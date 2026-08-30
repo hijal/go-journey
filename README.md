@@ -13,23 +13,26 @@ go run ./payment-tracker
 | Folder                           | Concept                                                   |
 | -------------------------------- | --------------------------------------------------------- |
 | `api-backend`                    | Struct + constructor method                               |
-| `background-jobs`                | Loop, error handling, map lookup                          |
-| `cart-stock`                     | Case-sensitive variables (`quantity` vs `Quantity`)       |
-| `concurrent-webhook`             | Goroutine + channel + WaitGroup                           |
+| `background-jobs` | Loop, error handling, map lookup |
+| `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) |
+| `checkout-cart` | Float arithmetic + type conversion |
+| `concurrent-webhook` | Goroutine + channel + WaitGroup |
 | `config-loader`                  | Builtin `len` shadowing                                   |
 | `devops-config-loader`           | Package-level vars, const, funcs                          |
 | `double-entry-ledger`            | Methods with pointer receiver, insufficient balance error |
 | `env-variable-parsing`           | `strconv` parsing with defaults                           |
-| `fingerprint-config`             | SHA-256 checksum + string/byte immutability               |
-| `invoice-batch-scanner`          | `continue` / `break` in loop                              |
+| `fingerprint-config` | SHA-256 checksum + string/byte immutability |
+| `group-variable` | Grouped `const`/`iota` + grouped `var` |
+| `invoice-batch-scanner` | `continue` / `break` in loop |
 | `invoice-json`                   | JSON marshal + unexported field                           |
 | `inventory-stock`                | Unsigned underflow + safe compare                         |
 | `interget-overflow`              | Integer overflow (`int32` vs `int64`)                     |
 | `ledger-entry`                   | Custom type (`Money`)                                     |
 | `money-conversion-testing`       | Table-driven unit test + `math.Round`                     |
-| `monitoring-agent`               | Float precision + epsilon compare                         |
-| `multi-gateway-payment-proccess` | Interface + polymorphism                                  |
-| `order-status-enum`              | `iota` enum + `String()` method                           |
+| `monitoring-agent` | Float precision + epsilon compare |
+| `multi-gateway-payment-proccess` | Interface + polymorphism |
+| `new-account` | Zero values (`string`/`int64`/`bool`) |
+| `order-status-enum` | `iota` enum + `String()` method |
 | `payment-amount`                 | Custom type (`PaymentAmount`) + paisa-based money         |
 | `payment-fee-calculator`         | Constant + function                                       |
 | `payment-risk-flagging`          | `switch` with `fallthrough`                               |
