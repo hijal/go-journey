@@ -108,7 +108,7 @@ if v, ok := rawEnv["REQUEST_TIMEOUT_SEC"]; ok && v != "" {
 `timeoutSec`-এর জন্য **default-সহ safe parse**:
 
 - `var timeoutSec int` — zero value (`0`) দিয়ে শুরু।
-- `ok && v != ""` — key আছে **এবং** শূন্য না — এই দুটো condition-ই মিললে-শুধু `Atoi` করা হয়। 
+- `ok && v != ""` — key আছে **এবং** শূন্য না — এই দুটো condition-ই মিললে-শুধু `Atoi` করা হয়।
 - `timeoutSec, _ = strconv.Atoi(v)` — underscore `_` দিয়ে error discard করা হয় (এখানে non-empty guaranteed, তাই safe)।
 - অন্যথায় `timeoutSec = 30` — default।
 

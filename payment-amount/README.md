@@ -109,9 +109,9 @@ fmt.Printf("Remaining   : %d paisa (%.2f BDT)\n", remaining, float64(remaining)/
 - `%f` — float; `%.2f` মানে দশমিকে ২ ঘর। BDT দেখার জন্য paisa-কে `float64(...)/100` দিয়ে convert করা হয় (149950/100 = 1499.50)।
 - `\n` — newline।
 - Output format:
-  - `Order total : 149950 paisa (1499.50 BDT)`
-  - `Refunded    : 20000 paisa (200.00 BDT)`
-  - `Remaining   : 129950 paisa (1299.50 BDT)`
+    - `Order total : 149950 paisa (1499.50 BDT)`
+    - `Refunded    : 20000 paisa (200.00 BDT)`
+    - `Remaining   : 129950 paisa (1299.50 BDT)`
 
 (দৃষ্টি দাও: `Order total`, `Refunded`, `Remaining` এ তিনটা column-জাতীয় layout, যাতে একটার নিচে আরেকটা পরিমাণ চোখে ধরা পড়ে।)
 
@@ -248,9 +248,9 @@ fmt.Printf("Remaining   : %d paisa (%.2f BDT)\n", remaining, float64(remaining)/
 - `%f` — a float; `%.2f` means exactly 2 decimal places. To show BDT, paisa is converted with `float64(...)/100` (149950/100 = 1499.50).
 - `\n` — a newline.
 - Output format:
-  - `Order total : 149950 paisa (1499.50 BDT)`
-  - `Refunded    : 20000 paisa (200.00 BDT)`
-  - `Remaining   : 129950 paisa (1299.50 BDT)`
+    - `Order total : 149950 paisa (1499.50 BDT)`
+    - `Refunded    : 20000 paisa (200.00 BDT)`
+    - `Remaining   : 129950 paisa (1299.50 BDT)`
 
 (Notice the aligned layout of `Order total`, `Refunded`, and `Remaining` — amounts line up visually for easy comparison.)
 

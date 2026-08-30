@@ -122,7 +122,7 @@ for message := range results {
 
 `for ... range` দিয়ে channel-এর সব পাঠানো value-টা পড়ে (buffered-এ জমা থাকা ৩টা message) এবং print করে। Channel close হয়ে যাওয়ায় loop এমনিতেই শেষ হয়।
 
-> **নোট:** goroutine-গুলো যেহেতু একসাথে চলে, message-গুলোর **order নিশ্চিত নয়** — কোন merchant আগে `` "delivered" `` হবে তা নির্ভর করে scheduling-এর উপর। সাধারণত উপরে-থেকে-নিচে order আসে, কিন্তু guarantee নয়।
+> **নোট:** goroutine-গুলো যেহেতু একসাথে চলে, message-গুলোর **order নিশ্চিত নয়** — কোন merchant আগে `"delivered"` হবে তা নির্ভর করে scheduling-এর উপর। সাধারণত উপরে-থেকে-নিচে order আসে, কিন্তু guarantee নয়।
 
 ### Line 34
 
@@ -269,7 +269,7 @@ for message := range results {
 
 `for ... range` drains all buffered values from the channel (the 3 messages) and prints each. Because the channel is closed, the loop ends naturally.
 
-> **Note:** Since the goroutines run concurrently, the **ordering of messages is not guaranteed** — which merchant gets `` "delivered" `` first depends on the scheduler. It typically appears top-to-bottom, but it's not guaranteed.
+> **Note:** Since the goroutines run concurrently, the **ordering of messages is not guaranteed** — which merchant gets `"delivered"` first depends on the scheduler. It typically appears top-to-bottom, but it's not guaranteed.
 
 ### Line 34
 

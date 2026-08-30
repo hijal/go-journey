@@ -109,18 +109,18 @@ cases := []struct {
 
 **Table-এর প্রতিটা row** একটা test case:
 
-| input | expected | reason |
-|-------|----------|--------|
-| `"amount"` | `true` | সাধারণ lowercase identifier — valid |
-| `"Amount"` | `true` | বড় হাতের দিয়ে শুরু exported identifier — valid |
-| `"amount_cents"` | `true` | underscore থাকাটা legal — valid |
-| `"_temp"` | `true` | underscore দিয়ে শুরু legal — valid |
-| `"_"` | `true` | প্লেইন `_` হলো **blank identifier** — valid |
-| `"1amount"` | `false` | digit দিয়ে শুরু **হতে পারে না** — invalid |
-| `"amount cents"` | `false` | space আছে, যা identifier-এ নিষিদ্ধ — invalid |
-| `"amount-cents"` | `false` | hyphen (`-`) identifier-এ অক্ষর নয় — invalid |
-| `""` | `false` | খালি string identifier নয় — invalid |
-| `"func"` | `false` | Go-র **keyword** identifier হিসেবে ব্যবহার করা যায় না — invalid |
+| input            | expected | reason                                                           |
+| ---------------- | -------- | ---------------------------------------------------------------- |
+| `"amount"`       | `true`   | সাধারণ lowercase identifier — valid                              |
+| `"Amount"`       | `true`   | বড় হাতের দিয়ে শুরু exported identifier — valid                 |
+| `"amount_cents"` | `true`   | underscore থাকাটা legal — valid                                  |
+| `"_temp"`        | `true`   | underscore দিয়ে শুরু legal — valid                              |
+| `"_"`            | `true`   | প্লেইন `_` হলো **blank identifier** — valid                      |
+| `"1amount"`      | `false`  | digit দিয়ে শুরু **হতে পারে না** — invalid                       |
+| `"amount cents"` | `false`  | space আছে, যা identifier-এ নিষিদ্ধ — invalid                     |
+| `"amount-cents"` | `false`  | hyphen (`-`) identifier-এ অক্ষর নয় — invalid                    |
+| `""`             | `false`  | খালি string identifier নয় — invalid                             |
+| `"func"`         | `false`  | Go-র **keyword** identifier হিসেবে ব্যবহার করা যায় না — invalid |
 
 #### Line 26
 
@@ -313,18 +313,18 @@ An **anonymous struct slice** — the "table" of table-driven testing. Each stru
 
 **Each row of the table** is one test case:
 
-| input | expected | reason |
-|-------|----------|--------|
-| `"amount"` | `true` | a normal lowercase identifier — valid |
-| `"Amount"` | `true` | exported identifier starting uppercase — valid |
-| `"amount_cents"` | `true` | underscores are legal — valid |
-| `"_temp"` | `true` | starting with underscore is legal — valid |
-| `"_"` | `true` | plain `_` is the **blank identifier** — valid |
-| `"1amount"` | `false` | cannot start with a digit — invalid |
-| `"amount cents"` | `false` | contains a space, which is forbidden — invalid |
-| `"amount-cents"` | `false` | hyphen (`-`) is not a valid identifier character — invalid |
-| `""` | `false` | an empty string is not an identifier — invalid |
-| `"func"` | `false` | a Go **keyword** can't be used as an identifier — invalid |
+| input            | expected | reason                                                     |
+| ---------------- | -------- | ---------------------------------------------------------- |
+| `"amount"`       | `true`   | a normal lowercase identifier — valid                      |
+| `"Amount"`       | `true`   | exported identifier starting uppercase — valid             |
+| `"amount_cents"` | `true`   | underscores are legal — valid                              |
+| `"_temp"`        | `true`   | starting with underscore is legal — valid                  |
+| `"_"`            | `true`   | plain `_` is the **blank identifier** — valid              |
+| `"1amount"`      | `false`  | cannot start with a digit — invalid                        |
+| `"amount cents"` | `false`  | contains a space, which is forbidden — invalid             |
+| `"amount-cents"` | `false`  | hyphen (`-`) is not a valid identifier character — invalid |
+| `""`             | `false`  | an empty string is not an identifier — invalid             |
+| `"func"`         | `false`  | a Go **keyword** can't be used as an identifier — invalid  |
 
 #### Line 26
 

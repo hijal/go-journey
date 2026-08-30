@@ -73,8 +73,8 @@ func pollWithTimeout(delay, timeout time.Duration) string {
 - `make(chan string)` — একটা **unbuffered channel** (capacity 0)।
 - `go checkPaymentStatus(statusCh, delay)` — goroutine হিসেবে status checker চালায়; এটা `delay` পরে answer দেবে।
 - **`select`** — Go-র শক্তিশালী টুল: একসাথে **একাধিক channel operation-এর মধ্যে** অপেক্ষা করে, **যেটা আগে ready হয় সেটা চলে**:
-  - `case status := <-statusCh:` — status channel-এ থেকে value আসলেই `status` আনে, `return status` (`"confirmed"`)।
-  - `case <-time.After(timeout):` — `time.After(timeout)` একটা channel return করে যেটা `timeout` পর একবার value দেয়। যদি সেটা আগে ready হয় (মানে payment-টা `delay` সময়ের মধ্যে আসেনি), তাহলে `"time-out"` return করে।
+    - `case status := <-statusCh:` — status channel-এ থেকে value আসলেই `status` আনে, `return status` (`"confirmed"`)।
+    - `case <-time.After(timeout):` — `time.After(timeout)` একটা channel return করে যেটা `timeout` পর একবার value দেয়। যদি সেটা আগে ready হয় (মানে payment-টা `delay` সময়ের মধ্যে আসেনি), তাহলে `"time-out"` return করে।
 
 অর্থাৎ **রেস**: payment confirm আর timeout — দুটোর মধ্যে যেটা আগে আসে, select সেটা নেয়। এটা হল **timeout-সহ poll** করার idiomatic Go উপায় — চিরকাল ঝুলে থাকা থেকে বাঁচায়।
 
@@ -200,8 +200,8 @@ func pollWithTimeout(delay, timeout time.Duration) string {
 - `make(chan string)` — an **unbuffered channel** (capacity 0).
 - `go checkPaymentStatus(statusCh, delay)` — launches the status checker as a goroutine; it will answer after `delay`.
 - **`select`** — Go's powerful tool: it waits on **multiple channel operations** at once and **runs whichever is ready first**:
-  - `case status := <-statusCh:` — if a value arrives on the status channel, bring it into `status` and `return status` (`"confirmed"`).
-  - `case <-time.After(timeout):` — `time.After(timeout)` returns a channel that fires once after `timeout`. If that is ready first (meaning the payment didn't arrive within `timeout`), return `"time-out"`.
+    - `case status := <-statusCh:` — if a value arrives on the status channel, bring it into `status` and `return status` (`"confirmed"`).
+    - `case <-time.After(timeout):` — `time.After(timeout)` returns a channel that fires once after `timeout`. If that is ready first (meaning the payment didn't arrive within `timeout`), return `"time-out"`.
 
 So it's a **race** between the payment confirmation and the timeout — whichever comes first, `select` takes it. This is the idiomatic Go way to **poll with a timeout** — it avoids hanging forever.
 

@@ -60,7 +60,7 @@ server:
 rawBytes := []byte(config)
 ```
 
-`config` (string) থেকে **conversion**: `[]byte(config)` — string-এর byte-গুলো কপি করে একটা byte slice বানায়। 
+`config` (string) থেকে **conversion**: `[]byte(config)` — string-এর byte-গুলো কপি করে একটা byte slice বানায়।
 
 > **গুরুত্বপূর্ণ:** conversion-এ **copy** হয়। `rawBytes` mutate করলে মূল `config` string-টা অপরিবর্তিত থাকে — string আর byte slice আলাদা জিনিস।
 
@@ -124,9 +124,9 @@ Closing brace — `main` function শেষ হয়।
 ```
 Config fingerprint: 1a1a6c537e55486e56b04e6d45cc25f9bedd00addb704f6f0da2d0203f490ba9
 Mutated bytes did not change the original string
-  original string still starts with: 
+  original string still starts with:
 serv
-Bytes converted back to string, first line differs: 
+Bytes converted back to string, first line differs:
 Xerv
 ```
 
@@ -258,9 +258,9 @@ Closing brace — ends the `main` function.
 ```
 Config fingerprint: 1a1a6c537e55486e56b04e6d45cc25f9bedd00addb704f6f0da2d0203f490ba9
 Mutated bytes did not change the original string
-  original string still starts with: 
+  original string still starts with:
 serv
-Bytes converted back to string, first line differs: 
+Bytes converted back to string, first line differs:
 Xerv
 ```
 

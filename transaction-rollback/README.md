@@ -89,8 +89,8 @@ func transferFunds(amount float64) error {
 
 - `tx := &Transaction{}` — নতুন transaction (pointer) বানায়; `committed=false` দিয়ে শুরু।
 - **`defer tx.rollback()`** — সবচেয়ে গুরুত্বপূর্ণ লাইন। `defer` এটা schedule করে যাতে **function-টা return হওয়ার ঠিক আগে** (যদিও যেখানেই `return` হোক — success অথবা error —) `tx.rollback()` চালানো হয়।
-  - Success path: `tx.commit()` আগে `committed=true` সেট করে, `return nil`। তারপর deferred rollback চলে — কিন্তু `committed` true, তাই কিছুই print হয় না।
-  - Error path: `amount <= 0` হলে error return করে — `committed` এখনও false। Deferred rollback চলে → "transaction rolled back" print হয়।
+    - Success path: `tx.commit()` আগে `committed=true` সেট করে, `return nil`। তারপর deferred rollback চলে — কিন্তু `committed` true, তাই কিছুই print হয় না।
+    - Error path: `amount <= 0` হলে error return করে — `committed` এখনও false। Deferred rollback চলে → "transaction rolled back" print হয়।
 
 **এটাই `defer`-এর শক্তি:** rollback cleanup-টা function-এর শুরুতে লেখা হয়, কিন্তু execution-টা function-এর শেষে নিশ্চিত হয় — প্রতিটা exit path-এ (সফল হোক বা ব্যর্থ) একবার। `defer` মনে রাখে আর একবারই চালায়, comment-কে জানতেও হয় না কার কোন return-এ।
 
@@ -240,8 +240,8 @@ func transferFunds(amount float64) error {
 
 - `tx := &Transaction{}` — creates a new transaction (pointer), starting with `committed=false`.
 - **`defer tx.rollback()`** — the most important line. `defer` schedules `tx.rollback()` to run **right before the function returns** — from whichever `return` (success or error):
-  - Success path: `tx.commit()` first sets `committed=true`, then `return nil`. The deferred rollback then runs — but `committed` is true, so nothing prints.
-  - Error path: `amount <= 0` causes an early `return` of the error — `committed` is still false. The deferred rollback runs → prints "transaction rolled back".
+    - Success path: `tx.commit()` first sets `committed=true`, then `return nil`. The deferred rollback then runs — but `committed` is true, so nothing prints.
+    - Error path: `amount <= 0` causes an early `return` of the error — `committed` is still false. The deferred rollback runs → prints "transaction rolled back".
 
 **This is the power of `defer`:** the rollback cleanup is written at the top of the function, but guaranteed to execute at the end — on every exit path (success or failure). `defer` remembers it and runs it exactly once; nobody has to remember to call rollback before each `return`.
 

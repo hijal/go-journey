@@ -93,20 +93,20 @@ tests := []struct {
 
 **Table** — anonymous struct slice, প্রতিটা case-এ ৩টা field:
 
-- `name` — case-এর নাম (diagnostic)। 
+- `name` — case-এর নাম (diagnostic)।
 - `bdt` — input: টাকার পরিমাণ।
 - `want` — expected paisa value।
 
 6টা case cover করে:
 
-| case | input (`bdt`) | `want` | মন্তব্য |
-|---|---|---|---|
-| whole number | `100.0` | `10000` | সরল |
-| two decimals | `1499.50` | `149950` | normal case |
-| rounds up | `19.995` | `2000` | float drift থাকলেও round-এ `19.995` → `20.00` |
-| rounds down | `19.994` | `1999` | নিচে round |
-| zero | `0.0` | `0` | edge |
-| negative (refund) | `-50.25` | `-5025` | refund-এর জন্য negative |
+| case              | input (`bdt`) | `want`   | মন্তব্য                                       |
+| ----------------- | ------------- | -------- | --------------------------------------------- |
+| whole number      | `100.0`       | `10000`  | সরল                                           |
+| two decimals      | `1499.50`     | `149950` | normal case                                   |
+| rounds up         | `19.995`      | `2000`   | float drift থাকলেও round-এ `19.995` → `20.00` |
+| rounds down       | `19.994`      | `1999`   | নিচে round                                    |
+| zero              | `0.0`         | `0`      | edge                                          |
+| negative (refund) | `-50.25`      | `-5025`  | refund-এর জন্য negative                       |
 
 #### Lines 19–27
 
@@ -253,14 +253,14 @@ tests := []struct {
 
 Six cases cover:
 
-| case | input (`bdt`) | `want` | comment |
-|---|---|---|---|
-| whole number | `100.0` | `10000` | simple |
-| two decimals | `1499.50` | `149950` | the normal case |
-| rounds up | `19.995` | `2000` | even with float drift, round sends `19.995` → `20.00` |
-| rounds down | `19.994` | `1999` | rounds down |
-| zero | `0.0` | `0` | edge case |
-| negative (refund) | `-50.25` | `-5025` | negative for refunds |
+| case              | input (`bdt`) | `want`   | comment                                               |
+| ----------------- | ------------- | -------- | ----------------------------------------------------- |
+| whole number      | `100.0`       | `10000`  | simple                                                |
+| two decimals      | `1499.50`     | `149950` | the normal case                                       |
+| rounds up         | `19.995`      | `2000`   | even with float drift, round sends `19.995` → `20.00` |
+| rounds down       | `19.994`      | `1999`   | rounds down                                           |
+| zero              | `0.0`         | `0`      | edge case                                             |
+| negative (refund) | `-50.25`      | `-5025`  | negative for refunds                                  |
 
 #### Lines 19–27
 
