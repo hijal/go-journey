@@ -1,6 +1,6 @@
 # payment-fee-calculator
 
-Go-তে **function**, **`const`**, **`float64`** আর `var` declaration দিয়ে простой fee (ফি) হিসাব শেখার ছোট example।
+Go-তে **function**, **`const`**, **`float64`** আর `var` declaration দিয়ে সহজ fee (ফি) হিসাব শেখার ছোট example।
 
 **📖 ভাষা নির্বাচন করুন / Choose language:**
 

@@ -24,6 +24,7 @@ go run ./payment-tracker
 | `ledger-entry` | Custom type (`Money`) |
 | `multi-gateway-payment-proccess` | Interface + polymorphism |
 | `order-status-enum` | `iota` enum + `String()` method |
+| `payment-amount` | Custom type (`PaymentAmount`) + paisa-based money |
 | `payment-fee-calculator` | Constant + function |
 | `payment-risk-flagging` | `switch` with `fallthrough` |
 | `payment-status-poll` | `select` + channel timeout |

@@ -61,7 +61,7 @@ func (StripeStyleProcessor) Charge(amountCents int) error {
 }
 ```
 
-`StripeStyleProcessor`-এর উপর **method** `Charge` define করে। Receiver-টা `(StripeStyleProcessor)` — কোনোตัว receiver variable-এর নাম নেই, কারণ আমাদের কিছুর দরকার নেই (empty struct)। Method-টা একটা message print করে এবং `nil` (no error) return করে।
+`StripeStyleProcessor`-এর উপর **method** `Charge` define করে। Receiver-টা `(StripeStyleProcessor)` — কোনো receiver variable-এর নাম নেই, কারণ আমাদের কিছুর দরকার নেই (empty struct)। Method-টা একটা message print করে এবং `nil` (no error) return করে।
 
 ### Lines 18–20
 
@@ -138,7 +138,7 @@ processors := []PaymentProcessor{
 }
 ```
 
-`processors` — একটা `[]PaymentProcessor` slice। গুরুত্বপূর্ণ: element-গুলোর type হলো **interface** `PaymentProcessor`, কিন্তু আমরা দুটো concrete type-এর value দিচ্ছি (`StripeStyleProcessor{}` আর `MobileWalletProcessor{}`)। چون ওরা interface-কে satisfy করে, ওরা-কে interface-তে assign করা যায়।
+`processors` — একটা `[]PaymentProcessor` slice। গুরুত্বপূর্ণ: element-গুলোর type হলো **interface** `PaymentProcessor`, কিন্তু আমরা দুটো concrete type-এর value দিচ্ছি (`StripeStyleProcessor{}` আর `MobileWalletProcessor{}`)। যেহেতু ওরা interface-কে satisfy করে, ওরা-কে interface-তে assign করা যায়।
 
 ### Lines 46–48
 

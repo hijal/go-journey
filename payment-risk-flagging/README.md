@@ -65,7 +65,7 @@ func riskFlags(amount float64) []string {
 
 ফলে দাঁড়ায়: `["manual-review", "extra-verification", "log-audit-trail"]`।
 
-> **সতর্কতা:** `fallthrough` ব্যবহার করলে মনে রাখতে হবে — পরের case-এর শর্ত আর যাচাই হয় না। তাই amount যত বড়, তত বেশি case-এর block চলে (যেহেতু 10万-এ থামে না)। এখানে ইচ্ছাকৃতভাবে cascade behavior দেখানো হয়েছে। সাধারণত চাইলে এই লজিকটা `if...else if` দিয়েও লেখা যায়, কিন্তু `fallthrough` দিয়ে slice-এ progressively flag accumulate করা হয়েছে।
+> **সতর্কতা:** `fallthrough` ব্যবহার করলে মনে রাখতে হবে — পরের case-এর শর্ত আর যাচাই হয় না। তাই amount যত বড়, তত বেশি case-এর block চলে (যেহেতু 100000-এ থামে না)। এখানে ইচ্ছাকৃতভাবে cascade behavior দেখানো হয়েছে। সাধারণত চাইলে এই লজিকটা `if...else if` দিয়েও লেখা যায়, কিন্তু `fallthrough` দিয়ে slice-এ progressively flag accumulate করা হয়েছে।
 
 - ছোট amount-এর জন্য (যেমন 500) `default` চলে — কোনো comment ছাড়া কিছুই হয় না (ছোট পরিমাণে risk flag লাগে না)।
 
