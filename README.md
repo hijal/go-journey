@@ -18,8 +18,9 @@ go run ./payment-tracker
 | `checkout-cart` | Float arithmetic + type conversion |
 | `concurrent-webhook` | Goroutine + channel + WaitGroup |
 | `config-loader`                  | Builtin `len` shadowing                                   |
-| `devops-config-loader`           | Package-level vars, const, funcs                          |
-| `double-entry-ledger`            | Methods with pointer receiver, insufficient balance error |
+| `devops-config-loader` | Package-level vars, const, funcs |
+| `devops-tooling` | Multiple assignment + `strconv.Atoi` |
+| `double-entry-ledger` | Methods with pointer receiver, insufficient balance error |
 | `env-variable-parsing`           | `strconv` parsing with defaults                           |
 | `fingerprint-config` | SHA-256 checksum + string/byte immutability |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` |
@@ -33,7 +34,8 @@ go run ./payment-tracker
 | `multi-gateway-payment-proccess` | Interface + polymorphism |
 | `new-account` | Zero values (`string`/`int64`/`bool`) |
 | `order-status-enum` | `iota` enum + `String()` method |
-| `payment-amount`                 | Custom type (`PaymentAmount`) + paisa-based money         |
+| `package-local-variable` | Package-level vs local variable scope |
+| `payment-amount` | Custom type (`PaymentAmount`) + paisa-based money |
 | `payment-fee-calculator`         | Constant + function                                       |
 | `payment-risk-flagging`          | `switch` with `fallthrough`                               |
 | `payment-status-poll`            | `select` + channel timeout                                |
