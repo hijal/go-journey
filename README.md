@@ -21,6 +21,7 @@ go run ./payment-tracker
 | `double-entry-ledger` | Methods with pointer receiver, insufficient balance error |
 | `invoice-batch-scanner` | `continue` / `break` in loop |
 | `invoice-json` | JSON marshal + unexported field |
+| `inventory-stock` | Unsigned underflow + safe compare |
 | `ledger-entry` | Custom type (`Money`) |
 | `multi-gateway-payment-proccess` | Interface + polymorphism |
 | `order-status-enum` | `iota` enum + `String()` method |
