@@ -23,6 +23,7 @@ go run ./payment-tracker
 | `double-entry-ledger` | Methods with pointer receiver, insufficient balance error |
 | `env-variable-parsing`           | `strconv` parsing with defaults                           |
 | `fingerprint-config` | SHA-256 checksum + string/byte immutability |
+| `fixed-tax-discount` | Constants + `fmt.Printf` formatting |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` |
 | `invoice-batch-scanner` | `continue` / `break` in loop |
 | `invoice-json`                   | JSON marshal + unexported field                           |
@@ -42,6 +43,7 @@ go run ./payment-tracker
 | `payment-tracker`                | Variable naming / underscores                             |
 | `plan-based-rate-limit`          | Maps + `slices`/`maps` stdlib (Go 1.21+)                  |
 | `rune-byte`                      | Byte vs rune, UTF-8 decoding                              |
+| `retry-policy` | Retry loop + backoff with `time.Sleep` |
 | `settlement-reconciliation`      | `goto` retry + labeled `break`                            |
 | `testing`                        | `go/token.IsIdentifier` unit test                         |
 | `transaction-rollback`           | `defer` for rollback pattern                              |
