@@ -14,6 +14,7 @@ go run ./payment-tracker
 | -------------------------------- | --------------------------------------------------------- |
 | `api-backend`                    | Struct + constructor method                               |
 | `background-jobs` | Loop, error handling, map lookup |
+| `byte-size-constants` | iota + bit shift for KB/MB/GB constants |
 | `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) |
 | `checkout-cart` | Float arithmetic + type conversion |
 | `concurrent-webhook` | Goroutine + channel + WaitGroup |
@@ -25,6 +26,7 @@ go run ./payment-tracker
 | `fingerprint-config` | SHA-256 checksum + string/byte immutability |
 | `fixed-tax-discount` | Constants + `fmt.Printf` formatting |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` |
+| `http-status-code` | Unexported constants + `switch` for status mapping |
 | `invoice-batch-scanner` | `continue` / `break` in loop |
 | `invoice-json`                   | JSON marshal + unexported field                           |
 | `inventory-stock`                | Unsigned underflow + safe compare                         |
@@ -42,7 +44,9 @@ go run ./payment-tracker
 | `payment-status-poll`            | `select` + channel timeout                                |
 | `payment-tracker`                | Variable naming / underscores                             |
 | `plan-based-rate-limit`          | Maps + `slices`/`maps` stdlib (Go 1.21+)                  |
+| `rate-limit-config` | Exported vs unexported constants + unit suffix naming |
 | `rune-byte`                      | Byte vs rune, UTF-8 decoding                              |
+| `retry-backoff-timing` | Linear backoff + `time.Duration` constants |
 | `retry-policy` | Retry loop + backoff with `time.Sleep` |
 | `settlement-reconciliation`      | `goto` retry + labeled `break`                            |
 | `testing`                        | `go/token.IsIdentifier` unit test                         |
