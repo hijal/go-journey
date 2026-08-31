@@ -10,47 +10,47 @@ go run ./payment-tracker
 
 ## Examples
 
-| Folder                           | Concept                                                   |
-| -------------------------------- | --------------------------------------------------------- |
-| `api-backend`                    | Struct + constructor method                               |
-| `background-jobs` | Loop, error handling, map lookup |
-| `byte-size-constants` | iota + bit shift for KB/MB/GB constants |
-| `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) |
-| `checkout-cart` | Float arithmetic + type conversion |
-| `concurrent-webhook` | Goroutine + channel + WaitGroup |
-| `config-loader`                  | Builtin `len` shadowing                                   |
-| `devops-config-loader` | Package-level vars, const, funcs |
-| `devops-tooling` | Multiple assignment + `strconv.Atoi` |
-| `double-entry-ledger` | Methods with pointer receiver, insufficient balance error |
-| `env-variable-parsing`           | `strconv` parsing with defaults                           |
-| `fingerprint-config` | SHA-256 checksum + string/byte immutability |
-| `fixed-tax-discount` | Constants + `fmt.Printf` formatting |
-| `group-variable` | Grouped `const`/`iota` + grouped `var` |
-| `http-status-code` | Unexported constants + `switch` for status mapping |
-| `invoice-batch-scanner` | `continue` / `break` in loop |
-| `invoice-json`                   | JSON marshal + unexported field                           |
-| `inventory-stock`                | Unsigned underflow + safe compare                         |
-| `interget-overflow`              | Integer overflow (`int32` vs `int64`)                     |
-| `ledger-entry`                   | Custom type (`Money`)                                     |
-| `money-conversion-testing`       | Table-driven unit test + `math.Round`                     |
-| `monitoring-agent` | Float precision + epsilon compare |
-| `multi-gateway-payment-proccess` | Interface + polymorphism |
-| `new-account` | Zero values (`string`/`int64`/`bool`) |
-| `order-status-enum` | `iota` enum + `String()` method |
-| `package-local-variable` | Package-level vs local variable scope |
-| `payment-amount` | Custom type (`PaymentAmount`) + paisa-based money |
-| `payment-fee-calculator`         | Constant + function                                       |
-| `payment-risk-flagging`          | `switch` with `fallthrough`                               |
-| `payment-status-poll`            | `select` + channel timeout                                |
-| `payment-tracker`                | Variable naming / underscores                             |
-| `plan-based-rate-limit`          | Maps + `slices`/`maps` stdlib (Go 1.21+)                  |
-| `rate-limit-config` | Exported vs unexported constants + unit suffix naming |
-| `rune-byte`                      | Byte vs rune, UTF-8 decoding                              |
-| `retry-backoff-timing` | Linear backoff + `time.Duration` constants |
-| `retry-policy` | Retry loop + backoff with `time.Sleep` |
-| `settlement-reconciliation`      | `goto` retry + labeled `break`                            |
-| `testing`                        | `go/token.IsIdentifier` unit test                         |
-| `transaction-rollback`           | `defer` for rollback pattern                              |
+| Folder | Concept | Docs |
+| --- | --- | --- |
+| `api-backend` | Struct + constructor method | [README](./api-backend/README.md) |
+| `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
+| `byte-size-constants` | iota + bit shift for KB/MB/GB constants | [README](./byte-size-constants/README.md) |
+| `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) | [README](./cart-stock/README.md) |
+| `checkout-cart` | Float arithmetic + type conversion | [README](./checkout-cart/README.md) |
+| `concurrent-webhook` | Goroutine + channel + WaitGroup | [README](./concurrent-webhook/README.md) |
+| `config-loader` | Builtin `len` shadowing | [README](./config-loader/README.md) |
+| `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
+| `devops-tooling` | Multiple assignment + `strconv.Atoi` | [README](./devops-tooling/README.md) |
+| `double-entry-ledger` | Methods with pointer receiver, insufficient balance error | [README](./double-entry-ledger/README.md) |
+| `env-variable-parsing` | `strconv` parsing with defaults | [README](./env-variable-parsing/README.md) |
+| `fingerprint-config` | SHA-256 checksum + string/byte immutability | [README](./fingerprint-config/README.md) |
+| `fixed-tax-discount` | Constants + `fmt.Printf` formatting | [README](./fixed-tax-discount/README.md) |
+| `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
+| `http-status-code` | Unexported constants + `switch` for status mapping | [README](./http-status-code/README.md) |
+| `invoice-batch-scanner` | `continue` / `break` in loop | [README](./invoice-batch-scanner/README.md) |
+| `invoice-json` | JSON marshal + unexported field | [README](./invoice-json/README.md) |
+| `inventory-stock` | Unsigned underflow + safe compare | [README](./inventory-stock/README.md) |
+| `interget-overflow` | Integer overflow (`int32` vs `int64`) | [README](./interget-overflow/README.md) |
+| `ledger-entry` | Custom type (`Money`) | [README](./ledger-entry/README.md) |
+| `money-conversion-testing` | Table-driven unit test + `math.Round` | [README](./money-conversion-testing/README.md) |
+| `monitoring-agent` | Float precision + epsilon compare | [README](./monitoring-agent/README.md) |
+| `multi-gateway-payment-proccess` | Interface + polymorphism | [README](./multi-gateway-payment-proccess/README.md) |
+| `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
+| `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
+| `package-local-variable` | Package-level vs local variable scope | [README](./package-local-variable/README.md) |
+| `payment-amount` | Custom type (`PaymentAmount`) + paisa-based money | [README](./payment-amount/README.md) |
+| `payment-fee-calculator` | Constant + function | [README](./payment-fee-calculator/README.md) |
+| `payment-risk-flagging` | `switch` with `fallthrough` | [README](./payment-risk-flagging/README.md) |
+| `payment-status-poll` | `select` + channel timeout | [README](./payment-status-poll/README.md) |
+| `payment-tracker` | Variable naming / underscores | [README](./payment-tracker/README.md) |
+| `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
+| `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
+| `rune-byte` | Byte vs rune, UTF-8 decoding | [README](./rune-byte/README.md) |
+| `retry-backoff-timing` | Linear backoff + `time.Duration` constants | [README](./retry-backoff-timing/README.md) |
+| `retry-policy` | Retry loop + backoff with `time.Sleep` | [README](./retry-policy/README.md) |
+| `settlement-reconciliation` | `goto` retry + labeled `break` | [README](./settlement-reconciliation/README.md) |
+| `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
+| `transaction-rollback` | `defer` for rollback pattern | [README](./transaction-rollback/README.md) |
 
 ## Notes
 
