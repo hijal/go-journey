@@ -14,6 +14,7 @@ go run ./payment-tracker
 | --- | --- | --- |
 | `api-backend` | Struct + constructor method | [README](./api-backend/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
+| `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
 | `byte-size-constants` | iota + bit shift for KB/MB/GB constants | [README](./byte-size-constants/README.md) |
 | `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) | [README](./cart-stock/README.md) |
 | `checkout-cart` | Float arithmetic + type conversion | [README](./checkout-cart/README.md) |
