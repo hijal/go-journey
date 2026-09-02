@@ -52,13 +52,19 @@ go run ./payment-tracker
 | `payment-tracker` | Variable naming / underscores | [README](./payment-tracker/README.md) |
 | `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
+| `request-validation` | Input validation with guard clauses + `strings` | [README](./request-validation/README.md) |
+| `retail-loyalty-program` | `switch` + `fallthrough` tier benefits | [README](./retail-loyalty-program/README.md) |
 | `rune-byte` | Byte vs rune, UTF-8 decoding | [README](./rune-byte/README.md) |
 | `retry-backoff-timing` | Linear backoff + `time.Duration` constants | [README](./retry-backoff-timing/README.md) |
 | `retry-policy` | Retry loop + backoff with `time.Sleep` | [README](./retry-policy/README.md) |
 | `settlement-reconciliation` | `goto` retry + labeled `break` | [README](./settlement-reconciliation/README.md) |
+| `shipping-cost-tier` | `if/else if` tier-based shipping cost | [README](./shipping-cost-tier/README.md) |
+| `switch-group` | Multi-value `case` log routing | [README](./switch-group/README.md) |
 | `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
+| `token-validation` | Sentinel error + `errors.Is` + `%w` wrap | [README](./token-validation/README.md) |
 | `transaction-rollback` | `defer` for rollback pattern | [README](./transaction-rollback/README.md) |
 | `unix-permission-bits` | Bit flags (rwx permission bitmask) | [README](./unix-permission-bits/README.md) |
+| `withdrawal-atm` | `if/else` balance validation | [README](./withdrawal-atm/README.md) |
 
 ## Notes
 
