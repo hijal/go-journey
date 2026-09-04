@@ -25,6 +25,7 @@ go run ./payment-tracker
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
 | `devops-tooling` | Multiple assignment + `strconv.Atoi` | [README](./devops-tooling/README.md) |
 | `double-entry-ledger` | Methods with pointer receiver, insufficient balance error | [README](./double-entry-ledger/README.md) |
+| `emi-loan` | Numeric underscore + aligned `%.2f` table | [README](./emi-loan/README.md) |
 | `env-variable-parsing` | `strconv` parsing with defaults | [README](./env-variable-parsing/README.md) |
 | `fingerprint-config` | SHA-256 checksum + string/byte immutability | [README](./fingerprint-config/README.md) |
 | `fixed-tax-discount` | Constants + `fmt.Printf` formatting | [README](./fixed-tax-discount/README.md) |
