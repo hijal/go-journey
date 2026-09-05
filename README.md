@@ -13,6 +13,7 @@ go run ./payment-tracker
 | Folder | Concept | Docs |
 | --- | --- | --- |
 | `api-backend` | Struct + constructor method | [README](./api-backend/README.md) |
+| `anonymous-function` | Anonymous function + IIFE pattern | [README](./anonymous-function/README.md) |
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
 | `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
@@ -25,9 +26,11 @@ go run ./payment-tracker
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
 | `devops-tooling` | Multiple assignment + `strconv.Atoi` | [README](./devops-tooling/README.md) |
 | `double-entry-ledger` | Methods with pointer receiver, insufficient balance error | [README](./double-entry-ledger/README.md) |
+| `devide-zero` | Error handling + division by zero guard | [README](./devide-zero/README.md) |
 | `emi-loan` | Numeric underscore + aligned `%.2f` table | [README](./emi-loan/README.md) |
 | `env-variable-parsing` | `strconv` parsing with defaults | [README](./env-variable-parsing/README.md) |
 | `fingerprint-config` | SHA-256 checksum + string/byte immutability | [README](./fingerprint-config/README.md) |
+| `fn-value` | Function type + function as value | [README](./fn-value/README.md) |
 | `fixed-tax-discount` | Constants + `fmt.Printf` formatting | [README](./fixed-tax-discount/README.md) |
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
@@ -55,6 +58,7 @@ go run ./payment-tracker
 | `payment-tracker` | Variable naming / underscores | [README](./payment-tracker/README.md) |
 | `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
+| `named-naked-return` | Named return values + naked return | [README](./named-naked-return/README.md) |
 | `request-validation` | Input validation with guard clauses + `strings` | [README](./request-validation/README.md) |
 | `retail-loyalty-program` | `switch` + `fallthrough` tier benefits | [README](./retail-loyalty-program/README.md) |
 | `rune-byte` | Byte vs rune, UTF-8 decoding | [README](./rune-byte/README.md) |
@@ -69,6 +73,7 @@ go run ./payment-tracker
 | `transaction-fraud-screening` | `for range` + `continue` fraud flags | [README](./transaction-fraud-screening/README.md) |
 | `transaction-rollback` | `defer` for rollback pattern | [README](./transaction-rollback/README.md) |
 | `unix-permission-bits` | Bit flags (rwx permission bitmask) | [README](./unix-permission-bits/README.md) |
+| `variadic-function` | Variadic function (`...int`) | [README](./variadic-function/README.md) |
 | `withdrawal-atm` | `if/else` balance validation | [README](./withdrawal-atm/README.md) |
 
 ## Notes
