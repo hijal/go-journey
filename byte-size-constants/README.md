@@ -1,16 +1,16 @@
 # byte-size-constants
 
-Go-তে **iota** আর **bit shift (`<<`)** দিয়ে byte-size constants (KB, MB, GB, TB) তৈরি শেখার ছোট example — iota-র value-কে calculator হিসেবে ব্যবহার।
+Go-তে **iota** আর **bit shift (`<<`)** দিয়ে byte-size constants (KB, MB, GB, TB) তৈরি শেখার ছোট example -- iota-র value-কে calculator হিসেবে ব্যবহার.
 
-**📖 ভাষা নির্বাচন করুন / Choose language:**
+**ভাষা নির্বাচন করুন / Choose language:**
 
-[🇧🇩 বাংলা](#bangla) • [🇬🇧 English](#english)
+[বাংলা](#bangla) * [English](#english)
 
 ---
 
 <a name="bangla"></a>
 
-## 🇧🇩 বাংলা সংস্করণ
+## বাংলা সংস্করণ
 
 ### Line 1
 
@@ -18,7 +18,7 @@ Go-তে **iota** আর **bit shift (`<<`)** দিয়ে byte-size constan
 package main
 ```
 
-একটা executable program (`main` package) declare করে, যা `go run` দিয়ে চালানো যায়।
+একটা executable program (`main` package) declare করে, যা `go run` দিয়ে চালানো যায়.
 
 ### Line 3
 
@@ -26,9 +26,9 @@ package main
 import "fmt"
 ```
 
-Console-এ output print করার জন্য `fmt` package import করা হয়।
+Console-এ output print করার জন্য `fmt` package import করা হয়.
 
-### Lines 5–12
+### Lines 5-12
 
 ```go
 const (
@@ -41,16 +41,16 @@ const (
 )
 ```
 
-**iota + bit-shift দিয়ে byte units:** প্রতিটা line-এ `iota` auto-increase হয় (0, 1, 2, 3, 4, 5)। প্রতিটা expression `1 << (10 × iota)`:
+**iota + bit-shift দিয়ে byte units:** প্রতিটা line-এ `iota` auto-increase হয় (0, 1, 2, 3, 4, 5). প্রতিটা expression `1 << (10 * iota)`:
 
-- `_` → iota=0, `1 << 0` = 1 — **skipped** (blank identifier); প্রতি-1 মান (byte unit) লাগে না।
-- `KB` → iota=1, `1 << 10` = 1024
-- `MB` → iota=2, `1 << 20` = 1048576 (1024²)
-- `GB` → iota=3, `1 << 30` = 1073741824 (1024³)
-- `TB` → iota=4, `1 << 40` = 1099511627776 (1024⁴)
-- `PB` → iota=5, `1 << 50` = 1125899906842624 (1024⁵)
+- `_` -> iota=0, `1 << 0` = 1 -- **skipped** (blank identifier); প্রতি-1 মান (byte unit) লাগে না.
+- `KB` -> iota=1, `1 << 10` = 1024
+- `MB` -> iota=2, `1 << 20` = 1048576 (1024^2)
+- `GB` -> iota=3, `1 << 30` = 1073741824 (1024^3)
+- `TB` -> iota=4, `1 << 40` = 1099511627776 (1024^4)
+- `PB` -> iota=5, `1 << 50` = 1125899906842624 (1024^5)
 
-> **কেন `<< (10 × iota)`:** binary-তে `1 << n` মানে `1 × 2ⁿ`। কিন্তু byte units 1024-base (2¹⁰), তাই `10 × iota` — 10-bit shifts, প্রতিটা unit-এ। (1KB = 2¹⁰ = 1024 byte.)
+> **কেন `<< (10 * iota)`:** binary-তে `1 << n` মানে `1 * 2^n`. কিন্তু byte units 1024-base (2^1^0), তাই `10 * iota` -- 10-bit shifts, প্রতিটা unit-এ. (1KB = 2^1^0 = 1024 byte.)
 
 ### Line 14
 
@@ -58,9 +58,9 @@ const (
 func main() {
 ```
 
-Program-এর entry point।
+Program-এর entry point.
 
-### Lines 15–16
+### Lines 15-16
 
 ```go
 var maxLogSize = 12 * MB
@@ -69,10 +69,10 @@ var uploadLimit = 250 * MB
 
 দুটো practical value:
 
-- `maxLogSize = 12 * MB` = 12 × 1048576 = 12582912 byte
-- `uploadLimit = 250 * MB` = 250 × 1048576 = 262144000 byte
+- `maxLogSize = 12 * MB` = 12 * 1048576 = 12582912 byte
+- `uploadLimit = 250 * MB` = 250 * 1048576 = 262144000 byte
 
-### Lines 18–20
+### Lines 18-20
 
 ```go
 fmt.Printf("max log size: %d bytes (%d MB)\n", maxLogSize, maxLogSize/MB)
@@ -92,7 +92,7 @@ Output:
 }
 ```
 
-Closing brace — `main` function শেষ হয়।
+Closing brace -- `main` function শেষ হয়.
 
 ---
 
@@ -106,11 +106,11 @@ upload limit: 262144000 bytes (250 MB)
 
 ## মূল শিক্ষা / Key Takeaways
 
-1. **`_` = blank identifier** — iota-কে skip করার জন্য (block-এর first line-এ value drop)।
-2. **`1 << (10 * iota)`** — binary bit-shift দিয়ে power-of-two byte constants।
-3. **`iota` as calculator** — iota-র value arithmetic expression-এ ব্যবহার করা।
-4. **Constant arithmetic** — `maxLogSize/MB` compile-time-এ constant, efficient।
-5. **Readable config** — `250 * MB` সহজেই বোঝা যায় (262144000 না)।
+1. **`_` = blank identifier** -- iota-কে skip করার জন্য (block-এর first line-এ value drop).
+2. **`1 << (10 * iota)`** -- binary bit-shift দিয়ে power-of-two byte constants.
+3. **`iota` as calculator** -- iota-র value arithmetic expression-এ ব্যবহার করা.
+4. **Constant arithmetic** -- `maxLogSize/MB` compile-time-এ constant, efficient.
+5. **Readable config** -- `250 * MB` সহজেই বোঝা যায় (262144000 না).
 
 ---
 
@@ -118,7 +118,7 @@ upload limit: 262144000 bytes (250 MB)
 
 <a name="english"></a>
 
-## 🇬🇧 English Version
+##  English Version
 
 ### Line 1
 
@@ -136,7 +136,7 @@ import "fmt"
 
 Imports the `fmt` package for console output.
 
-### Lines 5–12
+### Lines 5-12
 
 ```go
 const (
@@ -149,16 +149,16 @@ const (
 )
 ```
 
-**Byte units built with iota + bit shift:** each line, `iota` auto-increments (0, 1, 2, 3, 4, 5). Every expression is `1 << (10 × iota)`:
+**Byte units built with iota + bit shift:** each line, `iota` auto-increments (0, 1, 2, 3, 4, 5). Every expression is `1 << (10 * iota)`:
 
-- `_` → iota=0, `1 << 0` = 1 — **skipped** (blank identifier); don't need the 1-byte unit.
-- `KB` → iota=1, `1 << 10` = 1024
-- `MB` → iota=2, `1 << 20` = 1048576 (1024²)
-- `GB` → iota=3, `1 << 30` = 1073741824 (1024³)
-- `TB` → iota=4, `1 << 40` = 1099511627776 (1024⁴)
-- `PB` → iota=5, `1 << 50` = 1125899906842624 (1024⁵)
+- `_` -> iota=0, `1 << 0` = 1 -- **skipped** (blank identifier); don't need the 1-byte unit.
+- `KB` -> iota=1, `1 << 10` = 1024
+- `MB` -> iota=2, `1 << 20` = 1048576 (1024^2)
+- `GB` -> iota=3, `1 << 30` = 1073741824 (1024^3)
+- `TB` -> iota=4, `1 << 40` = 1099511627776 (1024^4)
+- `PB` -> iota=5, `1 << 50` = 1125899906842624 (1024^5)
 
-> **Why `<< (10 × iota)`:** `1 << n` in binary means `1 × 2ⁿ`. Byte units are 1024-based (2¹⁰), so `10 × iota` shifts by 10 bits per unit. (1KB = 2¹⁰ = 1024 bytes.)
+> **Why `<< (10 * iota)`:** `1 << n` in binary means `1 * 2^n`. Byte units are 1024-based (2^1^0), so `10 * iota` shifts by 10 bits per unit. (1KB = 2^1^0 = 1024 bytes.)
 
 ### Line 14
 
@@ -168,7 +168,7 @@ func main() {
 
 Program entry point.
 
-### Lines 15–16
+### Lines 15-16
 
 ```go
 var maxLogSize = 12 * MB
@@ -177,10 +177,10 @@ var uploadLimit = 250 * MB
 
 Two practical values:
 
-- `maxLogSize = 12 * MB` = 12 × 1048576 = 12582912 bytes
-- `uploadLimit = 250 * MB` = 250 × 1048576 = 262144000 bytes
+- `maxLogSize = 12 * MB` = 12 * 1048576 = 12582912 bytes
+- `uploadLimit = 250 * MB` = 250 * 1048576 = 262144000 bytes
 
-### Lines 18–20
+### Lines 18-20
 
 ```go
 fmt.Printf("max log size: %d bytes (%d MB)\n", maxLogSize, maxLogSize/MB)
@@ -200,7 +200,7 @@ Output:
 }
 ```
 
-Closing brace — ends the `main` function.
+Closing brace -- ends the `main` function.
 
 ---
 
@@ -214,8 +214,8 @@ upload limit: 262144000 bytes (250 MB)
 
 ## Key Takeaways
 
-1. **`_` = blank identifier** — skips iota on the first line of a block.
-2. **`1 << (10 * iota)`** — power-of-two byte constants via binary bit shift.
-3. **`iota` as calculator** — iota's value fed into arithmetic expressions.
-4. **Constant arithmetic** — `maxLogSize/MB` is computed at compile time, efficient.
-5. **Readable config** — `250 * MB` is far easier to understand than `262144000`.
+1. **`_` = blank identifier** -- skips iota on the first line of a block.
+2. **`1 << (10 * iota)`** -- power-of-two byte constants via binary bit shift.
+3. **`iota` as calculator** -- iota's value fed into arithmetic expressions.
+4. **Constant arithmetic** -- `maxLogSize/MB` is computed at compile time, efficient.
+5. **Readable config** -- `250 * MB` is far easier to understand than `262144000`.

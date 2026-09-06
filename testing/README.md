@@ -1,18 +1,18 @@
 # testing
 
-Go-তে **table-driven unit testing** এবং `go/token.IsIdentifier` দিয়ে Go identifier-এর validity rule test করা শেখার ছোট example। এতে একটা `main.go` আর একটা `identifier_test.go` আছে।
+Go-তে **table-driven unit testing** এবং `go/token.IsIdentifier` দিয়ে Go identifier-এর validity rule test করা শেখার ছোট example. এতে একটা `main.go` আর একটা `identifier_test.go` আছে.
 
 **চালানো:** `go test -v` (এই folder-এ)
 
-**📖 ভাষা নির্বাচন করুন / Choose language:**
+**ভাষা নির্বাচন করুন / Choose language:**
 
-[🇧🇩 বাংলা](#bangla) • [🇬🇧 English](#english)
+[বাংলা](#bangla) * [English](#english)
 
 ---
 
 <a name="bangla"></a>
 
-## 🇧🇩 বাংলা সংস্করণ
+## বাংলা সংস্করণ
 
 ### `main.go`
 
@@ -22,7 +22,7 @@ Go-তে **table-driven unit testing** এবং `go/token.IsIdentifier` দি
 package main
 ```
 
-একটা executable program (`main` package) declare করে। Test file-টাও একই `package main`-এ আছে, যাতে একসাথে compile হয়।
+একটা executable program (`main` package) declare করে. Test file-টাও একই `package main`-এ আছে, যাতে একসাথে compile হয়.
 
 #### Line 3
 
@@ -30,9 +30,9 @@ package main
 import "fmt"
 ```
 
-Console-এ output print করার জন্য `fmt` package import করা হয়।
+Console-এ output print করার জন্য `fmt` package import করা হয়.
 
-#### Lines 5–7
+#### Lines 5-7
 
 ```go
 func main() {
@@ -40,7 +40,7 @@ func main() {
 }
 ```
 
-`main` function-টা শুধু একটা নির্দেশনা message print করে — এটা দিয়ে user-কে বোঝানো হয় যে বাস্তব চেকটা `go test` দিয়ে চলে।
+`main` function-টা শুধু একটা নির্দেশনা message print করে -- এটা দিয়ে user-কে বোঝানো হয় যে বাস্তব চেকটা `go test` দিয়ে চলে.
 
 ---
 
@@ -52,9 +52,9 @@ func main() {
 package main
 ```
 
-Test file-টা `main` package-এ, কারণ এটা `main.go`-র সাথে একই package-এ test করে।
+Test file-টা `main` package-এ, কারণ এটা `main.go`-র সাথে একই package-এ test করে.
 
-#### Lines 3–6
+#### Lines 3-6
 
 ```go
 import (
@@ -65,8 +65,8 @@ import (
 
 দুটো standard library package import:
 
-- `go/token` — এটা Go language-এর lexical scanner/token package। এখানে `token.IsIdentifier` function আছে, যা check করে একটা string valid Go identifier কিনা। (Go নিজে নিজের source-এর identifier validate করতে এটা use করে।)
-- `testing` — Go-র builtin testing framework। এটা দিয়ে `TestXxx` function define করা হয়।
+- `go/token` -- এটা Go language-এর lexical scanner/token package. এখানে `token.IsIdentifier` function আছে, যা check করে একটা string valid Go identifier কিনা. (Go নিজে নিজের source-এর identifier validate করতে এটা use করে.)
+- `testing` -- Go-র builtin testing framework. এটা দিয়ে `TestXxx` function define করা হয়.
 
 #### Line 8
 
@@ -74,9 +74,9 @@ import (
 func TestIsValidIdentifier(t *testing.T) {
 ```
 
-একটা **test function**। নিয়ম: নাম `Test` দিয়ে শুরু, argument `*testing.T`। `go test` এই function-টা চালায় এবং report করে pass/fail।
+একটা **test function**. নিয়ম: নাম `Test` দিয়ে শুরু, argument `*testing.T`. `go test` এই function-টা চালায় এবং report করে pass/fail.
 
-#### Lines 9–13
+#### Lines 9-13
 
 ```go
 cases := []struct {
@@ -86,13 +86,13 @@ cases := []struct {
 }{
 ```
 
-এটা একটা **anonymous struct slice** — table-driven testing-এর "table"। প্রতিটা struct-এ তিনটা field:
+এটা একটা **anonymous struct slice** -- table-driven testing-এর "table". প্রতিটা struct-এ তিনটা field:
 
-- `name` — test case-এর নাম (diagnostic-এর জন্য)।
-- `input` — যে string-টা আমরা validate করব।
-- `expected` — আশা করা result (valid হলে `true`, না হলে `false`).
+- `name` -- test case-এর নাম (diagnostic-এর জন্য).
+- `input` -- যে string-টা আমরা validate করব.
+- `expected` -- আশা করা result (valid হলে `true`, না হলে `false`).
 
-#### Lines 14–24
+#### Lines 14-24
 
 ```go
 {"simple lowercase", "amount", true},
@@ -111,16 +111,16 @@ cases := []struct {
 
 | input            | expected | reason                                                           |
 | ---------------- | -------- | ---------------------------------------------------------------- |
-| `"amount"`       | `true`   | সাধারণ lowercase identifier — valid                              |
-| `"Amount"`       | `true`   | বড় হাতের দিয়ে শুরু exported identifier — valid                 |
-| `"amount_cents"` | `true`   | underscore থাকাটা legal — valid                                  |
-| `"_temp"`        | `true`   | underscore দিয়ে শুরু legal — valid                              |
-| `"_"`            | `true`   | প্লেইন `_` হলো **blank identifier** — valid                      |
-| `"1amount"`      | `false`  | digit দিয়ে শুরু **হতে পারে না** — invalid                       |
-| `"amount cents"` | `false`  | space আছে, যা identifier-এ নিষিদ্ধ — invalid                     |
-| `"amount-cents"` | `false`  | hyphen (`-`) identifier-এ অক্ষর নয় — invalid                    |
-| `""`             | `false`  | খালি string identifier নয় — invalid                             |
-| `"func"`         | `false`  | Go-র **keyword** identifier হিসেবে ব্যবহার করা যায় না — invalid |
+| `"amount"`       | `true`   | সাধারণ lowercase identifier -- valid                              |
+| `"Amount"`       | `true`   | বড় হাতের দিয়ে শুরু exported identifier -- valid                 |
+| `"amount_cents"` | `true`   | underscore থাকাটা legal -- valid                                  |
+| `"_temp"`        | `true`   | underscore দিয়ে শুরু legal -- valid                              |
+| `"_"`            | `true`   | প্লেইন `_` হলো **blank identifier** -- valid                      |
+| `"1amount"`      | `false`  | digit দিয়ে শুরু **হতে পারে না** -- invalid                       |
+| `"amount cents"` | `false`  | space আছে, যা identifier-এ নিষিদ্ধ -- invalid                     |
+| `"amount-cents"` | `false`  | hyphen (`-`) identifier-এ অক্ষর নয় -- invalid                    |
+| `""`             | `false`  | খালি string identifier নয় -- invalid                             |
+| `"func"`         | `false`  | Go-র **keyword** identifier হিসেবে ব্যবহার করা যায় না -- invalid |
 
 #### Line 26
 
@@ -128,7 +128,7 @@ cases := []struct {
 for _, tc := range cases {
 ```
 
-`range` দিয়ে table-এর প্রতিটা case-এ loop হয়। `_` index discard, `tc` হয় প্রতিটা struct।
+`range` দিয়ে table-এর প্রতিটা case-এ loop হয়. `_` index discard, `tc` হয় প্রতিটা struct.
 
 #### Line 27
 
@@ -136,7 +136,7 @@ for _, tc := range cases {
 t.Run(tc.name, func(t *testing.T) {
 ```
 
-`t.Run(name, fn)` একটা **subtest** চালায় — প্রতিটা case আলাদা named test হিসেবে show হয় (`go test -v`-এ)। এতে fail হলে কোন case ভেঙেছে সহজে বোঝা যায়।
+`t.Run(name, fn)` একটা **subtest** চালায় -- প্রতিটা case আলাদা named test হিসেবে show হয় (`go test -v`-এ). এতে fail হলে কোন case ভেঙেছে সহজে বোঝা যায়.
 
 #### Line 28
 
@@ -144,9 +144,9 @@ t.Run(tc.name, func(t *testing.T) {
 got := token.IsIdentifier(tc.input)
 ```
 
-`token.IsIdentifier(tc.input)` — এই function-টা input-টা valid identifier কিনা check করে এবং result `got`-এ রাখে। এটাই আসল testing logic।
+`token.IsIdentifier(tc.input)` -- এই function-টা input-টা valid identifier কিনা check করে এবং result `got`-এ রাখে. এটাই আসল testing logic.
 
-#### Lines 29–31
+#### Lines 29-31
 
 ```go
 if got != tc.expected {
@@ -154,7 +154,7 @@ if got != tc.expected {
 }
 ```
 
-যদি `got` আর `expected` মিলে না যায়, তাহলে `t.Errorf` দিয়ে failure report করে — input, actual result (`got`), আর expected value print করে। `%q` string-কে quote সহ, `%v` value print করে। মিলে গেলে কিছুই হয় না (নীরবে pass)।
+যদি `got` আর `expected` মিলে না যায়, তাহলে `t.Errorf` দিয়ে failure report করে -- input, actual result (`got`), আর expected value print করে. `%q` string-কে quote সহ, `%v` value print করে. মিলে গেলে কিছুই হয় না (নীরবে pass).
 
 #### Line 32
 
@@ -162,7 +162,7 @@ if got != tc.expected {
 })
 ```
 
-Subtest-এর closure শেষ।
+Subtest-এর closure শেষ.
 
 #### Line 33
 
@@ -170,7 +170,7 @@ Subtest-এর closure শেষ।
 }
 ```
 
-`for` loop শেষ।
+`for` loop শেষ.
 
 #### Line 34
 
@@ -178,7 +178,7 @@ Subtest-এর closure শেষ।
 }
 ```
 
-Test function শেষ।
+Test function শেষ.
 
 ---
 
@@ -204,11 +204,11 @@ Run 'go test -v' in this folder to check identifier validity rules.
 
 ## মূল শিক্ষা / Key Takeaways
 
-1. **Table-driven testing** — struct slice দিয়ে অনেকগুলো input/expected test case-কে সংগঠিত করা।
-2. **`go/token.IsIdentifier`** — string valid Go identifier কিনা দেখার standard library function।
-3. **`t.Run` subtests** — প্রতিটা case আলাদা named test হিসেবে; fail হলে location স্পষ্ট।
-4. **`t.Errorf`** — test fail হলে diagnostic message report করা।
-5. **Test conventions** — `_test.go` file, `TestXxx` function, `*testing.T` argument, `go test` দিয়ে চালানো।
+1. **Table-driven testing** -- struct slice দিয়ে অনেকগুলো input/expected test case-কে সংগঠিত করা.
+2. **`go/token.IsIdentifier`** -- string valid Go identifier কিনা দেখার standard library function.
+3. **`t.Run` subtests** -- প্রতিটা case আলাদা named test হিসেবে; fail হলে location স্পষ্ট.
+4. **`t.Errorf`** -- test fail হলে diagnostic message report করা.
+5. **Test conventions** -- `_test.go` file, `TestXxx` function, `*testing.T` argument, `go test` দিয়ে চালানো.
 
 ---
 
@@ -216,7 +216,7 @@ Run 'go test -v' in this folder to check identifier validity rules.
 
 <a name="english"></a>
 
-## 🇬🇧 English Version
+##  English Version
 
 ### `main.go`
 
@@ -236,7 +236,7 @@ import "fmt"
 
 Imports the `fmt` package for console output.
 
-#### Lines 5–7
+#### Lines 5-7
 
 ```go
 func main() {
@@ -244,7 +244,7 @@ func main() {
 }
 ```
 
-The `main` function just prints an instruction message — telling the user that the real checking happens via `go test`.
+The `main` function just prints an instruction message -- telling the user that the real checking happens via `go test`.
 
 ---
 
@@ -258,7 +258,7 @@ package main
 
 The test file is in the `main` package, since it tests code in the same package as `main.go`.
 
-#### Lines 3–6
+#### Lines 3-6
 
 ```go
 import (
@@ -269,8 +269,8 @@ import (
 
 Two standard library packages are imported:
 
-- `go/token` — Go's lexical scanner/token package. It provides `token.IsIdentifier`, a function that checks whether a string is a valid Go identifier (Go itself uses this on its own source code).
-- `testing` — Go's built-in testing framework, used to define `TestXxx` functions.
+- `go/token` -- Go's lexical scanner/token package. It provides `token.IsIdentifier`, a function that checks whether a string is a valid Go identifier (Go itself uses this on its own source code).
+- `testing` -- Go's built-in testing framework, used to define `TestXxx` functions.
 
 #### Line 8
 
@@ -280,7 +280,7 @@ func TestIsValidIdentifier(t *testing.T) {
 
 A **test function**. By convention it starts with `Test`, takes `*testing.T`, and `go test` runs it and reports pass/fail.
 
-#### Lines 9–13
+#### Lines 9-13
 
 ```go
 cases := []struct {
@@ -290,13 +290,13 @@ cases := []struct {
 }{
 ```
 
-An **anonymous struct slice** — the "table" of table-driven testing. Each struct has three fields:
+An **anonymous struct slice** -- the "table" of table-driven testing. Each struct has three fields:
 
-- `name` — a label for the test case (for diagnostics).
-- `input` — the string we want to validate.
-- `expected` — the expected result (`true` if valid, `false` otherwise).
+- `name` -- a label for the test case (for diagnostics).
+- `input` -- the string we want to validate.
+- `expected` -- the expected result (`true` if valid, `false` otherwise).
 
-#### Lines 14–24
+#### Lines 14-24
 
 ```go
 {"simple lowercase", "amount", true},
@@ -315,16 +315,16 @@ An **anonymous struct slice** — the "table" of table-driven testing. Each stru
 
 | input            | expected | reason                                                     |
 | ---------------- | -------- | ---------------------------------------------------------- |
-| `"amount"`       | `true`   | a normal lowercase identifier — valid                      |
-| `"Amount"`       | `true`   | exported identifier starting uppercase — valid             |
-| `"amount_cents"` | `true`   | underscores are legal — valid                              |
-| `"_temp"`        | `true`   | starting with underscore is legal — valid                  |
-| `"_"`            | `true`   | plain `_` is the **blank identifier** — valid              |
-| `"1amount"`      | `false`  | cannot start with a digit — invalid                        |
-| `"amount cents"` | `false`  | contains a space, which is forbidden — invalid             |
-| `"amount-cents"` | `false`  | hyphen (`-`) is not a valid identifier character — invalid |
-| `""`             | `false`  | an empty string is not an identifier — invalid             |
-| `"func"`         | `false`  | a Go **keyword** can't be used as an identifier — invalid  |
+| `"amount"`       | `true`   | a normal lowercase identifier -- valid                      |
+| `"Amount"`       | `true`   | exported identifier starting uppercase -- valid             |
+| `"amount_cents"` | `true`   | underscores are legal -- valid                              |
+| `"_temp"`        | `true`   | starting with underscore is legal -- valid                  |
+| `"_"`            | `true`   | plain `_` is the **blank identifier** -- valid              |
+| `"1amount"`      | `false`  | cannot start with a digit -- invalid                        |
+| `"amount cents"` | `false`  | contains a space, which is forbidden -- invalid             |
+| `"amount-cents"` | `false`  | hyphen (`-`) is not a valid identifier character -- invalid |
+| `""`             | `false`  | an empty string is not an identifier -- invalid             |
+| `"func"`         | `false`  | a Go **keyword** can't be used as an identifier -- invalid  |
 
 #### Line 26
 
@@ -340,7 +340,7 @@ Loops over each case in the table with `range`. `_` discards the index, and `tc`
 t.Run(tc.name, func(t *testing.T) {
 ```
 
-`t.Run(name, fn)` runs a **subtest** — each case appears as its own named test in `go test -v`. If one fails, it's easy to see exactly which case broke.
+`t.Run(name, fn)` runs a **subtest** -- each case appears as its own named test in `go test -v`. If one fails, it's easy to see exactly which case broke.
 
 #### Line 28
 
@@ -350,7 +350,7 @@ got := token.IsIdentifier(tc.input)
 
 `token.IsIdentifier(tc.input)` checks whether the input is a valid identifier and stores the result in `got`. This is the actual testing logic.
 
-#### Lines 29–31
+#### Lines 29-31
 
 ```go
 if got != tc.expected {
@@ -408,8 +408,8 @@ Run 'go test -v' in this folder to check identifier validity rules.
 
 ## Key Takeaways
 
-1. **Table-driven testing** — organizing many input/expected cases in a struct slice.
-2. **`go/token.IsIdentifier`** — standard library function to check if a string is a valid Go identifier.
-3. **`t.Run` subtests** — each case as a named test; fail location is clear.
-4. **`t.Errorf`** — reporting a failure with a diagnostic message.
-5. **Test conventions** — `_test.go` file, `TestXxx` function, `*testing.T` argument, run with `go test`.
+1. **Table-driven testing** -- organizing many input/expected cases in a struct slice.
+2. **`go/token.IsIdentifier`** -- standard library function to check if a string is a valid Go identifier.
+3. **`t.Run` subtests** -- each case as a named test; fail location is clear.
+4. **`t.Errorf`** -- reporting a failure with a diagnostic message.
+5. **Test conventions** -- `_test.go` file, `TestXxx` function, `*testing.T` argument, run with `go test`.

@@ -1,18 +1,18 @@
 # devide-zero
 
-Go-তে **division by zero** হ্যান্ডলিং করে error return করা শেখার ছোট example — custom error তৈরি করে safe divide function লেখা।
+Go-তে **division by zero** হ্যান্ডলিং করে error return করা শেখার ছোট example -- custom error তৈরি করে safe divide function লেখা.
 
-**📖 ভাষা নির্বাচন করুন / Choose language:**
+**ভাষা নির্বাচন করুন / Choose language:**
 
-[🇧🇩 বাংলা](#bangla) • [🇬🇧 English](#english)
+[বাংলা](#bangla) * [English](#english)
 
 ---
 
 <a name="bangla"></a>
 
-## 🇧🇩 বাংলা সংস্করণ
+## বাংলা সংস্করণ
 
-### Lines 1–6
+### Lines 1-6
 
 ```go
 package main
@@ -23,11 +23,11 @@ import (
 )
 ```
 
-- `package main` — একট�া executable program。
-- `errors` — `errors.New` দিয়ে custom error তৈরি করতে。
-- `fmt` — output print করতে।
+- `package main` -- একটা executable program.
+- `errors` -- `errors.New` দিয়ে custom error তৈরি করতে.
+- `fmt` -- output print করতে.
 
-### Lines 8–13
+### Lines 8-13
 
 ```go
 func divide(a, b float64) (float64, error) {
@@ -40,11 +40,11 @@ func divide(a, b float64) (float64, error) {
 
 Custom `divide` function যা দুটো value return করে:
 
-- `func divide(a, b float64) (float64, error)` — দুট�া input (`float64`), দুট�া output: `float64` (result) + `error` (nil হলে success)।
-- `if b == 0` — divisor শূন্য হলে error return করে (`errors.New("division by zero")`)।
-- `return (a / b), nil` — সঠিক case-এ result + nil error।
+- `func divide(a, b float64) (float64, error)` -- দুটা input (`float64`), দুটা output: `float64` (result) + `error` (nil হলে success).
+- `if b == 0` -- divisor শূন্য হলে error return করে (`errors.New("division by zero")`).
+- `return (a / b), nil` -- সঠিক case-এ result + nil error.
 
-### Lines 15–21
+### Lines 15-21
 
 ```go
 func main() {
@@ -56,9 +56,9 @@ func main() {
 }
 ```
 
-- `result, err := divide(10, 3)` — normal division, error নেই, result `3.333...`。
-- `if err != nil` — error থাকলে print করে, কিন্তু এখানে error নেই তাই skip।
-- `fmt.Println(result)` → `3.3333333333333335`
+- `result, err := divide(10, 3)` -- normal division, error নেই, result `3.333...`.
+- `if err != nil` -- error থাকলে print করে, কিন্তু এখানে error নেই তাই skip.
+- `fmt.Println(result)` -> `3.3333333333333335`
 
 ---
 
@@ -70,10 +70,10 @@ func main() {
 
 ## মূল শিক্ষা / Key Takeaways
 
-1. **Multiple return values** — Go-তে একাধিক value return করা সাধারণ; এখানে `float64, error`।
-2. **`errors.New()`** — simple string error তৈরি করতে stdlib থেকে。
-3. **Zero division guard** — `b == 0` চেক করে safe divide করা।
-4. **Error handling idiom** — `if err != nil` check করাই Go-তে standard pattern。
+1. **Multiple return values** -- Go-তে একাধিক value return করা সাধারণ; এখানে `float64, error`.
+2. **`errors.New()`** -- simple string error তৈরি করতে stdlib থেকে.
+3. **Zero division guard** -- `b == 0` চেক করে safe divide করা.
+4. **Error handling idiom** -- `if err != nil` check করাই Go-তে standard pattern.
 
 ---
 
@@ -81,9 +81,9 @@ func main() {
 
 <a name="english"></a>
 
-## 🇬🇧 English Version
+##  English Version
 
-### Lines 1–6
+### Lines 1-6
 
 ```go
 package main
@@ -94,11 +94,11 @@ import (
 )
 ```
 
-- `package main` — an executable program.
-- `errors` — to create custom errors with `errors.New`.
-- `fmt` — for console output.
+- `package main` -- an executable program.
+- `errors` -- to create custom errors with `errors.New`.
+- `fmt` -- for console output.
 
-### Lines 8–13
+### Lines 8-13
 
 ```go
 func divide(a, b float64) (float64, error) {
@@ -111,11 +111,11 @@ func divide(a, b float64) (float64, error) {
 
 A custom `divide` function that returns two values:
 
-- `func divide(a, b float64) (float64, error)` — two inputs (`float64`), two outputs: `float64` (result) + `error` (`nil` means success).
-- `if b == 0` — returns an error when divisor is zero (`errors.New("division by zero")`).
-- `return (a / b), nil` — on success, returns the result and a `nil` error.
+- `func divide(a, b float64) (float64, error)` -- two inputs (`float64`), two outputs: `float64` (result) + `error` (`nil` means success).
+- `if b == 0` -- returns an error when divisor is zero (`errors.New("division by zero")`).
+- `return (a / b), nil` -- on success, returns the result and a `nil` error.
 
-### Lines 15–21
+### Lines 15-21
 
 ```go
 func main() {
@@ -127,9 +127,9 @@ func main() {
 }
 ```
 
-- `result, err := divide(10, 3)` — normal division, no error, result is `3.333...`.
-- `if err != nil` — would print the error, but here there is no error so it's skipped.
-- `fmt.Println(result)` → `3.3333333333333335`
+- `result, err := divide(10, 3)` -- normal division, no error, result is `3.333...`.
+- `if err != nil` -- would print the error, but here there is no error so it's skipped.
+- `fmt.Println(result)` -> `3.3333333333333335`
 
 ---
 
@@ -141,7 +141,7 @@ func main() {
 
 ## Key Takeaways
 
-1. **Multiple return values** — common in Go; here returning `float64, error`.
-2. **`errors.New()`** — creates a simple string error from the standard library.
-3. **Zero division guard** — checks `b == 0` for a safe divide.
-4. **Error handling idiom** — `if err != nil` is the standard Go pattern.
+1. **Multiple return values** -- common in Go; here returning `float64, error`.
+2. **`errors.New()`** -- creates a simple string error from the standard library.
+3. **Zero division guard** -- checks `b == 0` for a safe divide.
+4. **Error handling idiom** -- `if err != nil` is the standard Go pattern.

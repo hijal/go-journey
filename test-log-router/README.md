@@ -1,22 +1,22 @@
 # test-log-router
 
-Go-তে **multi-value `case`** দিয়ে log destination routing আর **table-driven unit test** শেখার ছোট example। এতে `main.go` আর `main_test.go` আছে।
+Go-তে **multi-value `case`** দিয়ে log destination routing আর **table-driven unit test** শেখার ছোট example. এতে `main.go` আর `main_test.go` আছে.
 
-**চালানো:** `go run .` • `go test -v`
+**চালানো:** `go run .` * `go test -v`
 
-**📖 ভাষা নির্বাচন করুন / Choose language:**
+**ভাষা নির্বাচন করুন / Choose language:**
 
-[🇧🇩 বাংলা](#bangla) • [🇬🇧 English](#english)
+[বাংলা](#bangla) * [English](#english)
 
 ---
 
 <a name="bangla"></a>
 
-## 🇧🇩 বাংলা সংস্করণ
+## বাংলা সংস্করণ
 
 ### `main.go`
 
-#### Lines 1–3
+#### Lines 1-3
 
 ```go
 package main
@@ -24,10 +24,10 @@ package main
 import "fmt"
 ```
 
-- `package main` — একটা executable program। test file-টাও একই package-এ।
-- `fmt` — output print করার জন্য।
+- `package main` -- একটা executable program. test file-টাও একই package-এ.
+- `fmt` -- output print করার জন্য.
 
-#### Lines 5–18
+#### Lines 5-18
 
 ```go
 func logDestination(level string) string {
@@ -46,16 +46,16 @@ func logDestination(level string) string {
 }
 ```
 
-`logDestination` function — একটা log severity (`level`) নেয় এবং destination (string) return করে:
+`logDestination` function -- একটা log severity (`level`) নেয় এবং destination (string) return করে:
 
-- **Multi-value case:** `case "DEBUG", "TRACE":` — এক case-এ একাধিক value; level এইগুলোর যেকোনোটা হলে match।
-  - `"DEBUG"`, `"TRACE"` → `local file (rotated daily)`
-  - `"INFO"` → `stdout`
-  - `"WARN"`, `"ERROR"` → `stdout + alerting pipeline`
-  - `"FATAL"` → `stdout + alerting pipeline + pager`
-- `default` → `unknown level: drop and log a config warning`।
+- **Multi-value case:** `case "DEBUG", "TRACE":` -- এক case-এ একাধিক value; level এইগুলোর যেকোনোটা হলে match.
+  - `"DEBUG"`, `"TRACE"` -> `local file (rotated daily)`
+  - `"INFO"` -> `stdout`
+  - `"WARN"`, `"ERROR"` -> `stdout + alerting pipeline`
+  - `"FATAL"` -> `stdout + alerting pipeline + pager`
+- `default` -> `unknown level: drop and log a config warning`.
 
-#### Lines 20–27
+#### Lines 20-27
 
 ```go
 func main() {
@@ -68,13 +68,13 @@ func main() {
 }
 ```
 
-ছয়টা log level-এর destination print করে (প্রতিটা mapping দেখানোর জন্য)।
+ছয়টা log level-এর destination print করে (প্রতিটা mapping দেখানোর জন্য).
 
 ---
 
 ### `main_test.go`
 
-#### Lines 1–3
+#### Lines 1-3
 
 ```go
 package main
@@ -82,8 +82,8 @@ package main
 import "testing"
 ```
 
-- `package main` — একই package।
-- `testing` — Go-র testing framework।
+- `package main` -- একই package.
+- `testing` -- Go-র testing framework.
 
 #### Line 5
 
@@ -91,9 +91,9 @@ import "testing"
 func TestLogDestination(t *testing.T) {
 ```
 
-একটা **test function** — `Test` prefix, `*testing.T` argument। `go test` এটা চালায়।
+একটা **test function** -- `Test` prefix, `*testing.T` argument. `go test` এটা চালায়.
 
-#### Lines 6–17
+#### Lines 6-17
 
 ```go
 tests := []struct {
@@ -106,7 +106,7 @@ tests := []struct {
 }
 ```
 
-**Table-driven test** — একটা anonymous struct slice, প্রতিটা row-এ: `name` (case label), `level` (input), `want` (expected output)। main.go-র প্রতিটা case-এর mapping-টা এখানে যাচাই করা হয়।
+**Table-driven test** -- একটা anonymous struct slice, প্রতিটা row-এ: `name` (case label), `level` (input), `want` (expected output). main.go-র প্রতিটা case-এর mapping-টা এখানে যাচাই করা হয়.
 
 #### Line 19
 
@@ -114,7 +114,7 @@ tests := []struct {
 for _, tc := range tests {
 ```
 
-প্রতিটা test case-এ loop।
+প্রতিটা test case-এ loop.
 
 #### Line 20
 
@@ -122,9 +122,9 @@ for _, tc := range tests {
 t.Run(tc.name, func(t *testing.T) {
 ```
 
-`t.Run` — প্রতিটা case আলাদা **subtest** হিসেবে (named)। fail হলে কোনটা ভেঙেছে স্পষ্ট।
+`t.Run` -- প্রতিটা case আলাদা **subtest** হিসেবে (named). fail হলে কোনটা ভেঙেছে স্পষ্ট.
 
-#### Lines 21–24
+#### Lines 21-24
 
 ```go
 got := logDestination(tc.level)
@@ -133,8 +133,8 @@ if got != tc.want {
 }
 ```
 
-- `got := logDestination(tc.level)` — actual result।
-- `got != tc.want` হলে `t.Errorf` দিয়ে failure report (input, actual, expected `%q` linked)।
+- `got := logDestination(tc.level)` -- actual result.
+- `got != tc.want` হলে `t.Errorf` দিয়ে failure report (input, actual, expected `%q` linked).
 
 ---
 
@@ -151,15 +151,15 @@ stdout + alerting pipeline + pager
 unknown level: drop and log a config warning
 ```
 
-`go test -v`: সব subtests PASS।
+`go test -v`: সব subtests PASS.
 
 ## মূল শিক্ষা / Key Takeaways
 
-1. **Multi-value `case`** — `case "DEBUG", "TRACE":` — multiple values, যেকোনোটা match হলেই চলে।
-2. **`return` inside switch** — প্রতি case-এ immediate return, fallthrough ছাড়া।
-3. **`default`** — unmatched হলে।
-4. **Table-driven test** — struct slice দিয়ে অনেক case যাচাই।
-5. **`t.Run` subtests + `t.Errorf`** — যাচাই ও diagnostic।
+1. **Multi-value `case`** -- `case "DEBUG", "TRACE":` -- multiple values, যেকোনোটা match হলেই চলে.
+2. **`return` inside switch** -- প্রতি case-এ immediate return, fallthrough ছাড়া.
+3. **`default`** -- unmatched হলে.
+4. **Table-driven test** -- struct slice দিয়ে অনেক case যাচাই.
+5. **`t.Run` subtests + `t.Errorf`** -- যাচাই ও diagnostic.
 
 ---
 
@@ -167,11 +167,11 @@ unknown level: drop and log a config warning
 
 <a name="english"></a>
 
-## 🇬🇧 English Version
+##  English Version
 
 ### `main.go`
 
-#### Lines 1–3
+#### Lines 1-3
 
 ```go
 package main
@@ -179,10 +179,10 @@ package main
 import "fmt"
 ```
 
-- `package main` — an executable program. The test file is in the same package.
-- `fmt` — for console output.
+- `package main` -- an executable program. The test file is in the same package.
+- `fmt` -- for console output.
 
-#### Lines 5–18
+#### Lines 5-18
 
 ```go
 func logDestination(level string) string {
@@ -201,16 +201,16 @@ func logDestination(level string) string {
 }
 ```
 
-`logDestination` function — takes a log severity (`level`) and returns a destination (string):
+`logDestination` function -- takes a log severity (`level`) and returns a destination (string):
 
-- **Multi-value case:** `case "DEBUG", "TRACE":` — one case lists multiple values; it matches if `level` is any of them.
-  - `"DEBUG"`, `"TRACE"` → `local file (rotated daily)`
-  - `"INFO"` → `stdout`
-  - `"WARN"`, `"ERROR"` → `stdout + alerting pipeline`
-  - `"FATAL"` → `stdout + alerting pipeline + pager`
-- `default` → `unknown level: drop and log a config warning`.
+- **Multi-value case:** `case "DEBUG", "TRACE":` -- one case lists multiple values; it matches if `level` is any of them.
+  - `"DEBUG"`, `"TRACE"` -> `local file (rotated daily)`
+  - `"INFO"` -> `stdout`
+  - `"WARN"`, `"ERROR"` -> `stdout + alerting pipeline`
+  - `"FATAL"` -> `stdout + alerting pipeline + pager`
+- `default` -> `unknown level: drop and log a config warning`.
 
-#### Lines 20–27
+#### Lines 20-27
 
 ```go
 func main() {
@@ -229,7 +229,7 @@ Prints the destination for six log levels (to show each mapping).
 
 ### `main_test.go`
 
-#### Lines 1–3
+#### Lines 1-3
 
 ```go
 package main
@@ -237,8 +237,8 @@ package main
 import "testing"
 ```
 
-- `package main` — the same package.
-- `testing` — Go's testing framework.
+- `package main` -- the same package.
+- `testing` -- Go's testing framework.
 
 #### Line 5
 
@@ -246,9 +246,9 @@ import "testing"
 func TestLogDestination(t *testing.T) {
 ```
 
-A **test function** — `Test` prefix, `*testing.T` argument. `go test` runs it.
+A **test function** -- `Test` prefix, `*testing.T` argument. `go test` runs it.
 
-#### Lines 6–17
+#### Lines 6-17
 
 ```go
 tests := []struct {
@@ -261,7 +261,7 @@ tests := []struct {
 }
 ```
 
-**Table-driven test** — an anonymous struct slice; each row has `name` (case label), `level` (input), and `want` (expected output). The mappings from main.go are verified here.
+**Table-driven test** -- an anonymous struct slice; each row has `name` (case label), `level` (input), and `want` (expected output). The mappings from main.go are verified here.
 
 #### Line 19
 
@@ -277,9 +277,9 @@ Loops over each test case.
 t.Run(tc.name, func(t *testing.T) {
 ```
 
-`t.Run` — each case as its own named **subtest**. If one fails, it's clear which one broke.
+`t.Run` -- each case as its own named **subtest**. If one fails, it's clear which one broke.
 
-#### Lines 21–24
+#### Lines 21-24
 
 ```go
 got := logDestination(tc.level)
@@ -288,8 +288,8 @@ if got != tc.want {
 }
 ```
 
-- `got := logDestination(tc.level)` — the actual result.
-- If `got != tc.want`, report a failure with `t.Errorf` (input, actual, expected — `%q` quoted).
+- `got := logDestination(tc.level)` -- the actual result.
+- If `got != tc.want`, report a failure with `t.Errorf` (input, actual, expected -- `%q` quoted).
 
 ---
 
@@ -310,8 +310,8 @@ unknown level: drop and log a config warning
 
 ## Key Takeaways
 
-1. **Multi-value `case`** — `case "DEBUG", "TRACE":` — runs if any value matches.
-2. **`return` inside switch** — immediate return per case, no fallthrough.
-3. **`default`** — for unmatched levels.
-4. **Table-driven test** — verifying many cases with a struct slice.
-5. **`t.Run` subtests + `t.Errorf`** — verification and diagnostics.
+1. **Multi-value `case`** -- `case "DEBUG", "TRACE":` -- runs if any value matches.
+2. **`return` inside switch** -- immediate return per case, no fallthrough.
+3. **`default`** -- for unmatched levels.
+4. **Table-driven test** -- verifying many cases with a struct slice.
+5. **`t.Run` subtests + `t.Errorf`** -- verification and diagnostics.

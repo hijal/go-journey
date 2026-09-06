@@ -1,16 +1,16 @@
 # multi-gateway-payment-proccess
 
-Go-তে **interface**, **implicit implementation**, আর **polymorphism** দিয়ে একাধিক payment gateway (processor) manage করা শেখার ছোট example।
+Go-তে **interface**, **implicit implementation**, আর **polymorphism** দিয়ে একাধিক payment gateway (processor) manage করা শেখার ছোট example.
 
-**📖 ভাষা নির্বাচন করুন / Choose language:**
+**ভাষা নির্বাচন করুন / Choose language:**
 
-[🇧🇩 বাংলা](#bangla) • [🇬🇧 English](#english)
+[বাংলা](#bangla) * [English](#english)
 
 ---
 
 <a name="bangla"></a>
 
-## 🇧🇩 বাংলা সংস্করণ
+## বাংলা সংস্করণ
 
 ### Line 1
 
@@ -18,7 +18,7 @@ Go-তে **interface**, **implicit implementation**, আর **polymorphism** �
 package main
 ```
 
-একটা executable program (`main` package) declare করে, যা `go run` দিয়ে চালানো যায়।
+একটা executable program (`main` package) declare করে, যা `go run` দিয়ে চালানো যায়.
 
 ### Line 3
 
@@ -26,9 +26,9 @@ package main
 import "fmt"
 ```
 
-Console-এ output print করার জন্য `fmt` package import করা হয়।
+Console-এ output print করার জন্য `fmt` package import করা হয়.
 
-### Lines 5–8
+### Lines 5-8
 
 ```go
 type PaymentProcessor interface {
@@ -37,12 +37,12 @@ type PaymentProcessor interface {
 }
 ```
 
-একটা **interface** `PaymentProcessor` define করে। Interface হলো একটা **contract** — এটা বলে "যে কোনো type-কে `PaymentProcessor` হিসেবে ব্যবহার করতে হলে এই method-গুলো থাকতে হবে":
+একটা **interface** `PaymentProcessor` define করে. Interface হলো একটা **contract** -- এটা বলে "যে কোনো type-কে `PaymentProcessor` হিসেবে ব্যবহার করতে হলে এই method-গুলো থাকতে হবে":
 
-- `Charge(amountCents int) error` — একটা method যা cent-এ amount নেয় এবং `error` return করে।
-- `Name() string` — একটা method যা processor-এর নাম string হিসেবে return করে।
+- `Charge(amountCents int) error` -- একটা method যা cent-এ amount নেয় এবং `error` return করে.
+- `Name() string` -- একটা method যা processor-এর নাম string হিসেবে return করে.
 
-Interface-টা নিজে কোনো implementation ধারণ করে না — শুধু "কী করা উচিত" define করে।
+Interface-টা নিজে কোনো implementation ধারণ করে না -- শুধু "কী করা উচিত" define করে.
 
 ### Line 10
 
@@ -50,9 +50,9 @@ Interface-টা নিজে কোনো implementation ধারণ করে
 type StripeStyleProcessor struct{}
 ```
 
-`StripeStyleProcessor` নামে একটা **empty struct** type declare করে। এতে কোনো field নেই — আমরা শুধু behavior-এর জন্য type টা ব্যবহার করব। Name টা প্রতীকী: card network-এর মতো process করা (Stripe-style)।
+`StripeStyleProcessor` নামে একটা **empty struct** type declare করে. এতে কোনো field নেই -- আমরা শুধু behavior-এর জন্য type টা ব্যবহার করব. Name টা প্রতীকী: card network-এর মতো process করা (Stripe-style).
 
-### Lines 12–16
+### Lines 12-16
 
 ```go
 func (StripeStyleProcessor) Charge(amountCents int) error {
@@ -61,9 +61,9 @@ func (StripeStyleProcessor) Charge(amountCents int) error {
 }
 ```
 
-`StripeStyleProcessor`-এর উপর **method** `Charge` define করে। Receiver-টা `(StripeStyleProcessor)` — কোনো receiver variable-এর নাম নেই, কারণ আমাদের কিছুর দরকার নেই (empty struct)। Method-টা একটা message print করে এবং `nil` (no error) return করে।
+`StripeStyleProcessor`-এর উপর **method** `Charge` define করে. Receiver-টা `(StripeStyleProcessor)` -- কোনো receiver variable-এর নাম নেই, কারণ আমাদের কিছুর দরকার নেই (empty struct). Method-টা একটা message print করে এবং `nil` (no error) return করে.
 
-### Lines 18–20
+### Lines 18-20
 
 ```go
 func (StripeStyleProcessor) Name() string {
@@ -71,9 +71,9 @@ func (StripeStyleProcessor) Name() string {
 }
 ```
 
-`Name` method define করে যা `"card"` return করে।
+`Name` method define করে যা `"card"` return করে.
 
-এখন `StripeStyleProcessor`-এর interface-এর দুটো method-ই আছে → এটা automatic-এ `PaymentProcessor` interface-কে **satisfy** করে। Go-তে interface implement করার জন্য `implements` keyword-এর দরকার নেই — **structural typing**: method set-টা ঠিক থাকলেই হয়।
+এখন `StripeStyleProcessor`-এর interface-এর দুটো method-ই আছে -> এটা automatic-এ `PaymentProcessor` interface-কে **satisfy** করে. Go-তে interface implement করার জন্য `implements` keyword-এর দরকার নেই -- **structural typing**: method set-টা ঠিক থাকলেই হয়.
 
 ### Line 22
 
@@ -81,9 +81,9 @@ func (StripeStyleProcessor) Name() string {
 type MobileWalletProcessor struct{}
 ```
 
-আরেকটা empty struct type `MobileWalletProcessor` — মোবাইল wallet (যেমন bKash/Nagad/GPay-এর মতো) gateway-কে represent করে।
+আরেকটা empty struct type `MobileWalletProcessor` -- মোবাইল wallet (যেমন bKash/Nagad/GPay-এর মতো) gateway-কে represent করে.
 
-### Lines 24–27
+### Lines 24-27
 
 ```go
 func (MobileWalletProcessor) Charge(amountCents int) error {
@@ -92,9 +92,9 @@ func (MobileWalletProcessor) Charge(amountCents int) error {
 }
 ```
 
-`MobileWalletProcessor`-এর উপর `Charge` method — ভিন্ন message print করে, কিন্তু একই signature (`int -> error`), তাই interface-এর সাথে match করে।
+`MobileWalletProcessor`-এর উপর `Charge` method -- ভিন্ন message print করে, কিন্তু একই signature (`int -> error`), তাই interface-এর সাথে match করে.
 
-### Lines 29–31
+### Lines 29-31
 
 ```go
 func (MobileWalletProcessor) Name() string {
@@ -102,9 +102,9 @@ func (MobileWalletProcessor) Name() string {
 }
 ```
 
-`Name` method — `"mobile-wallet"` return করে। দুটো type এখন দুটোই `PaymentProcessor` interface-কে satisfy করে।
+`Name` method -- `"mobile-wallet"` return করে. দুটো type এখন দুটোই `PaymentProcessor` interface-কে satisfy করে.
 
-### Lines 33–38
+### Lines 33-38
 
 ```go
 func processPayment(p PaymentProcessor, amountCents int) {
@@ -115,11 +115,11 @@ func processPayment(p PaymentProcessor, amountCents int) {
 }
 ```
 
-আলাদা function `processPayment` যা একজন `PaymentProcessor` (`p`) আর একটা amount নেয়। **Polymorphism-এর মজা এখানেই:** function টা শুধু interface-কে জানে — `StripeStyleProcessor` নাকি `MobileWalletProcessor` সেটা জানার দরকার নেই।
+আলাদা function `processPayment` যা একজন `PaymentProcessor` (`p`) আর একটা amount নেয়. **Polymorphism-এর মজা এখানেই:** function টা শুধু interface-কে জানে -- `StripeStyleProcessor` নাকি `MobileWalletProcessor` সেটা জানার দরকার নেই.
 
-- `p.Name()` — কোন processor ব্যবহার হচ্ছে, print করে।
-- `p.Charge(amountCents)` — charge করে; result error `err`-এ। `if err := ...; err != nil` pattern দিয়ে check — error হলে "Payment failed" print করে।
-- Caller হিসেবে আমরা **যেকোনো** `PaymentProcessor` দিতে পারি। নতুন gateway যোগ করলে function-টা অপরিবর্তিত থাকে — এটা open/closed-এর মতো principle-এর একটা সাধারণ উদাহরণ।
+- `p.Name()` -- কোন processor ব্যবহার হচ্ছে, print করে.
+- `p.Charge(amountCents)` -- charge করে; result error `err`-এ. `if err := ...; err != nil` pattern দিয়ে check -- error হলে "Payment failed" print করে.
+- Caller হিসেবে আমরা **যেকোনো** `PaymentProcessor` দিতে পারি. নতুন gateway যোগ করলে function-টা অপরিবর্তিত থাকে -- এটা open/closed-এর মতো principle-এর একটা সাধারণ উদাহরণ.
 
 ### Line 40
 
@@ -127,9 +127,9 @@ func processPayment(p PaymentProcessor, amountCents int) {
 func main() {
 ```
 
-Program-এর entry point।
+Program-এর entry point.
 
-### Lines 41–44
+### Lines 41-44
 
 ```go
 processors := []PaymentProcessor{
@@ -138,9 +138,9 @@ processors := []PaymentProcessor{
 }
 ```
 
-`processors` — একটা `[]PaymentProcessor` slice। গুরুত্বপূর্ণ: element-গুলোর type হলো **interface** `PaymentProcessor`, কিন্তু আমরা দুটো concrete type-এর value দিচ্ছি (`StripeStyleProcessor{}` আর `MobileWalletProcessor{}`)। যেহেতু ওরা interface-কে satisfy করে, ওরা-কে interface-তে assign করা যায়।
+`processors` -- একটা `[]PaymentProcessor` slice. গুরুত্বপূর্ণ: element-গুলোর type হলো **interface** `PaymentProcessor`, কিন্তু আমরা দুটো concrete type-এর value দিচ্ছি (`StripeStyleProcessor{}` আর `MobileWalletProcessor{}`). যেহেতু ওরা interface-কে satisfy করে, ওরা-কে interface-তে assign করা যায়.
 
-### Lines 46–48
+### Lines 46-48
 
 ```go
 for _, p := range processors {
@@ -148,7 +148,7 @@ for _, p := range processors {
 }
 ```
 
-slice-এর প্রতিটা `p`-তে `processPayment(p, 25000)` call করে — amount `25000` cents (250 টাকা/ডলার) দিয়ে। `p` code-এ interface হলোেও, runtime-এ ঠিক আসল concrete type-এর method-ই চলে (dynamic dispatch)।
+slice-এর প্রতিটা `p`-তে `processPayment(p, 25000)` call করে -- amount `25000` cents (250 টাকা/ডলার) দিয়ে. `p` code-এ interface হলোেও, runtime-এ ঠিক আসল concrete type-এর method-ই চলে (dynamic dispatch).
 
 ### Line 49
 
@@ -156,7 +156,7 @@ slice-এর প্রতিটা `p`-তে `processPayment(p, 25000)` call �
 }
 ```
 
-Closing brace — `main` function শেষ হয়।
+Closing brace -- `main` function শেষ হয়.
 
 ---
 
@@ -171,11 +171,11 @@ charging 25000 cents via mobile wallet
 
 ## মূল শিক্ষা / Key Takeaways
 
-1. **Interface** — method-এর contract; type-কে কী কী করতে হবে define করে।
-2. **Implicit implementation** — `implements` keyword নাই; method set-টা match করলেই interface satisfy হয়।
-3. **Polymorphism** — `[]PaymentProcessor` slice-এ বিভিন্ন concrete type রাখা যায়; একই function সব চালায়।
-4. **Dynamic dispatch** — interface ভেরিয়েবল দিয়ে method call করলে runtime-এ আসল type-এর method চলে।
-5. **Extensibility** — নতুন gateway যোগ করতে হলে শুধু interface-এর method-গুলো implement করলেই চলবে।
+1. **Interface** -- method-এর contract; type-কে কী কী করতে হবে define করে.
+2. **Implicit implementation** -- `implements` keyword নাই; method set-টা match করলেই interface satisfy হয়.
+3. **Polymorphism** -- `[]PaymentProcessor` slice-এ বিভিন্ন concrete type রাখা যায়; একই function সব চালায়.
+4. **Dynamic dispatch** -- interface ভেরিয়েবল দিয়ে method call করলে runtime-এ আসল type-এর method চলে.
+5. **Extensibility** -- নতুন gateway যোগ করতে হলে শুধু interface-এর method-গুলো implement করলেই চলবে.
 
 ---
 
@@ -183,7 +183,7 @@ charging 25000 cents via mobile wallet
 
 <a name="english"></a>
 
-## 🇬🇧 English Version
+##  English Version
 
 ### Line 1
 
@@ -201,7 +201,7 @@ import "fmt"
 
 Imports the `fmt` package for console output.
 
-### Lines 5–8
+### Lines 5-8
 
 ```go
 type PaymentProcessor interface {
@@ -210,12 +210,12 @@ type PaymentProcessor interface {
 }
 ```
 
-Defines an **interface** `PaymentProcessor`. An interface is a **contract** — it declares which methods any type must have to be used as a `PaymentProcessor`:
+Defines an **interface** `PaymentProcessor`. An interface is a **contract** -- it declares which methods any type must have to be used as a `PaymentProcessor`:
 
-- `Charge(amountCents int) error` — a method taking an amount in cents and returning an `error`.
-- `Name() string` — a method returning the processor's name as a string.
+- `Charge(amountCents int) error` -- a method taking an amount in cents and returning an `error`.
+- `Name() string` -- a method returning the processor's name as a string.
 
-An interface holds no implementation itself — it only defines "what must be possible".
+An interface holds no implementation itself -- it only defines "what must be possible".
 
 ### Line 10
 
@@ -223,9 +223,9 @@ An interface holds no implementation itself — it only defines "what must be po
 type StripeStyleProcessor struct{}
 ```
 
-Declares an **empty struct** type `StripeStyleProcessor`. It has no fields — we only use the type for its behavior. The name is symbolic: processing like a card-network (Stripe-style).
+Declares an **empty struct** type `StripeStyleProcessor`. It has no fields -- we only use the type for its behavior. The name is symbolic: processing like a card-network (Stripe-style).
 
-### Lines 12–16
+### Lines 12-16
 
 ```go
 func (StripeStyleProcessor) Charge(amountCents int) error {
@@ -234,9 +234,9 @@ func (StripeStyleProcessor) Charge(amountCents int) error {
 }
 ```
 
-Defines the **method** `Charge` on `StripeStyleProcessor`. The receiver is `(StripeStyleProcessor)` — no receiver variable name, because we don't need one (empty struct). The method prints a message and returns `nil` (no error).
+Defines the **method** `Charge` on `StripeStyleProcessor`. The receiver is `(StripeStyleProcessor)` -- no receiver variable name, because we don't need one (empty struct). The method prints a message and returns `nil` (no error).
 
-### Lines 18–20
+### Lines 18-20
 
 ```go
 func (StripeStyleProcessor) Name() string {
@@ -246,7 +246,7 @@ func (StripeStyleProcessor) Name() string {
 
 Defines the `Name` method, returning `"card"`.
 
-Now `StripeStyleProcessor` has both methods of the interface → it automatically **satisfies** `PaymentProcessor`. Go needs no `implements` keyword — it's **structural typing**: if the method set matches, it satisfies the interface.
+Now `StripeStyleProcessor` has both methods of the interface -> it automatically **satisfies** `PaymentProcessor`. Go needs no `implements` keyword -- it's **structural typing**: if the method set matches, it satisfies the interface.
 
 ### Line 22
 
@@ -254,9 +254,9 @@ Now `StripeStyleProcessor` has both methods of the interface → it automaticall
 type MobileWalletProcessor struct{}
 ```
 
-Another empty struct type `MobileWalletProcessor` — representing a mobile-wallet gateway (like bKash/Nagad/GPay).
+Another empty struct type `MobileWalletProcessor` -- representing a mobile-wallet gateway (like bKash/Nagad/GPay).
 
-### Lines 24–27
+### Lines 24-27
 
 ```go
 func (MobileWalletProcessor) Charge(amountCents int) error {
@@ -265,9 +265,9 @@ func (MobileWalletProcessor) Charge(amountCents int) error {
 }
 ```
 
-`Charge` on `MobileWalletProcessor` — prints a different message but keeps the same signature (`int -> error`), so it matches the interface.
+`Charge` on `MobileWalletProcessor` -- prints a different message but keeps the same signature (`int -> error`), so it matches the interface.
 
-### Lines 29–31
+### Lines 29-31
 
 ```go
 func (MobileWalletProcessor) Name() string {
@@ -277,7 +277,7 @@ func (MobileWalletProcessor) Name() string {
 
 `Name` method returning `"mobile-wallet"`. Both types now satisfy the `PaymentProcessor` interface.
 
-### Lines 33–38
+### Lines 33-38
 
 ```go
 func processPayment(p PaymentProcessor, amountCents int) {
@@ -288,11 +288,11 @@ func processPayment(p PaymentProcessor, amountCents int) {
 }
 ```
 
-A separate function `processPayment` that takes a `PaymentProcessor` (`p`) and an amount. **This is the payoff of polymorphism:** the function only knows the interface — it doesn't need to know `StripeStyleProcessor` vs `MobileWalletProcessor`.
+A separate function `processPayment` that takes a `PaymentProcessor` (`p`) and an amount. **This is the payoff of polymorphism:** the function only knows the interface -- it doesn't need to know `StripeStyleProcessor` vs `MobileWalletProcessor`.
 
-- `p.Name()` — prints which processor is being used.
-- `p.Charge(amountCents)` — performs the charge; the resulting error goes into `err`. Checked with the `if err := ...; err != nil` pattern — on error it prints "Payment failed".
-- As a caller we can pass **any** `PaymentProcessor`. Adding a new gateway leaves this function untouched — a simple take on the open/closed principle.
+- `p.Name()` -- prints which processor is being used.
+- `p.Charge(amountCents)` -- performs the charge; the resulting error goes into `err`. Checked with the `if err := ...; err != nil` pattern -- on error it prints "Payment failed".
+- As a caller we can pass **any** `PaymentProcessor`. Adding a new gateway leaves this function untouched -- a simple take on the open/closed principle.
 
 ### Line 40
 
@@ -302,7 +302,7 @@ func main() {
 
 Program entry point.
 
-### Lines 41–44
+### Lines 41-44
 
 ```go
 processors := []PaymentProcessor{
@@ -311,9 +311,9 @@ processors := []PaymentProcessor{
 }
 ```
 
-`processors` — a `[]PaymentProcessor` slice. Key point: the element type is the **interface** `PaymentProcessor`, but we store concrete values of both types (`StripeStyleProcessor{}` and `MobileWalletProcessor{}`). Because they satisfy the interface, they can be assigned to it.
+`processors` -- a `[]PaymentProcessor` slice. Key point: the element type is the **interface** `PaymentProcessor`, but we store concrete values of both types (`StripeStyleProcessor{}` and `MobileWalletProcessor{}`). Because they satisfy the interface, they can be assigned to it.
 
-### Lines 46–48
+### Lines 46-48
 
 ```go
 for _, p := range processors {
@@ -329,7 +329,7 @@ For each `p` in the slice, calls `processPayment(p, 25000)` with `25000` cents (
 }
 ```
 
-Closing brace — ends the `main` function.
+Closing brace -- ends the `main` function.
 
 ---
 
@@ -344,8 +344,8 @@ charging 25000 cents via mobile wallet
 
 ## Key Takeaways
 
-1. **Interface** — a contract of methods; defines what a type must be able to do.
-2. **Implicit implementation** — no `implements` keyword; a matching method set satisfies the interface.
-3. **Polymorphism** — different concrete types can live in a `[]PaymentProcessor` slice and run through one function.
-4. **Dynamic dispatch** — calling a method through an interface variable dispatches to the real type at runtime.
-5. **Extensibility** — adding a new gateway only requires implementing the interface's methods.
+1. **Interface** -- a contract of methods; defines what a type must be able to do.
+2. **Implicit implementation** -- no `implements` keyword; a matching method set satisfies the interface.
+3. **Polymorphism** -- different concrete types can live in a `[]PaymentProcessor` slice and run through one function.
+4. **Dynamic dispatch** -- calling a method through an interface variable dispatches to the real type at runtime.
+5. **Extensibility** -- adding a new gateway only requires implementing the interface's methods.

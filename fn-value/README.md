@@ -1,18 +1,18 @@
 # fn-value
 
-Go-তে **function as a value** (function type) শেখার ছোট example — custom function type তৈরি করে function reference variable-এ store করা।
+Go-তে **function as a value** (function type) শেখার ছোট example -- custom function type তৈরি করে function reference variable-এ store করা.
 
-**📖 ভাষা নির্বাচন করুন / Choose language:**
+**ভাষা নির্বাচন করুন / Choose language:**
 
-[🇧🇩 বাংলা](#bangla) • [🇬🇧 English](#english)
+[বাংলা](#bangla) * [English](#english)
 
 ---
 
 <a name="bangla"></a>
 
-## 🇧🇩 বাংলা সংস্করণ
+## বাংলা সংস্করণ
 
-### Lines 1–3
+### Lines 1-3
 
 ```go
 package main
@@ -20,8 +20,8 @@ package main
 import "fmt"
 ```
 
-- `package main` — একট�া executable program。
-- `fmt` — output print করতে。
+- `package main` -- একটা executable program.
+- `fmt` -- output print করতে.
 
 ### Line 5
 
@@ -29,14 +29,14 @@ import "fmt"
 type Operator func(int, int) int
 ```
 
-একট�া custom function type তৈরি:
+একটা custom function type তৈরি:
 
-- `type Operator` — `Operator` নামে একট�া নতুন type।
-- `func(int, int) int` — এই type-টাকে সংজ্ঞা দেয়: দুট�া `int` parameter, একট�া `int` return value।
+- `type Operator` -- `Operator` নামে একটা নতুন type.
+- `func(int, int) int` -- এই type-টাকে সংজ্ঞা দেয়: দুটা `int` parameter, একটা `int` return value.
 
-এখন `Operator` হলো একট�া function类型 যার signature `(int, int) int`。
+এখন `Operator` হলো একটা function যার signature `(int, int) int`.
 
-### Lines 7–9
+### Lines 7-9
 
 ```go
 func multiply(a, b int) int {
@@ -44,7 +44,7 @@ func multiply(a, b int) int {
 }
 ```
 
-একট�া normal named function `multiply` — দুট�া int নিয়ে product দেয়।
+একটা normal named function `multiply` -- দুটা int নিয়ে product দেয়.
 
 ### Line 12
 
@@ -52,7 +52,7 @@ func multiply(a, b int) int {
 var op Operator = multiply
 ```
 
-`multiply` function-ট�ো `op` variable-এ assign করা হচ্ছ — function value as a variable。
+`multiply` function-টো `op` variable-এ assign করা হচ্ছ -- function value as a variable.
 
 ### Line 13
 
@@ -60,7 +60,7 @@ var op Operator = multiply
 fmt.Println("function value:", op(3, 4))
 ```
 
-`op(3, 4)` মানে `multiply(3, 4)` = `12`।
+`op(3, 4)` মানে `multiply(3, 4)` = `12`.
 
 ---
 
@@ -72,10 +72,10 @@ function value: 12
 
 ## মূল শিক্ষা / Key Takeaways
 
-1. **Function type** — `type Operator func(int, int) int` দিয়ে custom function signature type তৈরি করা যায়。
-2. **Function as value** — function-কে variable-এ store করে পরে call করা যায়।
-3. **Assignability** — `multiply`-র signature `func(int, int) int`, তাই `Operator`-এ assign করা যায়।
-4. **Function variables** — function pointers এর বদলে Go-তে সরাসরি function value variable-এ রাখা যায়。
+1. **Function type** -- `type Operator func(int, int) int` দিয়ে custom function signature type তৈরি করা যায়.
+2. **Function as value** -- function-কে variable-এ store করে পরে call করা যায়.
+3. **Assignability** -- `multiply`-র signature `func(int, int) int`, তাই `Operator`-এ assign করা যায়.
+4. **Function variables** -- function pointers এর বদলে Go-তে সরাসরি function value variable-এ রাখা যায়.
 
 ---
 
@@ -83,9 +83,9 @@ function value: 12
 
 <a name="english"></a>
 
-## 🇬🇧 English Version
+##  English Version
 
-### Lines 1–3
+### Lines 1-3
 
 ```go
 package main
@@ -93,8 +93,8 @@ package main
 import "fmt"
 ```
 
-- `package main` — an executable program.
-- `fmt` — for console output.
+- `package main` -- an executable program.
+- `fmt` -- for console output.
 
 ### Line 5
 
@@ -104,12 +104,12 @@ type Operator func(int, int) int
 
 Defines a custom function type:
 
-- `type Operator` — a new type named `Operator`.
-- `func(int, int) int` — this type represents any function that takes two `int`s and returns an `int`.
+- `type Operator` -- a new type named `Operator`.
+- `func(int, int) int` -- this type represents any function that takes two `int`s and returns an `int`.
 
-Now `Operator` is a function type with the signature `(int, int) int`。
+Now `Operator` is a function type with the signature `(int, int) int`.
 
-### Lines 7–9
+### Lines 7-9
 
 ```go
 func multiply(a, b int) int {
@@ -125,7 +125,7 @@ A normal named function `multiply` that takes two ints and returns their product
 var op Operator = multiply
 ```
 
-The `multiply` function is assigned to the `op` variable — a function value stored in a variable。
+The `multiply` function is assigned to the `op` variable -- a function value stored in a variable.
 
 ### Line 13
 
@@ -133,7 +133,7 @@ The `multiply` function is assigned to the `op` variable — a function value st
 fmt.Println("function value:", op(3, 4))
 ```
 
-`op(3, 4)` means `multiply(3, 4)` = `12`。
+`op(3, 4)` means `multiply(3, 4)` = `12`.
 
 ---
 
@@ -145,7 +145,7 @@ function value: 12
 
 ## Key Takeaways
 
-1. **Function type** — `type Operator func(int, int) int` lets you define a custom function signature type.
-2. **Function as value** — functions can be stored in variables and called through them.
-3. **Assignability** — `multiply`'s signature matches `func(int, int) int`, so it can be assigned to `Operator`.
-4. **Function variables** — Go stores function values directly in variables, not pointers.
+1. **Function type** -- `type Operator func(int, int) int` lets you define a custom function signature type.
+2. **Function as value** -- functions can be stored in variables and called through them.
+3. **Assignability** -- `multiply`'s signature matches `func(int, int) int`, so it can be assigned to `Operator`.
+4. **Function variables** -- Go stores function values directly in variables, not pointers.
