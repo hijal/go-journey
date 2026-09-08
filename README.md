@@ -17,9 +17,11 @@ go run ./payment-tracker
 | `apply-discount` | Pass-by-value: function param is a copy | [README](./apply-discount/README.md) |
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
+| `bangla-text-processing` | `len` bytes vs `utf8.RuneCountInString` + `for range` byte index | [README](./bangla-text-processing/README.md) |
 | `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
 | `bill-split` | Float constants + explicit cast + `%.2f` | [README](./bill-split/README.md) |
 | `byte-size-constants` | iota + bit shift for KB/MB/GB constants | [README](./byte-size-constants/README.md) |
+| `cart-discount` | Tagless `switch` tier discount + `Printf` width/precision | [README](./cart-discount/README.md) |
 | `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) | [README](./cart-stock/README.md) |
 | `checkout-cart` | Float arithmetic + type conversion | [README](./checkout-cart/README.md) |
 | `closure-fn` | Closure: function capturing outer variable | [README](./closure-fn/README.md) |
@@ -27,6 +29,7 @@ go run ./payment-tracker
 | `config-loader` | Builtin `len` shadowing | [README](./config-loader/README.md) |
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
 | `deploy-tool` | `defer` for audit/timing log | [README](./deploy-tool/README.md) |
+| `deterministic-map-report` | Map + `slices.Sort` keys for deterministic report | [README](./deterministic-map-report/README.md) |
 | `devops-tooling` | Multiple assignment + `strconv.Atoi` | [README](./devops-tooling/README.md) |
 | `double-entry-ledger` | Methods with pointer receiver, insufficient balance error | [README](./double-entry-ledger/README.md) |
 | `devide-zero` | Error handling + division by zero guard | [README](./devide-zero/README.md) |
@@ -55,9 +58,11 @@ go run ./payment-tracker
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
 | `package-local-variable` | Package-level vs local variable scope | [README](./package-local-variable/README.md) |
 | `paybill` | Bill payment with custom error + guard clauses | [README](./paybill/README.md) |
+| `paginated-fetching` | `for` + `break` paginated fetch + slice spread `append(... )` | [README](./paginated-fetching/README.md) |
 | `pagination` | Ceiling division + offset pagination | [README](./pagination/README.md) |
 | `payment-amount` | Custom type (`PaymentAmount`) + paisa-based money | [README](./payment-amount/README.md) |
 | `payment-fee-calculator` | Constant + function | [README](./payment-fee-calculator/README.md) |
+| `payment-retry` | Sentinel error + `errors.Is` + `%w` + exponential backoff | [README](./payment-retry/README.md) |
 | `payment-risk-flagging` | `switch` with `fallthrough` | [README](./payment-risk-flagging/README.md) |
 | `payment-status-poll` | `select` + channel timeout | [README](./payment-status-poll/README.md) |
 | `payment-tracker` | Variable naming / underscores | [README](./payment-tracker/README.md) |
