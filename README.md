@@ -27,18 +27,23 @@ go run ./payment-tracker
 | `closure-fn` | Closure: function capturing outer variable | [README](./closure-fn/README.md) |
 | `concurrent-webhook` | Goroutine + channel + WaitGroup | [README](./concurrent-webhook/README.md) |
 | `config-loader` | Builtin `len` shadowing | [README](./config-loader/README.md) |
+| `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
+| `data-validation-pipeline` | Function type + variadic validator pipeline | [README](./data-validation-pipeline/README.md) |
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
 | `deploy-tool` | `defer` for audit/timing log | [README](./deploy-tool/README.md) |
 | `deterministic-map-report` | Map + `slices.Sort` keys for deterministic report | [README](./deterministic-map-report/README.md) |
 | `devops-tooling` | Multiple assignment + `strconv.Atoi` | [README](./devops-tooling/README.md) |
 | `double-entry-ledger` | Methods with pointer receiver, insufficient balance error | [README](./double-entry-ledger/README.md) |
+| `dynamic-path-url-joiner` | Variadic + `strings.Trim`/`Join` for path join | [README](./dynamic-path-url-joiner/README.md) |
 | `devide-zero` | Error handling + division by zero guard | [README](./devide-zero/README.md) |
 | `emi-loan` | Numeric underscore + aligned `%.2f` table | [README](./emi-loan/README.md) |
 | `env-variable-parsing` | `strconv` parsing with defaults | [README](./env-variable-parsing/README.md) |
+| `find-max-num` | Variadic `...int` + linear max scan | [README](./find-max-num/README.md) |
 | `fingerprint-config` | SHA-256 checksum + string/byte immutability | [README](./fingerprint-config/README.md) |
 | `fn-value` | Function type + function as value | [README](./fn-value/README.md) |
 | `fixed-tax-discount` | Constants + `fmt.Printf` formatting | [README](./fixed-tax-discount/README.md) |
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
+| `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
 | `helpDesk` | Function pipeline of string transformers | [README](./helpDesk/README.md) |
 | `http-status-code` | Unexported constants + `switch` for status mapping | [README](./http-status-code/README.md) |
@@ -50,9 +55,11 @@ go run ./payment-tracker
 | `ip-subnet` | Bitwise ops + IP subnet membership | [README](./ip-subnet/README.md) |
 | `ledger-entry` | Custom type (`Money`) | [README](./ledger-entry/README.md) |
 | `leaderboard-tie-break` | `cmp.Compare` + nested switch tie-break | [README](./leaderboard-tie-break/README.md) |
+| `merge-multiple-slices` | Variadic slices + `append(...)` merge | [README](./merge-multiple-slices/README.md) |
 | `money-conversion-testing` | Table-driven unit test + `math.Round` | [README](./money-conversion-testing/README.md) |
 | `monitoring-agent` | Float precision + epsilon compare | [README](./monitoring-agent/README.md) |
 | `monitoring-system-temp` | Builtin `max` + `switch` with initializer | [README](./monitoring-system-temp/README.md) |
+| `multi-error-aggregation` | Custom error type + nil-filter combine | [README](./multi-error-aggregation/README.md) |
 | `multi-gateway-payment-proccess` | Interface + polymorphism | [README](./multi-gateway-payment-proccess/README.md) |
 | `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
@@ -72,6 +79,7 @@ go run ./payment-tracker
 | `request-validation` | Input validation with guard clauses + `strings` | [README](./request-validation/README.md) |
 | `retail-loyalty-program` | `switch` + `fallthrough` tier benefits | [README](./retail-loyalty-program/README.md) |
 | `retail-pos` | Closure with state: independent per-register totals | [README](./retail-pos/README.md) |
+| `role-permission-authorization` | Variadic roles + membership check | [README](./role-permission-authorization/README.md) |
 | `rune-byte` | Byte vs rune, UTF-8 decoding | [README](./rune-byte/README.md) |
 | `retry-backoff-timing` | Linear backoff + `time.Duration` constants | [README](./retry-backoff-timing/README.md) |
 | `retry-policy` | Retry loop + backoff with `time.Sleep` | [README](./retry-policy/README.md) |
@@ -79,6 +87,7 @@ go run ./payment-tracker
 | `settlement-reconciliation` | `goto` retry + labeled `break` | [README](./settlement-reconciliation/README.md) |
 | `shipping-cost-tier` | `if/else if` tier-based shipping cost | [README](./shipping-cost-tier/README.md) |
 | `signup-validator` | Function type + variadic validators | [README](./signup-validator/README.md) |
+| `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
 | `switch-group` | Multi-value `case` log routing | [README](./switch-group/README.md) |
 | `test-log-router` | Log destination routing + table test | [README](./test-log-router/README.md) |
 | `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
