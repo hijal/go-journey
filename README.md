@@ -13,6 +13,7 @@ go run ./payment-tracker
 | Folder | Concept | Docs |
 | --- | --- | --- |
 | `api-backend` | Struct + constructor method | [README](./api-backend/README.md) |
+| `api-rate-limiter` | Closure factory + shared counter rate limit | [README](./api-rate-limiter/README.md) |
 | `anonymous-function` | Anonymous function + IIFE pattern | [README](./anonymous-function/README.md) |
 | `apply-discount` | Pass-by-value: function param is a copy | [README](./apply-discount/README.md) |
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
@@ -27,7 +28,9 @@ go run ./payment-tracker
 | `closure-fn` | Closure: function capturing outer variable | [README](./closure-fn/README.md) |
 | `concurrent-webhook` | Goroutine + channel + WaitGroup | [README](./concurrent-webhook/README.md) |
 | `config-loader` | Builtin `len` shadowing | [README](./config-loader/README.md) |
+| `config-loading-iife` | IIFE + env vars with defaults | [README](./config-loading-iife/README.md) |
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
+| `customer-tier-discount` | Function-as-value conditional assignment | [README](./customer-tier-discount/README.md) |
 | `data-validation-pipeline` | Function type + variadic validator pipeline | [README](./data-validation-pipeline/README.md) |
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
 | `deploy-tool` | `defer` for audit/timing log | [README](./deploy-tool/README.md) |
@@ -46,7 +49,10 @@ go run ./payment-tracker
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
 | `helpDesk` | Function pipeline of string transformers | [README](./helpDesk/README.md) |
+| `higher-order-retry-helper` | Higher-order retry + `errors.Is` + `%w` | [README](./higher-order-retry-helper/README.md) |
+| `http-handler-closure` | Closure over a map in HTTP handlers | [README](./http-handler-closure/README.md) |
 | `http-status-code` | Unexported constants + `switch` for status mapping | [README](./http-status-code/README.md) |
+| `iife-payment` | IIFE validation + message build | [README](./iife-payment/README.md) |
 | `invoice-batch-scanner` | `continue` / `break` in loop | [README](./invoice-batch-scanner/README.md) |
 | `invoice-json` | JSON marshal + unexported field | [README](./invoice-json/README.md) |
 | `inventory-stock` | Unsigned underflow + safe compare | [README](./inventory-stock/README.md) |
@@ -64,6 +70,7 @@ go run ./payment-tracker
 | `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
 | `package-local-variable` | Package-level vs local variable scope | [README](./package-local-variable/README.md) |
+| `parallel-health-check` | Goroutines + `sync.WaitGroup` parallel health checks | [README](./parallel-health-check/README.md) |
 | `paybill` | Bill payment with custom error + guard clauses | [README](./paybill/README.md) |
 | `paginated-fetching` | `for` + `break` paginated fetch + slice spread `append(... )` | [README](./paginated-fetching/README.md) |
 | `pagination` | Ceiling division + offset pagination | [README](./pagination/README.md) |
@@ -74,6 +81,7 @@ go run ./payment-tracker
 | `payment-status-poll` | `select` + channel timeout | [README](./payment-status-poll/README.md) |
 | `payment-tracker` | Variable naming / underscores | [README](./payment-tracker/README.md) |
 | `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
+| `product-sort-comparator` | `slices.SortFunc` + `cmp.Compare` multi-key sort | [README](./product-sort-comparator/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
 | `named-naked-return` | Named return values + naked return | [README](./named-naked-return/README.md) |
 | `request-validation` | Input validation with guard clauses + `strings` | [README](./request-validation/README.md) |
@@ -85,6 +93,7 @@ go run ./payment-tracker
 | `retry-policy` | Retry loop + backoff with `time.Sleep` | [README](./retry-policy/README.md) |
 | `sent-notification` | Variadic + slice spread for alert channels | [README](./sent-notification/README.md) |
 | `settlement-reconciliation` | `goto` retry + labeled `break` | [README](./settlement-reconciliation/README.md) |
+| `shared-wallet-closure` | Multiple closures sharing one captured balance | [README](./shared-wallet-closure/README.md) |
 | `shipping-cost-tier` | `if/else if` tier-based shipping cost | [README](./shipping-cost-tier/README.md) |
 | `signup-validator` | Function type + variadic validators | [README](./signup-validator/README.md) |
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
@@ -94,6 +103,7 @@ go run ./payment-tracker
 | `token-validation` | Sentinel error + `errors.Is` + `%w` wrap | [README](./token-validation/README.md) |
 | `transaction-fraud-screening` | `for range` + `continue` fraud flags | [README](./transaction-fraud-screening/README.md) |
 | `transaction-rollback` | `defer` for rollback pattern | [README](./transaction-rollback/README.md) |
+| `transaction-rollback-defer` | `defer`-based rollback on failed transfer | [README](./transaction-rollback-defer/README.md) |
 | `unix-permission-bits` | Bit flags (rwx permission bitmask) | [README](./unix-permission-bits/README.md) |
 | `validate-config` | Config validation with named return values | [README](./validate-config/README.md) |
 | `variadic-function` | Variadic function (`...int`) | [README](./variadic-function/README.md) |
