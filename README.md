@@ -19,6 +19,7 @@ go run ./payment-tracker
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
 | `bangla-text-processing` | `len` bytes vs `utf8.RuneCountInString` + `for range` byte index | [README](./bangla-text-processing/README.md) |
+| `basic-array` | Fixed-size `[4]int` + 4 range-loop variations | [README](./basic-array/README.md) |
 | `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
 | `bill-split` | Float constants + explicit cast + `%.2f` | [README](./bill-split/README.md) |
 | `byte-size-constants` | iota + bit shift for KB/MB/GB constants | [README](./byte-size-constants/README.md) |
