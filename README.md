@@ -52,6 +52,7 @@ go run ./payment-tracker
 | `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
 | `helpDesk` | Function pipeline of string transformers | [README](./helpDesk/README.md) |
 | `higher-order-retry-helper` | Higher-order retry + `errors.Is` + `%w` | [README](./higher-order-retry-helper/README.md) |
+| `http-client-functional-options` | Functional options (`Option func(*T)`) | [README](./http-client-functional-options/README.md) |
 | `http-handler-closure` | Closure over a map in HTTP handlers | [README](./http-handler-closure/README.md) |
 | `http-status-code` | Unexported constants + `switch` for status mapping | [README](./http-status-code/README.md) |
 | `iife-payment` | IIFE validation + message build | [README](./iife-payment/README.md) |
