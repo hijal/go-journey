@@ -50,6 +50,7 @@ go run ./payment-tracker
 | `fixed-tax-discount` | Constants + `fmt.Printf` formatting | [README](./fixed-tax-discount/README.md) |
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
+| `grid-load-monitoring` | Parallel arrays + one-pass peak/low scan | [README](./grid-load-monitoring/README.md) |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
 | `helpDesk` | Function pipeline of string transformers | [README](./helpDesk/README.md) |
 | `higher-order-retry-helper` | Higher-order retry + `errors.Is` + `%w` | [README](./higher-order-retry-helper/README.md) |
