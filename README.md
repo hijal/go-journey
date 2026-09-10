@@ -112,6 +112,7 @@ go run ./payment-tracker
 | `unix-permission-bits` | Bit flags (rwx permission bitmask) | [README](./unix-permission-bits/README.md) |
 | `validate-config` | Config validation with named return values | [README](./validate-config/README.md) |
 | `variadic-function` | Variadic function (`...int`) | [README](./variadic-function/README.md) |
+| `webhook-callback-dispatcher` | EventBus Subscribe/Publish + `RWMutex` fan-out | [README](./webhook-callback-dispatcher/README.md) |
 | `withdrawal-atm` | `if/else` balance validation | [README](./withdrawal-atm/README.md) |
 
 ## Notes
