@@ -23,6 +23,7 @@ go run ./payment-tracker
 | `bill-split` | Float constants + explicit cast + `%.2f` | [README](./bill-split/README.md) |
 | `byte-size-constants` | iota + bit shift for KB/MB/GB constants | [README](./byte-size-constants/README.md) |
 | `cart-discount` | Tagless `switch` tier discount + `Printf` width/precision | [README](./cart-discount/README.md) |
+| `cart-methods-receivers` | Value vs pointer receivers in shopping cart | [README](./cart-methods-receivers/README.md) |
 | `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) | [README](./cart-stock/README.md) |
 | `checkout-cart` | Float arithmetic + type conversion | [README](./checkout-cart/README.md) |
 | `closure-fn` | Closure: function capturing outer variable | [README](./closure-fn/README.md) |
