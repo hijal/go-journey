@@ -23,5 +23,4 @@ func main() {
 	for i := range len(a) {
 		fmt.Println(i)
 	}
-
 }
