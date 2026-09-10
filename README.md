@@ -79,6 +79,7 @@ go run ./payment-tracker
 | `pagination` | Ceiling division + offset pagination | [README](./pagination/README.md) |
 | `payment-amount` | Custom type (`PaymentAmount`) + paisa-based money | [README](./payment-amount/README.md) |
 | `payment-fee-calculator` | Constant + function | [README](./payment-fee-calculator/README.md) |
+| `payment-gateway-strategy` | Function-type strategy (Stripe/PayPal swap) | [README](./payment-gateway-strategy/README.md) |
 | `payment-retry` | Sentinel error + `errors.Is` + `%w` + exponential backoff | [README](./payment-retry/README.md) |
 | `payment-risk-flagging` | `switch` with `fallthrough` | [README](./payment-risk-flagging/README.md) |
 | `payment-status-poll` | `select` + channel timeout | [README](./payment-status-poll/README.md) |
