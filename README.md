@@ -68,6 +68,7 @@ go run ./payment-tracker
 | `monitoring-system-temp` | Builtin `max` + `switch` with initializer | [README](./monitoring-system-temp/README.md) |
 | `multi-error-aggregation` | Custom error type + nil-filter combine | [README](./multi-error-aggregation/README.md) |
 | `multi-gateway-payment-proccess` | Interface + polymorphism | [README](./multi-gateway-payment-proccess/README.md) |
+| `network-retry-mechanism` | Linear backoff + jitter retry with `%w` | [README](./network-retry-mechanism/README.md) |
 | `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
 | `package-local-variable` | Package-level vs local variable scope | [README](./package-local-variable/README.md) |
