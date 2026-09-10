@@ -1,0 +1,5 @@
+{
+  "port": 8080,
+  "env": "development",
+  "db_host": "postgres://localhost:5432/app"
+}
