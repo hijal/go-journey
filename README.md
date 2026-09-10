@@ -74,6 +74,7 @@ go run ./payment-tracker
 | `network-retry-mechanism` | Linear backoff + jitter retry with `%w` | [README](./network-retry-mechanism/README.md) |
 | `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
+| `otp-verification` | Array `==` element-wise compare | [README](./otp-verification/README.md) |
 | `package-local-variable` | Package-level vs local variable scope | [README](./package-local-variable/README.md) |
 | `parallel-health-check` | Goroutines + `sync.WaitGroup` parallel health checks | [README](./parallel-health-check/README.md) |
 | `paybill` | Bill payment with custom error + guard clauses | [README](./paybill/README.md) |
