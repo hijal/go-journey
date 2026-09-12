@@ -18,6 +18,7 @@ go run ./payment-tracker
 | `apply-discount` | Pass-by-value: function param is a copy | [README](./apply-discount/README.md) |
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
+| `bank-account-basics` | Struct zero value + `%+v` + field mutation | [README](./bank-account-basics/README.md) |
 | `bangla-text-processing` | `len` bytes vs `utf8.RuneCountInString` + `for range` byte index | [README](./bangla-text-processing/README.md) |
 | `basic-array` | Fixed-size `[4]int` + 4 range-loop variations | [README](./basic-array/README.md) |
 | `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
