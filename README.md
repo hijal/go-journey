@@ -34,6 +34,7 @@ go run ./payment-tracker
 | `config-loading-iife` | IIFE + env vars with defaults | [README](./config-loading-iife/README.md) |
 | `config-parsing-multi-return` | JSON parse + `(*Config, error)` + `runtime.Caller` | [README](./config-parsing-multi-return/README.md) |
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
+| `customer-profile-nested` | Nested structs + slice field + dot-chain | [README](./customer-profile-nested/README.md) |
 | `customer-tier-discount` | Function-as-value conditional assignment | [README](./customer-tier-discount/README.md) |
 | `data-validation-pipeline` | Function type + variadic validator pipeline | [README](./data-validation-pipeline/README.md) |
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
