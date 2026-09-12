@@ -92,6 +92,7 @@ go run ./payment-tracker
 | `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
 | `predicate-generics-filter` | Generics `Filter[T]` / `Map[T,U]` + predicates | [README](./predicate-generics-filter/README.md) |
 | `product-sort-comparator` | `slices.SortFunc` + `cmp.Compare` multi-key sort | [README](./product-sort-comparator/README.md) |
+| `product-value-pointer` | Value vs pointer struct mutation + copy | [README](./product-value-pointer/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
 | `named-naked-return` | Named return values + naked return | [README](./named-naked-return/README.md) |
 | `request-validation` | Input validation with guard clauses + `strings` | [README](./request-validation/README.md) |
