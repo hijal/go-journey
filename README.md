@@ -103,6 +103,7 @@ go run ./payment-tracker
 | `rune-byte` | Byte vs rune, UTF-8 decoding | [README](./rune-byte/README.md) |
 | `retry-backoff-timing` | Linear backoff + `time.Duration` constants | [README](./retry-backoff-timing/README.md) |
 | `retry-policy` | Retry loop + backoff with `time.Sleep` | [README](./retry-policy/README.md) |
+| `sales-report-sort` | `slices.SortFunc` multi-key + `MaxFunc` + anonymous struct | [README](./sales-report-sort/README.md) |
 | `sent-notification` | Variadic + slice spread for alert channels | [README](./sent-notification/README.md) |
 | `service-config-constructor` | Embedded struct + validated constructor + sentinel | [README](./service-config-constructor/README.md) |
 | `settlement-reconciliation` | `goto` retry + labeled `break` | [README](./settlement-reconciliation/README.md) |
