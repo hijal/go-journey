@@ -104,6 +104,7 @@ go run ./payment-tracker
 | `retry-backoff-timing` | Linear backoff + `time.Duration` constants | [README](./retry-backoff-timing/README.md) |
 | `retry-policy` | Retry loop + backoff with `time.Sleep` | [README](./retry-policy/README.md) |
 | `sent-notification` | Variadic + slice spread for alert channels | [README](./sent-notification/README.md) |
+| `service-config-constructor` | Embedded struct + validated constructor + sentinel | [README](./service-config-constructor/README.md) |
 | `settlement-reconciliation` | `goto` retry + labeled `break` | [README](./settlement-reconciliation/README.md) |
 | `shared-wallet-closure` | Multiple closures sharing one captured balance | [README](./shared-wallet-closure/README.md) |
 | `shipping-cost-tier` | `if/else if` tier-based shipping cost | [README](./shipping-cost-tier/README.md) |
