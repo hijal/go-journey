@@ -38,6 +38,7 @@ go run ./payment-tracker
 | `customer-tier-discount` | Function-as-value conditional assignment | [README](./customer-tier-discount/README.md) |
 | `data-validation-pipeline` | Function type + variadic validator pipeline | [README](./data-validation-pipeline/README.md) |
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
+| `deploy-set-tooling` | Map-as-set deploy filter + `maps.Keys`/`slices.Sorted` | [README](./deploy-set-tooling/README.md) |
 | `deploy-tool` | `defer` for audit/timing log | [README](./deploy-tool/README.md) |
 | `deterministic-map-report` | Map + `slices.Sort` keys for deterministic report | [README](./deterministic-map-report/README.md) |
 | `devops-tooling` | Multiple assignment + `strconv.Atoi` | [README](./devops-tooling/README.md) |
