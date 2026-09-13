@@ -69,6 +69,7 @@ go run ./payment-tracker
 | `ip-subnet` | Bitwise ops + IP subnet membership | [README](./ip-subnet/README.md) |
 | `ledger-entry` | Custom type (`Money`) | [README](./ledger-entry/README.md) |
 | `leaderboard-tie-break` | `cmp.Compare` + nested switch tie-break | [README](./leaderboard-tie-break/README.md) |
+| `log-analysis-slicing` | Slicing + shared backing array + `IndexFunc` | [README](./log-analysis-slicing/README.md) |
 | `merge-multiple-slices` | Variadic slices + `append(...)` merge | [README](./merge-multiple-slices/README.md) |
 | `money-conversion-testing` | Table-driven unit test + `math.Round` | [README](./money-conversion-testing/README.md) |
 | `monitoring-agent` | Float precision + epsilon compare | [README](./monitoring-agent/README.md) |
