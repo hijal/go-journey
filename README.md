@@ -106,6 +106,7 @@ go run ./payment-tracker
 | `retry-policy` | Retry loop + backoff with `time.Sleep` | [README](./retry-policy/README.md) |
 | `sales-report-sort` | `slices.SortFunc` multi-key + `MaxFunc` + anonymous struct | [README](./sales-report-sort/README.md) |
 | `sent-notification` | Variadic + slice spread for alert channels | [README](./sent-notification/README.md) |
+| `server-health-slice` | `append` + pre-allocation + dynamic growth | [README](./server-health-slice/README.md) |
 | `service-config-constructor` | Embedded struct + validated constructor + sentinel | [README](./service-config-constructor/README.md) |
 | `settlement-reconciliation` | `goto` retry + labeled `break` | [README](./settlement-reconciliation/README.md) |
 | `shared-wallet-closure` | Multiple closures sharing one captured balance | [README](./shared-wallet-closure/README.md) |
