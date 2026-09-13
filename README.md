@@ -46,6 +46,7 @@ go run ./payment-tracker
 | `deterministic-map-report` | Map + `slices.Sort` keys for deterministic report | [README](./deterministic-map-report/README.md) |
 | `devops-tooling` | Multiple assignment + `strconv.Atoi` | [README](./devops-tooling/README.md) |
 | `double-entry-ledger` | Methods with pointer receiver, insufficient balance error | [README](./double-entry-ledger/README.md) |
+| `duplicate-order-detector` | Map seen-set + `slices.Contains` dedupe | [README](./duplicate-order-detector/README.md) |
 | `dynamic-path-url-joiner` | Variadic + `strings.Trim`/`Join` for path join | [README](./dynamic-path-url-joiner/README.md) |
 | `devide-zero` | Error handling + division by zero guard | [README](./devide-zero/README.md) |
 | `emi-loan` | Numeric underscore + aligned `%.2f` table | [README](./emi-loan/README.md) |
