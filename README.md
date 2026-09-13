@@ -13,6 +13,7 @@ go run ./payment-tracker
 | Folder | Concept | Docs |
 | --- | --- | --- |
 | `api-backend` | Struct + constructor method | [README](./api-backend/README.md) |
+| `api-pagination-slicing` | Offset formula + bounds-guard + clamp subslice | [README](./api-pagination-slicing/README.md) |
 | `api-rate-limiter` | Closure factory + shared counter rate limit | [README](./api-rate-limiter/README.md) |
 | `anonymous-function` | Anonymous function + IIFE pattern | [README](./anonymous-function/README.md) |
 | `apply-discount` | Pass-by-value: function param is a copy | [README](./apply-discount/README.md) |
