@@ -105,6 +105,7 @@ go run ./payment-tracker
 | `product-value-pointer` | Value vs pointer struct mutation + copy | [README](./product-value-pointer/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
 | `named-naked-return` | Named return values + naked return | [README](./named-naked-return/README.md) |
+| `recent-activity-feed` | Builtin `min` tail-trim + `Clone`+`Reverse` | [README](./recent-activity-feed/README.md) |
 | `request-validation` | Input validation with guard clauses + `strings` | [README](./request-validation/README.md) |
 | `retail-loyalty-program` | `switch` + `fallthrough` tier benefits | [README](./retail-loyalty-program/README.md) |
 | `retail-pos` | Closure with state: independent per-register totals | [README](./retail-pos/README.md) |
