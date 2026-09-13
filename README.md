@@ -79,6 +79,7 @@ go run ./payment-tracker
 | `money-conversion-testing` | Table-driven unit test + `math.Round` | [README](./money-conversion-testing/README.md) |
 | `monitoring-agent` | Float precision + epsilon compare | [README](./monitoring-agent/README.md) |
 | `monitoring-system-temp` | Builtin `max` + `switch` with initializer | [README](./monitoring-system-temp/README.md) |
+| `moving-average-monitor` | Builtin `max` clamp + sliding-window moving avg | [README](./moving-average-monitor/README.md) |
 | `multi-error-aggregation` | Custom error type + nil-filter combine | [README](./multi-error-aggregation/README.md) |
 | `multi-gateway-payment-proccess` | Interface + polymorphism | [README](./multi-gateway-payment-proccess/README.md) |
 | `network-retry-mechanism` | Linear backoff + jitter retry with `%w` | [README](./network-retry-mechanism/README.md) |
