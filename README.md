@@ -66,6 +66,7 @@ go run ./payment-tracker
 | `http-status-code` | Unexported constants + `switch` for status mapping | [README](./http-status-code/README.md) |
 | `iife-payment` | IIFE validation + message build | [README](./iife-payment/README.md) |
 | `invoice-batch-scanner` | `continue` / `break` in loop | [README](./invoice-batch-scanner/README.md) |
+| `invoice-line-totals` | Accumulated subtotal + `slices.Max` + float avg | [README](./invoice-line-totals/README.md) |
 | `invoice-json` | JSON marshal + unexported field | [README](./invoice-json/README.md) |
 | `inventory-stock` | Unsigned underflow + safe compare | [README](./inventory-stock/README.md) |
 | `insurance-eligibility-rule` | Nested struct + boolean eligibility | [README](./insurance-eligibility-rule/README.md) |
