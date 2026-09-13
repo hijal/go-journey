@@ -34,6 +34,7 @@ go run ./payment-tracker
 | `concurrent-webhook` | Goroutine + channel + WaitGroup | [README](./concurrent-webhook/README.md) |
 | `config-loader` | Builtin `len` shadowing | [README](./config-loader/README.md) |
 | `config-loading-iife` | IIFE + env vars with defaults | [README](./config-loading-iife/README.md) |
+| `config-merge-copy` | `slices.Clone` copy + zero-pad + `slices.Equal` | [README](./config-merge-copy/README.md) |
 | `config-parsing-multi-return` | JSON parse + `(*Config, error)` + `runtime.Caller` | [README](./config-parsing-multi-return/README.md) |
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
 | `customer-profile-nested` | Nested structs + slice field + dot-chain | [README](./customer-profile-nested/README.md) |
