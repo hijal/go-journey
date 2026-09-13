@@ -70,6 +70,7 @@ go run ./payment-tracker
 | `insurance-eligibility-rule` | Nested struct + boolean eligibility | [README](./insurance-eligibility-rule/README.md) |
 | `interget-overflow` | Integer overflow (`int32` vs `int64`) | [README](./interget-overflow/README.md) |
 | `ip-subnet` | Bitwise ops + IP subnet membership | [README](./ip-subnet/README.md) |
+| `job-queue-drain` | `slices.DeleteFunc` in-place drain + retry list | [README](./job-queue-drain/README.md) |
 | `ledger-entry` | Custom type (`Money`) | [README](./ledger-entry/README.md) |
 | `leaderboard-tie-break` | `cmp.Compare` + nested switch tie-break | [README](./leaderboard-tie-break/README.md) |
 | `log-analysis-slicing` | Slicing + shared backing array + `IndexFunc` | [README](./log-analysis-slicing/README.md) |
