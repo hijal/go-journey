@@ -130,6 +130,7 @@ go run ./payment-tracker
 | `transaction-fraud-screening` | `for range` + `continue` fraud flags | [README](./transaction-fraud-screening/README.md) |
 | `transaction-rollback` | `defer` for rollback pattern | [README](./transaction-rollback/README.md) |
 | `transaction-rollback-defer` | `defer`-based rollback on failed transfer | [README](./transaction-rollback-defer/README.md) |
+| `undo-stack-editor` | Snapshot-based undo stack + `slices.Clone` | [README](./undo-stack-editor/README.md) |
 | `unix-permission-bits` | Bit flags (rwx permission bitmask) | [README](./unix-permission-bits/README.md) |
 | `validate-config` | Config validation with named return values | [README](./validate-config/README.md) |
 | `variadic-function` | Variadic function (`...int`) | [README](./variadic-function/README.md) |
