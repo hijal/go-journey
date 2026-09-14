@@ -130,6 +130,7 @@ go run ./payment-tracker
 | `switch-group` | Multi-value `case` log routing | [README](./switch-group/README.md) |
 | `test-log-router` | Log destination routing + table test | [README](./test-log-router/README.md) |
 | `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
+| `ticket-category-count` | Map frequency-count zero-value idiom | [README](./ticket-category-count/README.md) |
 | `token-validation` | Sentinel error + `errors.Is` + `%w` wrap | [README](./token-validation/README.md) |
 | `topk-latency-dashboard` | Sort + tail-slice top-K + p95 approximation | [README](./topk-latency-dashboard/README.md) |
 | `transaction-fraud-screening` | `for range` + `continue` fraud flags | [README](./transaction-fraud-screening/README.md) |
