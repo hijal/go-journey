@@ -130,6 +130,7 @@ go run ./payment-tracker
 | `shopping-cart-slice` | Slice `len` + index access + range sum | [README](./shopping-cart-slice/README.md) |
 | `signup-validator` | Function type + variadic validators | [README](./signup-validator/README.md) |
 | `sku-price-lookup` | Map + comma-ok lookup present/absent path | [README](./sku-price-lookup/README.md) |
+| `sku-validation` | Staged guard clauses + `Split` + `Atoi` + `Errorf` | [README](./sku-validation/README.md) |
 | `sliding-window-limiter` | Ring-buffer sliding window + threshold limit | [README](./sliding-window-limiter/README.md) |
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
 | `status-code-analytics` | Map count + `Sorted(Keys())` + max-scan | [README](./status-code-analytics/README.md) |
