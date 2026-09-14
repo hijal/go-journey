@@ -46,10 +46,12 @@ func wrapText(text string, width int) string {
 			b.WriteString(word)
 			lineLen = len(word)
 		case lineLen+1+len(word) <= width:
-			b.WriteString(" " + word)
+			b.WriteString(" ")
+			b.WriteString(word)
 			lineLen += 1 + len(word)
 		default:
-			b.WriteString("\n" + word)
+			b.WriteString("\n")
+			b.WriteString(word)
 			lineLen = len(word)
 		}
 	}
@@ -142,10 +144,12 @@ func wrapText(text string, width int) string {
 			b.WriteString(word)
 			lineLen = len(word)
 		case lineLen+1+len(word) <= width:
-			b.WriteString(" " + word)
+			b.WriteString(" ")
+			b.WriteString(word)
 			lineLen += 1 + len(word)
 		default:
-			b.WriteString("\n" + word)
+			b.WriteString("\n")
+			b.WriteString(word)
 			lineLen = len(word)
 		}
 	}
