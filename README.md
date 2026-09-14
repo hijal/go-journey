@@ -12,6 +12,7 @@ go run ./payment-tracker
 
 | Folder | Concept | Docs |
 | --- | --- | --- |
+| `account-number-masking` | `strings.Repeat` + tail-slice mask + edge guard | [README](./account-number-masking/README.md) |
 | `api-backend` | Struct + constructor method | [README](./api-backend/README.md) |
 | `api-pagination-slicing` | Offset formula + bounds-guard + clamp subslice | [README](./api-pagination-slicing/README.md) |
 | `api-rate-limiter` | Closure factory + shared counter rate limit | [README](./api-rate-limiter/README.md) |
