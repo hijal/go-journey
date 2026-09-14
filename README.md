@@ -30,12 +30,14 @@ go run ./payment-tracker
 | `cart-methods-receivers` | Value vs pointer receivers in shopping cart | [README](./cart-methods-receivers/README.md) |
 | `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) | [README](./cart-stock/README.md) |
 | `checkout-cart` | Float arithmetic + type conversion | [README](./checkout-cart/README.md) |
+| `cicd-job-grouping` | Anonymous struct + status grouping map | [README](./cicd-job-grouping/README.md) |
 | `closure-fn` | Closure: function capturing outer variable | [README](./closure-fn/README.md) |
 | `concurrent-webhook` | Goroutine + channel + WaitGroup | [README](./concurrent-webhook/README.md) |
 | `config-loader` | Builtin `len` shadowing | [README](./config-loader/README.md) |
 | `config-loading-iife` | IIFE + env vars with defaults | [README](./config-loading-iife/README.md) |
 | `config-merge-copy` | `slices.Clone` copy + zero-pad + `slices.Equal` | [README](./config-merge-copy/README.md) |
 | `config-parsing-multi-return` | JSON parse + `(*Config, error)` + `runtime.Caller` | [README](./config-parsing-multi-return/README.md) |
+| `currency-conversion-map` | Global rate map + comma-ok error + spread side-effect | [README](./currency-conversion-map/README.md) |
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
 | `customer-profile-nested` | Nested structs + slice field + dot-chain | [README](./customer-profile-nested/README.md) |
 | `customer-tier-discount` | Function-as-value conditional assignment | [README](./customer-tier-discount/README.md) |
