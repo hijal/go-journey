@@ -151,6 +151,7 @@ go run ./payment-tracker
 | `variadic-function` | Variadic function (`...int`) | [README](./variadic-function/README.md) |
 | `warehouse-inventory-receiver` | Sentinel error + `%w` wrap + pointer receiver | [README](./warehouse-inventory-receiver/README.md) |
 | `webhook-callback-dispatcher` | EventBus Subscribe/Publish + `RWMutex` fan-out | [README](./webhook-callback-dispatcher/README.md) |
+| `wrap-text-exercise` | Greedy word-wrap + `Fields` + `Builder` + width tracking | [README](./wrap-text-exercise/README.md) |
 | `withdrawal-atm` | `if/else` balance validation | [README](./withdrawal-atm/README.md) |
 
 ## Notes
