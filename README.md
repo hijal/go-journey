@@ -101,6 +101,7 @@ go run ./payment-tracker
 | `payment-risk-flagging` | `switch` with `fallthrough` | [README](./payment-risk-flagging/README.md) |
 | `payment-status-poll` | `select` + channel timeout | [README](./payment-status-poll/README.md) |
 | `payment-tracker` | Variable naming / underscores | [README](./payment-tracker/README.md) |
+| `permission-set-ops` | Map-as-set membership + clone/union + intersection | [README](./permission-set-ops/README.md) |
 | `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
 | `predicate-generics-filter` | Generics `Filter[T]` / `Map[T,U]` + predicates | [README](./predicate-generics-filter/README.md) |
 | `product-sort-comparator` | `slices.SortFunc` + `cmp.Compare` multi-key sort | [README](./product-sort-comparator/README.md) |
