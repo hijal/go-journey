@@ -55,6 +55,7 @@ go run ./payment-tracker
 | `devide-zero` | Error handling + division by zero guard | [README](./devide-zero/README.md) |
 | `emi-loan` | Numeric underscore + aligned `%.2f` table | [README](./emi-loan/README.md) |
 | `env-variable-parsing` | `strconv` parsing with defaults | [README](./env-variable-parsing/README.md) |
+| `failed-job-csv-report` | `Cut` key=value + `Contains` filter + `Builder` CSV | [README](./failed-job-csv-report/README.md) |
 | `feature-flags-map` | Nil map read + comma-ok + `delete` | [README](./feature-flags-map/README.md) |
 | `find-max-num` | Variadic `...int` + linear max scan | [README](./find-max-num/README.md) |
 | `fingerprint-config` | SHA-256 checksum + string/byte immutability | [README](./fingerprint-config/README.md) |
