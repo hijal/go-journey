@@ -149,6 +149,7 @@ go run ./payment-tracker
 | `transaction-rollback-defer` | `defer`-based rollback on failed transfer | [README](./transaction-rollback-defer/README.md) |
 | `undo-stack-editor` | Snapshot-based undo stack + `slices.Clone` | [README](./undo-stack-editor/README.md) |
 | `unix-permission-bits` | Bit flags (rwx permission bitmask) | [README](./unix-permission-bits/README.md) |
+| `upload-filename-sanitizer` | Sanitize + `HasSuffix` allowlist + `LastIndex` split | [README](./upload-filename-sanitizer/README.md) |
 | `validate-config` | Config validation with named return values | [README](./validate-config/README.md) |
 | `variadic-function` | Variadic function (`...int`) | [README](./variadic-function/README.md) |
 | `warehouse-inventory-receiver` | Sentinel error + `%w` wrap + pointer receiver | [README](./warehouse-inventory-receiver/README.md) |
