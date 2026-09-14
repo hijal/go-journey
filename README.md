@@ -123,6 +123,7 @@ go run ./payment-tracker
 | `shipping-cost-tier` | `if/else if` tier-based shipping cost | [README](./shipping-cost-tier/README.md) |
 | `shopping-cart-slice` | Slice `len` + index access + range sum | [README](./shopping-cart-slice/README.md) |
 | `signup-validator` | Function type + variadic validators | [README](./signup-validator/README.md) |
+| `sku-price-lookup` | Map + comma-ok lookup present/absent path | [README](./sku-price-lookup/README.md) |
 | `sliding-window-limiter` | Ring-buffer sliding window + threshold limit | [README](./sliding-window-limiter/README.md) |
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
 | `structured-logging-variadic` | Variadic `...any` key-value structured logger | [README](./structured-logging-variadic/README.md) |
