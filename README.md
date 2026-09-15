@@ -79,6 +79,7 @@ go run ./payment-tracker
 | `invoice-batch-scanner` | `continue` / `break` in loop | [README](./invoice-batch-scanner/README.md) |
 | `invoice-line-totals` | Accumulated subtotal + `slices.Max` + float avg | [README](./invoice-line-totals/README.md) |
 | `invoice-json` | JSON marshal + unexported field | [README](./invoice-json/README.md) |
+| `inventory-cache-pointers` | `map[string]*T` cache + pointer dereference mutate | [README](./inventory-cache-pointers/README.md) |
 | `inventory-stock` | Unsigned underflow + safe compare | [README](./inventory-stock/README.md) |
 | `insurance-eligibility-rule` | Nested struct + boolean eligibility | [README](./insurance-eligibility-rule/README.md) |
 | `interget-overflow` | Integer overflow (`int32` vs `int64`) | [README](./interget-overflow/README.md) |
