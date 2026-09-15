@@ -22,6 +22,7 @@ go run ./payment-tracker
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
 | `batch-payment-grouping` | Threshold split + pre-allocated grouping | [README](./batch-payment-grouping/README.md) |
 | `bank-account-basics` | Struct zero value + `%+v` + field mutation | [README](./bank-account-basics/README.md) |
+| `bank-balance-update` | Pointer-receiver method + validation + balance mutation | [README](./bank-balance-update/README.md) |
 | `bangla-text-processing` | `len` bytes vs `utf8.RuneCountInString` + `for range` byte index | [README](./bangla-text-processing/README.md) |
 | `basic-array` | Fixed-size `[4]int` + 4 range-loop variations | [README](./basic-array/README.md) |
 | `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
