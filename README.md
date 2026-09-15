@@ -27,6 +27,7 @@ go run ./payment-tracker
 | `basic-array` | Fixed-size `[4]int` + 4 range-loop variations | [README](./basic-array/README.md) |
 | `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
 | `bill-split` | Float constants + explicit cast + `%.2f` | [README](./bill-split/README.md) |
+| `buffer-pooling-sync` | `sync.Pool` reuse + `bytes.Buffer` + type assertion | [README](./buffer-pooling-sync/README.md) |
 | `byte-size-constants` | iota + bit shift for KB/MB/GB constants | [README](./byte-size-constants/README.md) |
 | `cart-discount` | Tagless `switch` tier discount + `Printf` width/precision | [README](./cart-discount/README.md) |
 | `cart-methods-receivers` | Value vs pointer receivers in shopping cart | [README](./cart-methods-receivers/README.md) |
