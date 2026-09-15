@@ -34,6 +34,7 @@ go run ./payment-tracker
 | `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) | [README](./cart-stock/README.md) |
 | `checkout-cart` | Float arithmetic + type conversion | [README](./checkout-cart/README.md) |
 | `cicd-job-grouping` | Anonymous struct + status grouping map | [README](./cicd-job-grouping/README.md) |
+| `cli-flag-parsing` | Standard `flag` package + Bool/Int/String + Parse | [README](./cli-flag-parsing/README.md) |
 | `closure-fn` | Closure: function capturing outer variable | [README](./closure-fn/README.md) |
 | `compare-versions` | Dotted-numeric compare + missing part = 0 + `max` + `Atoi` | [README](./compare-versions/README.md) |
 | `concurrent-webhook` | Goroutine + channel + WaitGroup | [README](./concurrent-webhook/README.md) |
