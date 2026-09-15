@@ -62,6 +62,7 @@ go run ./payment-tracker
 | `fingerprint-config` | SHA-256 checksum + string/byte immutability | [README](./fingerprint-config/README.md) |
 | `fn-value` | Function type + function as value | [README](./fn-value/README.md) |
 | `fixed-tax-discount` | Constants + `fmt.Printf` formatting | [README](./fixed-tax-discount/README.md) |
+| `fluent-http-builder` | Fluent builder pattern + chain setters | [README](./fluent-http-builder/README.md) |
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
 | `grid-load-monitoring` | Parallel arrays + one-pass peak/low scan | [README](./grid-load-monitoring/README.md) |
@@ -142,6 +143,7 @@ go run ./payment-tracker
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
 | `status-code-analytics` | Map count + `Sorted(Keys())` + max-scan | [README](./status-code-analytics/README.md) |
 | `structured-logging-variadic` | Variadic `...any` key-value structured logger | [README](./structured-logging-variadic/README.md) |
+| `swap-function` | Pointer swap + parallel assignment + slice-element address | [README](./swap-function/README.md) |
 | `switch-group` | Multi-value `case` log routing | [README](./switch-group/README.md) |
 | `test-log-router` | Log destination routing + table test | [README](./test-log-router/README.md) |
 | `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
