@@ -41,6 +41,7 @@ go run ./payment-tracker
 | `config-merge-copy` | `slices.Clone` copy + zero-pad + `slices.Equal` | [README](./config-merge-copy/README.md) |
 | `config-parsing-multi-return` | JSON parse + `(*Config, error)` + `runtime.Caller` | [README](./config-parsing-multi-return/README.md) |
 | `currency-conversion-map` | Global rate map + comma-ok error + spread side-effect | [README](./currency-conversion-map/README.md) |
+| `custom-io-writer` | `io.Writer` interface + custom `Write([]byte)` method | [README](./custom-io-writer/README.md) |
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
 | `customer-profile-nested` | Nested structs + slice field + dot-chain | [README](./customer-profile-nested/README.md) |
 | `customer-tier-discount` | Function-as-value conditional assignment | [README](./customer-tier-discount/README.md) |
