@@ -83,6 +83,7 @@ go run ./payment-tracker
 | `key-value-config-parser` | `strings.Cut` + Trim/HasPrefix mini-INI parser | [README](./key-value-config-parser/README.md) |
 | `ledger-entry` | Custom type (`Money`) | [README](./ledger-entry/README.md) |
 | `leaderboard-tie-break` | `cmp.Compare` + nested switch tie-break | [README](./leaderboard-tie-break/README.md) |
+| `linked-list` | Singly-linked list + pointer walk + `Stringer` | [README](./linked-list/README.md) |
 | `log-analysis-slicing` | Slicing + shared backing array + `IndexFunc` | [README](./log-analysis-slicing/README.md) |
 | `matrix-slice-report` | `[][]int` matrix + row/column aggregation | [README](./matrix-slice-report/README.md) |
 | `merge-multiple-slices` | Variadic slices + `append(...)` merge | [README](./merge-multiple-slices/README.md) |
