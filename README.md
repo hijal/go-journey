@@ -85,6 +85,7 @@ go run ./payment-tracker
 | `interget-overflow` | Integer overflow (`int32` vs `int64`) | [README](./interget-overflow/README.md) |
 | `ip-subnet` | Bitwise ops + IP subnet membership | [README](./ip-subnet/README.md) |
 | `job-queue-drain` | `slices.DeleteFunc` in-place drain + retry list | [README](./job-queue-drain/README.md) |
+| `job-worker-interface` | Interface consumer + sentinel error + `errors.Is` + `%w` | [README](./job-worker-interface/README.md) |
 | `json-patch-optional` | Optional `*T` pointer fields + nil-guard partial update | [README](./json-patch-optional/README.md) |
 | `key-value-config-parser` | `strings.Cut` + Trim/HasPrefix mini-INI parser | [README](./key-value-config-parser/README.md) |
 | `ledger-entry` | Custom type (`Money`) | [README](./ledger-entry/README.md) |
