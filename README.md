@@ -160,6 +160,7 @@ go run ./payment-tracker
 | `transaction-fraud-screening` | `for range` + `continue` fraud flags | [README](./transaction-fraud-screening/README.md) |
 | `transaction-rollback` | `defer` for rollback pattern | [README](./transaction-rollback/README.md) |
 | `transaction-rollback-defer` | `defer`-based rollback on failed transfer | [README](./transaction-rollback-defer/README.md) |
+| `transaction-stringer` | `String()` method + `fmt.Stringer` + `%-7s` align | [README](./transaction-stringer/README.md) |
 | `undo-stack-editor` | Snapshot-based undo stack + `slices.Clone` | [README](./undo-stack-editor/README.md) |
 | `unix-permission-bits` | Bit flags (rwx permission bitmask) | [README](./unix-permission-bits/README.md) |
 | `upload-filename-sanitizer` | Sanitize + `HasSuffix` allowlist + `LastIndex` split | [README](./upload-filename-sanitizer/README.md) |
