@@ -150,6 +150,7 @@ go run ./payment-tracker
 | `sliding-window-limiter` | Ring-buffer sliding window + threshold limit | [README](./sliding-window-limiter/README.md) |
 | `sms-template-renderer` | `strings.NewReplacer` multi-placeholder template render | [README](./sms-template-renderer/README.md) |
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
+| `statement-sort-interface` | `sort.Interface` vs `slices.SortFunc` + `cmp.Compare` | [README](./statement-sort-interface/README.md) |
 | `status-code-analytics` | Map count + `Sorted(Keys())` + max-scan | [README](./status-code-analytics/README.md) |
 | `structured-logging-variadic` | Variadic `...any` key-value structured logger | [README](./structured-logging-variadic/README.md) |
 | `swap-function` | Pointer swap + parallel assignment + slice-element address | [README](./swap-function/README.md) |
