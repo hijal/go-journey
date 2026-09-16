@@ -16,6 +16,7 @@ go run ./payment-tracker
 | `api-backend` | Struct + constructor method | [README](./api-backend/README.md) |
 | `api-pagination-slicing` | Offset formula + bounds-guard + clamp subslice | [README](./api-pagination-slicing/README.md) |
 | `api-rate-limiter` | Closure factory + shared counter rate limit | [README](./api-rate-limiter/README.md) |
+| `analytics-interface-embedding` | Interface embedding + `var _` compile-time check | [README](./analytics-interface-embedding/README.md) |
 | `anonymous-function` | Anonymous function + IIFE pattern | [README](./anonymous-function/README.md) |
 | `apply-discount` | Pass-by-value: function param is a copy | [README](./apply-discount/README.md) |
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
