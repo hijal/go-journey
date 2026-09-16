@@ -100,6 +100,7 @@ go run ./payment-tracker
 | `moving-average-monitor` | Builtin `max` clamp + sliding-window moving avg | [README](./moving-average-monitor/README.md) |
 | `multi-error-aggregation` | Custom error type + nil-filter combine | [README](./multi-error-aggregation/README.md) |
 | `multi-gateway-payment-proccess` | Interface + polymorphism | [README](./multi-gateway-payment-proccess/README.md) |
+| `multi-payment-checkout` | Interface polymorphism + cents-to-currency + `[]PaymentMethod` | [README](./multi-payment-checkout/README.md) |
 | `network-retry-mechanism` | Linear backoff + jitter retry with `%w` | [README](./network-retry-mechanism/README.md) |
 | `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
