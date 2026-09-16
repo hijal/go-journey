@@ -77,6 +77,7 @@ go run ./payment-tracker
 | `higher-order-retry-helper` | Higher-order retry + `errors.Is` + `%w` | [README](./higher-order-retry-helper/README.md) |
 | `http-client-functional-options` | Functional options (`Option func(*T)`) | [README](./http-client-functional-options/README.md) |
 | `http-handler-closure` | Closure over a map in HTTP handlers | [README](./http-handler-closure/README.md) |
+| `http-handler-interface` | `http.Handler` interface + ServeMux + slog | [README](./http-handler-interface/README.md) |
 | `http-status-code` | Unexported constants + `switch` for status mapping | [README](./http-status-code/README.md) |
 | `iife-payment` | IIFE validation + message build | [README](./iife-payment/README.md) |
 | `invoice-batch-scanner` | `continue` / `break` in loop | [README](./invoice-batch-scanner/README.md) |
