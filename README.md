@@ -128,6 +128,7 @@ go run ./payment-tracker
 | `permission-set-ops` | Map-as-set membership + clone/union + intersection | [README](./permission-set-ops/README.md) |
 | `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
 | `predicate-generics-filter` | Generics `Filter[T]` / `Map[T,U]` + predicates | [README](./predicate-generics-filter/README.md) |
+| `priority-job-queue` | `container/heap` max-priority + tie-break + `heap.Fix` | [README](./priority-job-queue/README.md) |
 | `product-sort-comparator` | `slices.SortFunc` + `cmp.Compare` multi-key sort | [README](./product-sort-comparator/README.md) |
 | `product-value-pointer` | Value vs pointer struct mutation + copy | [README](./product-value-pointer/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
