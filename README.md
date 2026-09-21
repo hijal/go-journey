@@ -107,6 +107,7 @@ go run ./payment-tracker
 | `multi-payment-checkout` | Interface polymorphism + cents-to-currency + `[]PaymentMethod` | [README](./multi-payment-checkout/README.md) |
 | `network-retry-mechanism` | Linear backoff + jitter retry with `%w` | [README](./network-retry-mechanism/README.md) |
 | `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
+| `order-service-di` | Constructor DI + interfaces + `%w` wrapping | [README](./order-service-di/README.md) |
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
 | `otp-verification` | Array `==` element-wise compare | [README](./otp-verification/README.md) |
 | `package-local-variable` | Package-level vs local variable scope | [README](./package-local-variable/README.md) |
