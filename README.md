@@ -155,6 +155,7 @@ go run ./payment-tracker
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
 | `statement-sort-interface` | `sort.Interface` vs `slices.SortFunc` + `cmp.Compare` | [README](./statement-sort-interface/README.md) |
 | `status-code-analytics` | Map count + `Sorted(Keys())` + max-scan | [README](./status-code-analytics/README.md) |
+| `streaming-upload-checksum` | `TeeReader`+`LimitReader` streaming upload + sha256 | [README](./streaming-upload-checksum/README.md) |
 | `structured-logging-variadic` | Variadic `...any` key-value structured logger | [README](./structured-logging-variadic/README.md) |
 | `swap-function` | Pointer swap + parallel assignment + slice-element address | [README](./swap-function/README.md) |
 | `switch-group` | Multi-value `case` log routing | [README](./switch-group/README.md) |
