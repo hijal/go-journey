@@ -72,6 +72,7 @@ go run ./payment-tracker
 | `fluent-http-builder` | Fluent builder pattern + chain setters | [README](./fluent-http-builder/README.md) |
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
+| `goroutine-ordering` | Non-deterministic goroutine order + main-exit kill | [README](./goroutine-ordering/README.md) |
 | `grid-load-monitoring` | Parallel arrays + one-pass peak/low scan | [README](./grid-load-monitoring/README.md) |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
 | `helpDesk` | Function pipeline of string transformers | [README](./helpDesk/README.md) |
