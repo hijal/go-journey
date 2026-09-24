@@ -179,7 +179,7 @@ go run ./payment-tracker
 | `upload-filename-sanitizer` | Sanitize + `HasSuffix` allowlist + `LastIndex` split | [README](./upload-filename-sanitizer/README.md) |
 | `validate-config` | Config validation with named return values | [README](./validate-config/README.md) |
 | `variadic-function` | Variadic function (`...int`) | [README](./variadic-function/README.md) |
-| `waitgroup-basics` | `sync.WaitGroup` Add/Done/Wait — রেগুলার counter | [README](./waitgroup-basics/README.md) |
+| `waitgroup-basics` | `sync.WaitGroup` classic Add/Done/Wait + modern `wg.Go` | [README](./waitgroup-basics/README.md) |
 | `warehouse-inventory-receiver` | Sentinel error + `%w` wrap + pointer receiver | [README](./warehouse-inventory-receiver/README.md) |
 | `webhook-callback-dispatcher` | EventBus Subscribe/Publish + `RWMutex` fan-out | [README](./webhook-callback-dispatcher/README.md) |
 | `wrap-text-exercise` | Greedy word-wrap + `Fields` + `Builder` + width tracking | [README](./wrap-text-exercise/README.md) |

@@ -1,6 +1,6 @@
 # waitgroup-basics
 
-Go-তে **`sync.WaitGroup` (Add/Done/Wait)** শেখার ছোট example — goroutine-দের জন্য সঠিক waiting mechanism।
+Go-তে **`sync.WaitGroup` — classic (`Add`/`Done`/`Wait`) + modern (`wg.Go`)** শেখার ছোট example — goroutine-দের জন্য সঠিক waiting mechanism।
 
 **📖 ভাষা নির্বাচন করুন / Choose language:**
 
@@ -53,9 +53,10 @@ func main() {
 
 **`WaitGroup`** — zero-value usable; goroutine count track করে।
 
-### Lines 17–23
+### Lines 17–27
 
 ```go
+	// classic pattern
 	for _, id := range []int{101, 102, 103} {
 		wg.Add(1)
 		go func() {
@@ -63,20 +64,36 @@ func main() {
 			generateInvoice(id)
 		}()
 	}
+	wg.Wait()
+	fmt.Println("all invoices done with classic pattern")
+	fmt.Println()
 ```
+
+**Classic pattern:**
 
 - **`wg.Add(1)`** — প্রতিটি goroutine spawn-এর আগে counter +1।
 - `go func(){...}()` — goroutine; `defer wg.Done()` — শেষে counter −1।
 - Go 1.22+ loop var — `id` প্রতি iteration-এ ভিন্ন (`101,102,103`)।
+- **`wg.Wait()`** — counter 0 না হওয়া পর্যন্ত block; কাজ শেষ হলেই পরের line।
 
-### Lines 24–25
+### Lines 29–37
 
 ```go
+	// modern pattern
+	for _, id := range []int{105, 106, 107} {
+		wg.Go(func() {
+			generateInvoice(id)
+		})
+	}
 	wg.Wait()
-	fmt.Println("all invoices done")
+
+	fmt.Println("all invoices done with modern pattern")
 ```
 
-**`wg.Wait()`** — counter 0 না হওয়া পর্যন্ত block; কাজ শেষ হলেই পরের line।
+**Modern pattern (Go 1.24+ `WaitGroup.Go`):**
+
+- **`wg.Go(func)`** — `Add(1)` + `go func()` + `Done()` **এক call-এ**; counter নিজেই manage হয় (এখনো finish-এর আগে `Wait` করতে হবে)।
+- কম boilerplate, rookie mistake (Done ভুলে যাওয়া) কমবার সম্ভাবনা।
 
 > **time.Sleep ব্যবহার করো না অপেক্ষার জন্য** — তুমি জানো না কত সময় লাগবে: কম হলে অসম্পূর্ণ, বেশি হলে নষ্ট। `WaitGroup` ঠিক সময়েই ছাড়বে।
 
@@ -86,20 +103,26 @@ func main() {
 
 ```
 invoice ready for order 102
-invoice ready for order 101
 invoice ready for order 103
-all invoices done
+invoice ready for order 101
+all invoices done with classic pattern
+
+invoice ready for order 106
+invoice ready for order 105
+invoice ready for order 107
+all invoices done with modern pattern
 ```
 
-(প্রথম তিনটা line-এর order goroutine-এ nondeterministic; শেষ line সবসময় last)
+(প্রথম দুই block-এর ভেতরে line-গুলোর order goroutine-এ nondeterministic; প্রতিটা block-এর শেষ line সবসময় last)
 
 ## মূল শিক্ষা / Key Takeaways
 
 1. **`Add(n)`** — counter বাড়াও (spawn-এর আগে)।
 2. **`Done()`** — counter এক কমাও (প্রায়ই `defer`)।
 3. **`Wait()`** — 0 পর্যন্ত block।
-4. **Sleep অ-নির্ভরযোগ্য** — WaitGroup-ই সঠিক।
-5. **Thread-safe counter** — mutation goroutine-safe।
+4. **`wg.Go()`** — Go 1.24+: Add+go+Done একসাথে।
+5. **Sleep অ-নির্ভরযোগ্য** — WaitGroup-ই সঠিক।
+6. **Thread-safe counter** — mutation goroutine-safe।
 
 ---
 
@@ -150,9 +173,10 @@ func main() {
 
 **`WaitGroup`** — usable at zero value; tracks the goroutine count.
 
-### Lines 17–23
+### Lines 17–27
 
 ```go
+	// classic pattern
 	for _, id := range []int{101, 102, 103} {
 		wg.Add(1)
 		go func() {
@@ -160,20 +184,36 @@ func main() {
 			generateInvoice(id)
 		}()
 	}
+	wg.Wait()
+	fmt.Println("all invoices done with classic pattern")
+	fmt.Println()
 ```
+
+**The classic pattern:**
 
 - **`wg.Add(1)`** — counter +1 before each goroutine spawn.
 - `go func(){...}()` — the goroutine; `defer wg.Done()` — counter −1 on exit.
 - Go 1.22+ loop vars — `id` is per-iteration (`101,102,103`).
+- **`wg.Wait()`** — blocks until the counter hits 0; execution continues only when the work is done.
 
-### Lines 24–25
+### Lines 29–37
 
 ```go
+	// modern pattern
+	for _, id := range []int{105, 106, 107} {
+		wg.Go(func() {
+			generateInvoice(id)
+		})
+	}
 	wg.Wait()
-	fmt.Println("all invoices done")
+
+	fmt.Println("all invoices done with modern pattern")
 ```
 
-**`wg.Wait()`** — blocks until the counter hits 0; execution continues only when the work is done.
+**The modern pattern (Go 1.24+ `WaitGroup.Go`):**
+
+- **`wg.Go(func)`** — `Add(1)` + `go func()` + `Done()` **in one call**; the counter is managed for you (you still `Wait` before finishing).
+- Less boilerplate, fewer chances for the rookie mistake of forgetting `Done`.
 
 > **Don't use `time.Sleep` to wait** — you don't know how long things take: too little and the work is incomplete, too much and time is wasted. `WaitGroup` releases at exactly the right moment.
 
@@ -183,17 +223,23 @@ func main() {
 
 ```
 invoice ready for order 102
-invoice ready for order 101
 invoice ready for order 103
-all invoices done
+invoice ready for order 101
+all invoices done with classic pattern
+
+invoice ready for order 106
+invoice ready for order 105
+invoice ready for order 107
+all invoices done with modern pattern
 ```
 
-(the order of the first three lines is nondeterministic per goroutine; the last line always comes last)
+(within each block the line order is nondeterministic per goroutine; each block's last line always comes last)
 
 ## Key Takeaways
 
 1. **`Add(n)`** — bump the counter (before spawning).
 2. **`Done()`** — decrement (often via `defer`).
 3. **`Wait()`** — block until 0.
-4. **Sleep is unreliable** — `WaitGroup` is the correct tool.
-5. **Thread-safe counter** — goroutine-safe mutation.
+4. **`wg.Go()`** — Go 1.24+: Add+go+Done in one.
+5. **Sleep is unreliable** — `WaitGroup` is the correct tool.
+6. **Thread-safe counter** — goroutine-safe mutation.
