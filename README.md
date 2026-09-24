@@ -19,6 +19,7 @@ go run ./payment-tracker
 | `analytics-interface-embedding` | Interface embedding + `var _` compile-time check | [README](./analytics-interface-embedding/README.md) |
 | `anonymous-function` | Anonymous function + IIFE pattern | [README](./anonymous-function/README.md) |
 | `apply-discount` | Pass-by-value: function param is a copy | [README](./apply-discount/README.md) |
+| `atomic-counter` | `atomic.Int64` lock-free safe counter | [README](./atomic-counter/README.md) |
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
 | `batch-payment-grouping` | Threshold split + pre-allocated grouping | [README](./batch-payment-grouping/README.md) |
