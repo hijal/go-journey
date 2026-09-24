@@ -49,6 +49,8 @@ go run ./payment-tracker
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
 | `customer-profile-nested` | Nested structs + slice field + dot-chain | [README](./customer-profile-nested/README.md) |
 | `customer-tier-discount` | Function-as-value conditional assignment | [README](./customer-tier-discount/README.md) |
+| `data-race-detector` | Deliberate `DATA RACE` demo (`-race` catches it) | [README](./data-race-detector/README.md) |
+| `data-race-detector-solution` | `sync.Mutex`-guarded fix (always 1000) | [README](./data-race-detector-solution/README.md) |
 | `data-validation-pipeline` | Function type + variadic validator pipeline | [README](./data-validation-pipeline/README.md) |
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
 | `deploy-set-tooling` | Map-as-set deploy filter + `maps.Keys`/`slices.Sorted` | [README](./deploy-set-tooling/README.md) |
