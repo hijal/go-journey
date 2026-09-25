@@ -148,6 +148,7 @@ go run ./payment-tracker
 | `sales-report-sort` | `slices.SortFunc` multi-key + `MaxFunc` + anonymous struct | [README](./sales-report-sort/README.md) |
 | `search-query-matcher` | `Fields` normalize + `Contains` AND-match + case-insensitive | [README](./search-query-matcher/README.md) |
 | `secrets-redaction-logging` | `Stringer`+`GoStringer`+`LogValuer` secret redaction | [README](./secrets-redaction-logging/README.md) |
+| `select-channels` | `select` + `time.After` timeout + async fetch | [README](./select-channels/README.md) |
 | `sent-notification` | Variadic + slice spread for alert channels | [README](./sent-notification/README.md) |
 | `server-health-slice` | `append` + pre-allocation + dynamic growth | [README](./server-health-slice/README.md) |
 | `service-config-constructor` | Embedded struct + validated constructor + sentinel | [README](./service-config-constructor/README.md) |
