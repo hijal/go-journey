@@ -189,6 +189,7 @@ go run ./payment-tracker
 | `waitgroup-basics` | `sync.WaitGroup` classic Add/Done/Wait + modern `wg.Go` | [README](./waitgroup-basics/README.md) |
 | `warehouse-inventory-receiver` | Sentinel error + `%w` wrap + pointer receiver | [README](./warehouse-inventory-receiver/README.md) |
 | `webhook-callback-dispatcher` | EventBus Subscribe/Publish + `RWMutex` fan-out | [README](./webhook-callback-dispatcher/README.md) |
+| `worker-pool-semaphore` | `chan struct{}` semaphore + max-100 concurrent + 100k jobs | [README](./worker-pool-semaphore/README.md) |
 | `wrap-text-exercise` | Greedy word-wrap + `Fields` + `Builder` + width tracking | [README](./wrap-text-exercise/README.md) |
 | `withdrawal-atm` | `if/else` balance validation | [README](./withdrawal-atm/README.md) |
 
