@@ -45,6 +45,7 @@ go run ./payment-tracker
 | `config-loading-iife` | IIFE + env vars with defaults | [README](./config-loading-iife/README.md) |
 | `config-merge-copy` | `slices.Clone` copy + zero-pad + `slices.Equal` | [README](./config-merge-copy/README.md) |
 | `config-parsing-multi-return` | JSON parse + `(*Config, error)` + `runtime.Caller` | [README](./config-parsing-multi-return/README.md) |
+| `context-cancellation` | `WithTimeout` + `ctx.Done()` + `DeadlineExceeded` | [README](./context-cancellation/README.md) |
 | `currency-conversion-map` | Global rate map + comma-ok error + spread side-effect | [README](./currency-conversion-map/README.md) |
 | `custom-io-writer` | `io.Writer` interface + custom `Write([]byte)` method | [README](./custom-io-writer/README.md) |
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
