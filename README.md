@@ -146,6 +146,7 @@ go run ./payment-tracker
 | `retail-pos` | Closure with state: independent per-register totals | [README](./retail-pos/README.md) |
 | `role-permission-authorization` | Variadic roles + membership check | [README](./role-permission-authorization/README.md) |
 | `rune-byte` | Byte vs rune, UTF-8 decoding | [README](./rune-byte/README.md) |
+| `runtime-helper` | `NumCPU` + `GOMAXPROCS` + `NumGoroutine` introspection | [README](./runtime-helper/README.md) |
 | `retry-backoff-timing` | Linear backoff + `time.Duration` constants | [README](./retry-backoff-timing/README.md) |
 | `retry-policy` | Retry loop + backoff with `time.Sleep` | [README](./retry-policy/README.md) |
 | `sales-report-sort` | `slices.SortFunc` multi-key + `MaxFunc` + anonymous struct | [README](./sales-report-sort/README.md) |
