@@ -40,6 +40,7 @@ go run ./payment-tracker
 | `cli-flag-parsing` | Standard `flag` package + Bool/Int/String + Parse | [README](./cli-flag-parsing/README.md) |
 | `closure-fn` | Closure: function capturing outer variable | [README](./closure-fn/README.md) |
 | `compare-versions` | Dotted-numeric compare + missing part = 0 + `max` + `Atoi` | [README](./compare-versions/README.md) |
+| `concurrent-order-notifications` | `wg.Go` parallel fan-out + elapsed ~100ms | [README](./concurrent-order-notifications/README.md) |
 | `concurrent-webhook` | Goroutine + channel + WaitGroup | [README](./concurrent-webhook/README.md) |
 | `config-loader` | Builtin `len` shadowing | [README](./config-loader/README.md) |
 | `config-loading-iife` | IIFE + env vars with defaults | [README](./config-loading-iife/README.md) |
