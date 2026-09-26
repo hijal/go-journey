@@ -82,6 +82,7 @@ go run ./payment-tracker
 | `goroutine-panic` | `wg.Go` + `recover` + `slog.Error` safe task wrapper | [README](./goroutine-panic/README.md) |
 | `grid-load-monitoring` | Parallel arrays + one-pass peak/low scan | [README](./grid-load-monitoring/README.md) |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
+| `health-check-timeout` | `select` result vs `time.After` budget TIMEOUT | [README](./health-check-timeout/README.md) |
 | `helpDesk` | Function pipeline of string transformers | [README](./helpDesk/README.md) |
 | `higher-order-retry-helper` | Higher-order retry + `errors.Is` + `%w` | [README](./higher-order-retry-helper/README.md) |
 | `http-client-functional-options` | Functional options (`Option func(*T)`) | [README](./http-client-functional-options/README.md) |
@@ -131,12 +132,14 @@ go run ./payment-tracker
 | `payment-gateway-strategy` | Function-type strategy (Stripe/PayPal swap) | [README](./payment-gateway-strategy/README.md) |
 | `payment-retry` | Sentinel error + `errors.Is` + `%w` + exponential backoff | [README](./payment-retry/README.md) |
 | `payment-risk-flagging` | `switch` with `fallthrough` | [README](./payment-risk-flagging/README.md) |
+| `payment-risk-score` | Goroutine risk model + billing validate overlap | [README](./payment-risk-score/README.md) |
 | `payment-status-poll` | `select` + channel timeout | [README](./payment-status-poll/README.md) |
 | `payment-tracker` | Variable naming / underscores | [README](./payment-tracker/README.md) |
 | `permission-set-ops` | Map-as-set membership + clone/union + intersection | [README](./permission-set-ops/README.md) |
 | `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
 | `predicate-generics-filter` | Generics `Filter[T]` / `Map[T,U]` + predicates | [README](./predicate-generics-filter/README.md) |
 | `priority-job-queue` | `container/heap` max-priority + tie-break + `heap.Fix` | [README](./priority-job-queue/README.md) |
+| `product-page-fanout` | `wg.Go` parallel fetch + `errors.Join` degraded | [README](./product-page-fanout/README.md) |
 | `product-sort-comparator` | `slices.SortFunc` + `cmp.Compare` multi-key sort | [README](./product-sort-comparator/README.md) |
 | `product-value-pointer` | Value vs pointer struct mutation + copy | [README](./product-value-pointer/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
