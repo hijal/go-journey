@@ -78,6 +78,7 @@ go run ./payment-tracker
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
 | `gateway-request-metrics` | Mutex-map route counts + `atomic.Int64` total | [README](./gateway-request-metrics/README.md) |
+| `graceful-shutdown-worker` | `context` timeout + `select Done` graceful stop | [README](./graceful-shutdown-worker/README.md) |
 | `goroutine-error-collection` | `errors.Join` + index-aligned goroutine error slots | [README](./goroutine-error-collection/README.md) |
 | `goroutine-ordering` | Non-deterministic goroutine order + main-exit kill | [README](./goroutine-ordering/README.md) |
 | `goroutine-panic` | `wg.Go` + `recover` + `slog.Error` safe task wrapper | [README](./goroutine-panic/README.md) |
@@ -185,6 +186,7 @@ go run ./payment-tracker
 | `ticket-category-count` | Map frequency-count zero-value idiom | [README](./ticket-category-count/README.md) |
 | `token-validation` | Sentinel error + `errors.Is` + `%w` wrap | [README](./token-validation/README.md) |
 | `topk-latency-dashboard` | Sort + tail-slice top-K + p95 approximation | [README](./topk-latency-dashboard/README.md) |
+| `transaction-etl-pipeline` | Channel ETL: source → parse → filter + err channel | [README](./transaction-etl-pipeline/README.md) |
 | `transaction-fraud-screening` | `for range` + `continue` fraud flags | [README](./transaction-fraud-screening/README.md) |
 | `transaction-rollback` | `defer` for rollback pattern | [README](./transaction-rollback/README.md) |
 | `transaction-rollback-defer` | `defer`-based rollback on failed transfer | [README](./transaction-rollback-defer/README.md) |
