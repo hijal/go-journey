@@ -172,6 +172,7 @@ go run ./payment-tracker
 | `structured-logging-variadic` | Variadic `...any` key-value structured logger | [README](./structured-logging-variadic/README.md) |
 | `swap-function` | Pointer swap + parallel assignment + slice-element address | [README](./swap-function/README.md) |
 | `switch-group` | Multi-value `case` log routing | [README](./switch-group/README.md) |
+| `sync-once` | `sync.OnceValue` lazy cached thread-safe init | [README](./sync-once/README.md) |
 | `test-log-router` | Log destination routing + table test | [README](./test-log-router/README.md) |
 | `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
 | `thread-safe-counter` | `sync.Mutex` + `defer` unlock + `WaitGroup` | [README](./thread-safe-counter/README.md) |
