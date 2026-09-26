@@ -77,6 +77,7 @@ go run ./payment-tracker
 | `fluent-http-builder` | Fluent builder pattern + chain setters | [README](./fluent-http-builder/README.md) |
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
+| `gateway-request-metrics` | Mutex-map route counts + `atomic.Int64` total | [README](./gateway-request-metrics/README.md) |
 | `goroutine-error-collection` | `errors.Join` + index-aligned goroutine error slots | [README](./goroutine-error-collection/README.md) |
 | `goroutine-ordering` | Non-deterministic goroutine order + main-exit kill | [README](./goroutine-ordering/README.md) |
 | `goroutine-panic` | `wg.Go` + `recover` + `slog.Error` safe task wrapper | [README](./goroutine-panic/README.md) |
@@ -180,6 +181,7 @@ go run ./payment-tracker
 | `test-log-router` | Log destination routing + table test | [README](./test-log-router/README.md) |
 | `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
 | `thread-safe-counter` | `sync.Mutex` + `defer` unlock + `WaitGroup` | [README](./thread-safe-counter/README.md) |
+| `thumbnail-worker-pool` | 4-worker pool + jobs/results channels + sort-by-id | [README](./thumbnail-worker-pool/README.md) |
 | `ticket-category-count` | Map frequency-count zero-value idiom | [README](./ticket-category-count/README.md) |
 | `token-validation` | Sentinel error + `errors.Is` + `%w` wrap | [README](./token-validation/README.md) |
 | `topk-latency-dashboard` | Sort + tail-slice top-K + p95 approximation | [README](./topk-latency-dashboard/README.md) |
