@@ -78,6 +78,7 @@ go run ./payment-tracker
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
 | `goroutine-error-collection` | `errors.Join` + index-aligned goroutine error slots | [README](./goroutine-error-collection/README.md) |
 | `goroutine-ordering` | Non-deterministic goroutine order + main-exit kill | [README](./goroutine-ordering/README.md) |
+| `goroutine-panic` | `wg.Go` + `recover` + `slog.Error` safe task wrapper | [README](./goroutine-panic/README.md) |
 | `grid-load-monitoring` | Parallel arrays + one-pass peak/low scan | [README](./grid-load-monitoring/README.md) |
 | `group-variable` | Grouped `const`/`iota` + grouped `var` | [README](./group-variable/README.md) |
 | `helpDesk` | Function pipeline of string transformers | [README](./helpDesk/README.md) |
