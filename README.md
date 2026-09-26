@@ -23,12 +23,14 @@ go run ./payment-tracker
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
 | `batch-payment-grouping` | Threshold split + pre-allocated grouping | [README](./batch-payment-grouping/README.md) |
+| `batch-settlement-errgroup` | `errgroup.WithContext` + `SetLimit(3)` first-error fail-fast | [README](./batch-settlement-errgroup/README.md) |
 | `bank-account-basics` | Struct zero value + `%+v` + field mutation | [README](./bank-account-basics/README.md) |
 | `bank-balance-update` | Pointer-receiver method + validation + balance mutation | [README](./bank-balance-update/README.md) |
 | `bangla-text-processing` | `len` bytes vs `utf8.RuneCountInString` + `for range` byte index | [README](./bangla-text-processing/README.md) |
 | `basic-array` | Fixed-size `[4]int` + 4 range-loop variations | [README](./basic-array/README.md) |
 | `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
 | `bill-split` | Float constants + explicit cast + `%.2f` | [README](./bill-split/README.md) |
+| `bounded-concurrent-http` | Semaphore cap-2 + 200ms ctx timeout stock fetch | [README](./bounded-concurrent-http/README.md) |
 | `buffer-pooling-sync` | `sync.Pool` reuse + `bytes.Buffer` + type assertion | [README](./buffer-pooling-sync/README.md) |
 | `byte-size-constants` | iota + bit shift for KB/MB/GB constants | [README](./byte-size-constants/README.md) |
 | `card-authorization-error` | Custom error type + `errors.As` typed classification | [README](./card-authorization-error/README.md) |
