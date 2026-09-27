@@ -148,6 +148,7 @@ go run ./payment-tracker
 | `product-value-pointer` | Value vs pointer struct mutation + copy | [README](./product-value-pointer/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
 | `named-naked-return` | Named return values + naked return | [README](./named-naked-return/README.md) |
+| `numeric-constants` | Untyped `1<<100`/`Big`/`Small` + int/float64 fit | [README](./numeric-constants/README.md) |
 | `recent-activity-feed` | Builtin `min` tail-trim + `Clone`+`Reverse` | [README](./recent-activity-feed/README.md) |
 | `request-validation` | Input validation with guard clauses + `strings` | [README](./request-validation/README.md) |
 | `retail-loyalty-program` | `switch` + `fallthrough` tier benefits | [README](./retail-loyalty-program/README.md) |
