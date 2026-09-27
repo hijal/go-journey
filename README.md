@@ -18,7 +18,9 @@ go run ./payment-tracker
 | `api-rate-limiter` | Closure factory + shared counter rate limit | [README](./api-rate-limiter/README.md) |
 | `analytics-interface-embedding` | Interface embedding + `var _` compile-time check | [README](./analytics-interface-embedding/README.md) |
 | `anonymous-function` | Anonymous function + IIFE pattern | [README](./anonymous-function/README.md) |
+| `appending-slice` | `append` growth: nil → len 5 cap 6 doubling | [README](./appending-slice/README.md) |
 | `apply-discount` | Pass-by-value: function param is a copy | [README](./apply-discount/README.md) |
+| `arrays-basics` | Fixed-size `[2]string` / `[6]int` + literals | [README](./arrays-basics/README.md) |
 | `atomic-counter` | `atomic.Int64` lock-free safe counter | [README](./atomic-counter/README.md) |
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
@@ -79,6 +81,8 @@ go run ./payment-tracker
 | `fluent-http-builder` | Fluent builder pattern + chain setters | [README](./fluent-http-builder/README.md) |
 | `for-continued-loop` | `for` as while: double until `sum < 1000` | [README](./for-continued-loop/README.md) |
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
+| `function-closures` | Closures with independent captured state | [README](./function-closures/README.md) |
+| `function-values` | First-class functions: pass/assign | [README](./function-values/README.md) |
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
 | `gateway-request-metrics` | Mutex-map route counts + `atomic.Int64` total | [README](./gateway-request-metrics/README.md) |
 | `graceful-shutdown-worker` | `context` timeout + `select Done` graceful stop | [README](./graceful-shutdown-worker/README.md) |
@@ -114,6 +118,7 @@ go run ./payment-tracker
 | `leaderboard-tie-break` | `cmp.Compare` + nested switch tie-break | [README](./leaderboard-tie-break/README.md) |
 | `linked-list` | Singly-linked list + pointer walk + `Stringer` | [README](./linked-list/README.md) |
 | `log-analysis-slicing` | Slicing + shared backing array + `IndexFunc` | [README](./log-analysis-slicing/README.md) |
+| `maps-basics` | `make` map + map literal + struct value | [README](./maps-basics/README.md) |
 | `matrix-slice-report` | `[][]int` matrix + row/column aggregation | [README](./matrix-slice-report/README.md) |
 | `merge-multiple-slices` | Variadic slices + `append(...)` merge | [README](./merge-multiple-slices/README.md) |
 | `money-conversion-testing` | Table-driven unit test + `math.Round` | [README](./money-conversion-testing/README.md) |
@@ -123,8 +128,10 @@ go run ./payment-tracker
 | `multi-error-aggregation` | Custom error type + nil-filter combine | [README](./multi-error-aggregation/README.md) |
 | `multi-gateway-payment-proccess` | Interface + polymorphism | [README](./multi-gateway-payment-proccess/README.md) |
 | `multi-payment-checkout` | Interface polymorphism + cents-to-currency + `[]PaymentMethod` | [README](./multi-payment-checkout/README.md) |
+| `mutating-maps` | `delete` + comma-ok presence check | [README](./mutating-maps/README.md) |
 | `network-retry-mechanism` | Linear backoff + jitter retry with `%w` | [README](./network-retry-mechanism/README.md) |
 | `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
+| `nil-slices` | Zero-value nil slice: `len=0 cap=0` + `==nil` | [README](./nil-slices/README.md) |
 | `order-service-di` | Constructor DI + interfaces + `%w` wrapping | [README](./order-service-di/README.md) |
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
 | `otp-verification` | Array `==` element-wise compare | [README](./otp-verification/README.md) |
@@ -144,11 +151,15 @@ go run ./payment-tracker
 | `payment-tracker` | Variable naming / underscores | [README](./payment-tracker/README.md) |
 | `permission-set-ops` | Map-as-set membership + clone/union + intersection | [README](./permission-set-ops/README.md) |
 | `plan-based-rate-limit` | Maps + `slices`/`maps` stdlib (Go 1.21+) | [README](./plan-based-rate-limit/README.md) |
+| `pointers-basics` | `&` address + `*` deref read/write | [README](./pointers-basics/README.md) |
+| `pointers-to-structs` | `&v` + implicit `p.X` field mutation | [README](./pointers-to-structs/README.md) |
 | `predicate-generics-filter` | Generics `Filter[T]` / `Map[T,U]` + predicates | [README](./predicate-generics-filter/README.md) |
 | `priority-job-queue` | `container/heap` max-priority + tie-break + `heap.Fix` | [README](./priority-job-queue/README.md) |
 | `product-page-fanout` | `wg.Go` parallel fetch + `errors.Join` degraded | [README](./product-page-fanout/README.md) |
 | `product-sort-comparator` | `slices.SortFunc` + `cmp.Compare` multi-key sort | [README](./product-sort-comparator/README.md) |
 | `product-value-pointer` | Value vs pointer struct mutation + copy | [README](./product-value-pointer/README.md) |
+| `range-basics` | `for i, v := range` index + value | [README](./range-basics/README.md) |
+| `range-continued` | Index-only range + `_` value-only range | [README](./range-continued/README.md) |
 | `rate-limit-config` | Exported vs unexported constants + unit suffix naming | [README](./rate-limit-config/README.md) |
 | `named-naked-return` | Named return values + naked return | [README](./named-naked-return/README.md) |
 | `numeric-constants` | Untyped `1<<100`/`Big`/`Small` + int/float64 fit | [README](./numeric-constants/README.md) |
@@ -175,6 +186,11 @@ go run ./payment-tracker
 | `signup-validator` | Function type + variadic validators | [README](./signup-validator/README.md) |
 | `sku-price-lookup` | Map + comma-ok lookup present/absent path | [README](./sku-price-lookup/README.md) |
 | `sku-validation` | Staged guard clauses + `Split` + `Atoi` + `Errorf` | [README](./sku-validation/README.md) |
+| `slice-length-capacity` | Re-slicing keeps/shrinks `cap` (`s[:0]`, `s[2:]`) | [README](./slice-length-capacity/README.md) |
+| `slice-with-make` | `make([]int, 5)` vs `make([]int, 0, 5)` | [README](./slice-with-make/README.md) |
+| `slices-basics` | Slice expression `primes[1:4]` array window | [README](./slices-basics/README.md) |
+| `slices-of-slices` | `[][]string` matrix + `strings.Join` rows | [README](./slices-of-slices/README.md) |
+| `slices-references-arrays` | Overlapping slices share backing array | [README](./slices-references-arrays/README.md) |
 | `sliding-window-limiter` | Ring-buffer sliding window + threshold limit | [README](./sliding-window-limiter/README.md) |
 | `sms-template-renderer` | `strings.NewReplacer` multi-placeholder template render | [README](./sms-template-renderer/README.md) |
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
@@ -182,6 +198,9 @@ go run ./payment-tracker
 | `statement-sort-interface` | `sort.Interface` vs `slices.SortFunc` + `cmp.Compare` | [README](./statement-sort-interface/README.md) |
 | `status-code-analytics` | Map count + `Sorted(Keys())` + max-scan | [README](./status-code-analytics/README.md) |
 | `streaming-upload-checksum` | `TeeReader`+`LimitReader` streaming upload + sha256 | [README](./streaming-upload-checksum/README.md) |
+| `struct-fields` | Dot access + field mutation (`v.X = 4`) | [README](./struct-fields/README.md) |
+| `struct-literals` | Positional/named/empty/pointer literals | [README](./struct-literals/README.md) |
+| `structs-basics` | `type Vertex struct` + positional literal | [README](./structs-basics/README.md) |
 | `structured-logging-variadic` | Variadic `...any` key-value structured logger | [README](./structured-logging-variadic/README.md) |
 | `swap-function` | Pointer swap + parallel assignment + slice-element address | [README](./swap-function/README.md) |
 | `switch-basics` | Expression `switch` on `runtime.GOOS` | [README](./switch-basics/README.md) |
