@@ -77,6 +77,7 @@ go run ./payment-tracker
 | `fn-value` | Function type + function as value | [README](./fn-value/README.md) |
 | `fixed-tax-discount` | Constants + `fmt.Printf` formatting | [README](./fixed-tax-discount/README.md) |
 | `fluent-http-builder` | Fluent builder pattern + chain setters | [README](./fluent-http-builder/README.md) |
+| `for-continued-loop` | `for` as while: double until `sum < 1000` | [README](./for-continued-loop/README.md) |
 | `free-shipping` | Boolean logic (`||` `&&` `!`) | [README](./free-shipping/README.md) |
 | `functional-optional-pattern` | Functional options pattern + closures | [README](./functional-optional-pattern/README.md) |
 | `gateway-request-metrics` | Mutex-map route counts + `atomic.Int64` total | [README](./gateway-request-metrics/README.md) |
@@ -94,6 +95,8 @@ go run ./payment-tracker
 | `http-handler-interface` | `http.Handler` interface + ServeMux + slog | [README](./http-handler-interface/README.md) |
 | `http-middleware-chain` | `Middleware` chain + wrap + statusRecorder | [README](./http-middleware-chain/README.md) |
 | `http-status-code` | Unexported constants + `switch` for status mapping | [README](./http-status-code/README.md) |
+| `if-else-basics` | `if` short stmt + `else` print / return path | [README](./if-else-basics/README.md) |
+| `if-short-statement` | `if v := ...; ` guard + early return (no else) | [README](./if-short-statement/README.md) |
 | `iife-payment` | IIFE validation + message build | [README](./iife-payment/README.md) |
 | `invoice-batch-scanner` | `continue` / `break` in loop | [README](./invoice-batch-scanner/README.md) |
 | `invoice-line-totals` | Accumulated subtotal + `slices.Max` + float avg | [README](./invoice-line-totals/README.md) |
@@ -175,12 +178,16 @@ go run ./payment-tracker
 | `sliding-window-limiter` | Ring-buffer sliding window + threshold limit | [README](./sliding-window-limiter/README.md) |
 | `sms-template-renderer` | `strings.NewReplacer` multi-placeholder template render | [README](./sms-template-renderer/README.md) |
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
+| `stacking-defers` | Deferred calls executed LIFO on exit | [README](./stacking-defers/README.md) |
 | `statement-sort-interface` | `sort.Interface` vs `slices.SortFunc` + `cmp.Compare` | [README](./statement-sort-interface/README.md) |
 | `status-code-analytics` | Map count + `Sorted(Keys())` + max-scan | [README](./status-code-analytics/README.md) |
 | `streaming-upload-checksum` | `TeeReader`+`LimitReader` streaming upload + sha256 | [README](./streaming-upload-checksum/README.md) |
 | `structured-logging-variadic` | Variadic `...any` key-value structured logger | [README](./structured-logging-variadic/README.md) |
 | `swap-function` | Pointer swap + parallel assignment + slice-element address | [README](./swap-function/README.md) |
+| `switch-basics` | Expression `switch` on `runtime.GOOS` | [README](./switch-basics/README.md) |
+| `switch-evaluation-order` | Top-down case eval: `time.Saturday` offsets | [README](./switch-evaluation-order/README.md) |
 | `switch-group` | Multi-value `case` log routing | [README](./switch-group/README.md) |
+| `switch-no-condition` | Expression-less `switch` = if/else-if chain | [README](./switch-no-condition/README.md) |
 | `sync-once` | `sync.OnceValue` lazy cached thread-safe init | [README](./sync-once/README.md) |
 | `test-log-router` | Log destination routing + table test | [README](./test-log-router/README.md) |
 | `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
