@@ -34,11 +34,14 @@ go run ./payment-tracker
 | `bill-split` | Float constants + explicit cast + `%.2f` | [README](./bill-split/README.md) |
 | `bounded-concurrent-http` | Semaphore cap-2 + 200ms ctx timeout stock fetch | [README](./bounded-concurrent-http/README.md) |
 | `buffer-pooling-sync` | `sync.Pool` reuse + `bytes.Buffer` + type assertion | [README](./buffer-pooling-sync/README.md) |
+| `buffered-channel-lencap` | Buffered channel `len` vs `cap` + non-blocking send | [README](./buffered-channel-lencap/README.md) |
 | `byte-size-constants` | iota + bit shift for KB/MB/GB constants | [README](./byte-size-constants/README.md) |
 | `card-authorization-error` | Custom error type + `errors.As` typed classification | [README](./card-authorization-error/README.md) |
 | `cart-discount` | Tagless `switch` tier discount + `Printf` width/precision | [README](./cart-discount/README.md) |
 | `cart-methods-receivers` | Value vs pointer receivers in shopping cart | [README](./cart-methods-receivers/README.md) |
 | `cart-stock` | Case-sensitive variables (`quantity` vs `Quantity`) | [README](./cart-stock/README.md) |
+| `channel-close-range` | `close` + `range` drain + `ok=false` after close | [README](./channel-close-range/README.md) |
+| `channel-send-receive` | Unbuffered channel handshake: goroutine send, main receive | [README](./channel-send-receive/README.md) |
 | `checkout-cart` | Float arithmetic + type conversion | [README](./checkout-cart/README.md) |
 | `cicd-job-grouping` | Anonymous struct + status grouping map | [README](./cicd-job-grouping/README.md) |
 | `cli-flag-parsing` | Standard `flag` package + Bool/Int/String + Parse | [README](./cli-flag-parsing/README.md) |
@@ -51,6 +54,7 @@ go run ./payment-tracker
 | `config-merge-copy` | `slices.Clone` copy + zero-pad + `slices.Equal` | [README](./config-merge-copy/README.md) |
 | `config-parsing-multi-return` | JSON parse + `(*Config, error)` + `runtime.Caller` | [README](./config-parsing-multi-return/README.md) |
 | `context-cancellation` | `WithTimeout` + `ctx.Done()` + `DeadlineExceeded` | [README](./context-cancellation/README.md) |
+| `context-done-err` | `select` result vs `ctx.Done()` + `%w` wrap of `ctx.Err()` | [README](./context-done-err/README.md) |
 | `currency-conversion-map` | Global rate map + comma-ok error + spread side-effect | [README](./currency-conversion-map/README.md) |
 | `custom-io-writer` | `io.Writer` interface + custom `Write([]byte)` method | [README](./custom-io-writer/README.md) |
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
@@ -59,11 +63,13 @@ go run ./payment-tracker
 | `data-race-detector` | Deliberate `DATA RACE` demo (`-race` catches it) | [README](./data-race-detector/README.md) |
 | `data-race-detector-solution` | `sync.Mutex`-guarded fix (always 1000) | [README](./data-race-detector-solution/README.md) |
 | `data-validation-pipeline` | Function type + variadic validator pipeline | [README](./data-validation-pipeline/README.md) |
+| `deadlock-goroutine-leak` | Intentional unbuffered-send deadlock (fatal, exit 1) | [README](./deadlock-goroutine-leak/README.md) |
 | `devops-config-loader` | Package-level vars, const, funcs | [README](./devops-config-loader/README.md) |
 | `deploy-set-tooling` | Map-as-set deploy filter + `maps.Keys`/`slices.Sorted` | [README](./deploy-set-tooling/README.md) |
 | `deploy-tool` | `defer` for audit/timing log | [README](./deploy-tool/README.md) |
 | `deterministic-map-report` | Map + `slices.Sort` keys for deterministic report | [README](./deterministic-map-report/README.md) |
 | `devops-tooling` | Multiple assignment + `strconv.Atoi` | [README](./devops-tooling/README.md) |
+| `directional-channels` | `chan<- int` send-only + `<-chan int` receive-only | [README](./directional-channels/README.md) |
 | `double-entry-ledger` | Methods with pointer receiver, insufficient balance error | [README](./double-entry-ledger/README.md) |
 | `duplicate-order-detector` | Map seen-set + `slices.Contains` dedupe | [README](./duplicate-order-detector/README.md) |
 | `dynamic-path-url-joiner` | Variadic + `strings.Trim`/`Join` for path join | [README](./dynamic-path-url-joiner/README.md) |
@@ -176,6 +182,8 @@ go run ./payment-tracker
 | `search-query-matcher` | `Fields` normalize + `Contains` AND-match + case-insensitive | [README](./search-query-matcher/README.md) |
 | `secrets-redaction-logging` | `Stringer`+`GoStringer`+`LogValuer` secret redaction | [README](./secrets-redaction-logging/README.md) |
 | `select-channels` | `select` + `time.After` timeout + async fetch | [README](./select-channels/README.md) |
+| `select-default-nonblocking` | `select` + `default` non-blocking send with drop | [README](./select-default-nonblocking/README.md) |
+| `select-timeout` | `select` race: two sources + `time.After` guard | [README](./select-timeout/README.md) |
 | `sent-notification` | Variadic + slice spread for alert channels | [README](./sent-notification/README.md) |
 | `server-health-slice` | `append` + pre-allocation + dynamic growth | [README](./server-health-slice/README.md) |
 | `service-config-constructor` | Embedded struct + validated constructor + sentinel | [README](./service-config-constructor/README.md) |
@@ -183,6 +191,7 @@ go run ./payment-tracker
 | `shared-wallet-closure` | Multiple closures sharing one captured balance | [README](./shared-wallet-closure/README.md) |
 | `shipping-cost-tier` | `if/else if` tier-based shipping cost | [README](./shipping-cost-tier/README.md) |
 | `shopping-cart-slice` | Slice `len` + index access + range sum | [README](./shopping-cart-slice/README.md) |
+| `signal-channel-broadcast` | `close(chan struct{})` broadcast + `wg.Go` workers | [README](./signal-channel-broadcast/README.md) |
 | `signup-validator` | Function type + variadic validators | [README](./signup-validator/README.md) |
 | `sku-price-lookup` | Map + comma-ok lookup present/absent path | [README](./sku-price-lookup/README.md) |
 | `sku-validation` | Staged guard clauses + `Split` + `Atoi` + `Errorf` | [README](./sku-validation/README.md) |
@@ -213,6 +222,7 @@ go run ./payment-tracker
 | `thread-safe-counter` | `sync.Mutex` + `defer` unlock + `WaitGroup` | [README](./thread-safe-counter/README.md) |
 | `thumbnail-worker-pool` | 4-worker pool + jobs/results channels + sort-by-id | [README](./thumbnail-worker-pool/README.md) |
 | `ticket-category-count` | Map frequency-count zero-value idiom | [README](./ticket-category-count/README.md) |
+| `time-channels` | `time.NewTicker` + `time.After` deadline in `select` | [README](./time-channels/README.md) |
 | `token-validation` | Sentinel error + `errors.Is` + `%w` wrap | [README](./token-validation/README.md) |
 | `topk-latency-dashboard` | Sort + tail-slice top-K + p95 approximation | [README](./topk-latency-dashboard/README.md) |
 | `transaction-etl-pipeline` | Channel ETL: source → parse → filter + err channel | [README](./transaction-etl-pipeline/README.md) |
