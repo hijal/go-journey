@@ -147,6 +147,7 @@ go run ./payment-tracker
 | `paginated-fetching` | `for` + `break` paginated fetch + slice spread `append(... )` | [README](./paginated-fetching/README.md) |
 | `pagination` | Ceiling division + offset pagination | [README](./pagination/README.md) |
 | `payment-amount` | Custom type (`PaymentAmount`) + paisa-based money | [README](./payment-amount/README.md) |
+| `payment-charge-channel` | Result struct on channel + sentinel `%w` + `errors.Is` | [README](./payment-charge-channel/README.md) |
 | `payment-fee-calculator` | Constant + function | [README](./payment-fee-calculator/README.md) |
 | `payment-gateway-abstraction` | Interface abstraction + sentinel error + `%w` | [README](./payment-gateway-abstraction/README.md) |
 | `payment-gateway-strategy` | Function-type strategy (Stripe/PayPal swap) | [README](./payment-gateway-strategy/README.md) |
