@@ -223,6 +223,7 @@ go run ./payment-tracker
 | `test-log-router` | Log destination routing + table test | [README](./test-log-router/README.md) |
 | `testing` | `go/token.IsIdentifier` unit test | [README](./testing/README.md) |
 | `thread-safe-counter` | `sync.Mutex` + `defer` unlock + `WaitGroup` | [README](./thread-safe-counter/README.md) |
+| `thumbnail-fanout-fanin` | Fan-out/fan-in 3 workers + closer goroutine `close(results)` | [README](./thumbnail-fanout-fanin/README.md) |
 | `thumbnail-worker-pool` | 4-worker pool + jobs/results channels + sort-by-id | [README](./thumbnail-worker-pool/README.md) |
 | `ticket-category-count` | Map frequency-count zero-value idiom | [README](./ticket-category-count/README.md) |
 | `time-channels` | `time.NewTicker` + `time.After` deadline in `select` | [README](./time-channels/README.md) |
