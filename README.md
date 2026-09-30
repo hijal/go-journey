@@ -55,6 +55,7 @@ go run ./payment-tracker
 | `config-parsing-multi-return` | JSON parse + `(*Config, error)` + `runtime.Caller` | [README](./config-parsing-multi-return/README.md) |
 | `context-cancellation` | `WithTimeout` + `ctx.Done()` + `DeadlineExceeded` | [README](./context-cancellation/README.md) |
 | `context-done-err` | `select` result vs `ctx.Done()` + `%w` wrap of `ctx.Err()` | [README](./context-done-err/README.md) |
+| `courier-rate-limit` | `chan struct{}` semaphore cap-2 + `atomic` CAS peak tracking | [README](./courier-rate-limit/README.md) |
 | `currency-conversion-map` | Global rate map + comma-ok error + spread side-effect | [README](./currency-conversion-map/README.md) |
 | `custom-io-writer` | `io.Writer` interface + custom `Write([]byte)` method | [README](./custom-io-writer/README.md) |
 | `custom-logger` | Variadic `...any` + `fmt.Sprint` custom logger | [README](./custom-logger/README.md) |
