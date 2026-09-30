@@ -28,6 +28,7 @@ go run ./payment-tracker
 | `batch-settlement-errgroup` | `errgroup.WithContext` + `SetLimit(3)` first-error fail-fast | [README](./batch-settlement-errgroup/README.md) |
 | `bank-account-basics` | Struct zero value + `%+v` + field mutation | [README](./bank-account-basics/README.md) |
 | `bank-balance-update` | Pointer-receiver method + validation + balance mutation | [README](./bank-balance-update/README.md) |
+| `bank-ledger-actor` | Actor model: request/reply channels, lock-free balance map | [README](./bank-ledger-actor/README.md) |
 | `bangla-text-processing` | `len` bytes vs `utf8.RuneCountInString` + `for range` byte index | [README](./bangla-text-processing/README.md) |
 | `basic-array` | Fixed-size `[4]int` + 4 range-loop variations | [README](./basic-array/README.md) |
 | `basic-types` | Basic types + rune as numeric code point | [README](./basic-types/README.md) |
