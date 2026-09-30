@@ -202,6 +202,7 @@ go run ./payment-tracker
 | `slices-of-slices` | `[][]string` matrix + `strings.Join` rows | [README](./slices-of-slices/README.md) |
 | `slices-references-arrays` | Overlapping slices share backing array | [README](./slices-references-arrays/README.md) |
 | `sliding-window-limiter` | Ring-buffer sliding window + threshold limit | [README](./sliding-window-limiter/README.md) |
+| `sms-provider-timeout` | `select` + `time.After` timeout + `<-chan` return | [README](./sms-provider-timeout/README.md) |
 | `sms-template-renderer` | `strings.NewReplacer` multi-placeholder template render | [README](./sms-template-renderer/README.md) |
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
 | `stacking-defers` | Deferred calls executed LIFO on exit | [README](./stacking-defers/README.md) |
