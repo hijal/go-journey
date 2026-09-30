@@ -177,6 +177,7 @@ go run ./payment-tracker
 | `recent-activity-feed` | Builtin `min` tail-trim + `Clone`+`Reverse` | [README](./recent-activity-feed/README.md) |
 | `request-validation` | Input validation with guard clauses + `strings` | [README](./request-validation/README.md) |
 | `retail-loyalty-program` | `switch` + `fallthrough` tier benefits | [README](./retail-loyalty-program/README.md) |
+| `report-worker-graceful` | Chained `signal.NotifyContext` + `WithTimeout` graceful shutdown | [README](./report-worker-graceful/README.md) |
 | `retail-pos` | Closure with state: independent per-register totals | [README](./retail-pos/README.md) |
 | `role-permission-authorization` | Variadic roles + membership check | [README](./role-permission-authorization/README.md) |
 | `rune-byte` | Byte vs rune, UTF-8 decoding | [README](./rune-byte/README.md) |
