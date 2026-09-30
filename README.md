@@ -22,6 +22,7 @@ go run ./payment-tracker
 | `apply-discount` | Pass-by-value: function param is a copy | [README](./apply-discount/README.md) |
 | `arrays-basics` | Fixed-size `[2]string` / `[6]int` + literals | [README](./arrays-basics/README.md) |
 | `atomic-counter` | `atomic.Int64` lock-free safe counter | [README](./atomic-counter/README.md) |
+| `audit-log-shipper` | `time.Ticker` batch flush on size/timer/close | [README](./audit-log-shipper/README.md) |
 | `attendance` | `min`/`max` builtins + overtime split | [README](./attendance/README.md) |
 | `background-jobs` | Loop, error handling, map lookup | [README](./background-jobs/README.md) |
 | `batch-payment-grouping` | Threshold split + pre-allocated grouping | [README](./batch-payment-grouping/README.md) |
