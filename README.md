@@ -138,6 +138,7 @@ go run ./payment-tracker
 | `network-retry-mechanism` | Linear backoff + jitter retry with `%w` | [README](./network-retry-mechanism/README.md) |
 | `new-account` | Zero values (`string`/`int64`/`bool`) | [README](./new-account/README.md) |
 | `nil-slices` | Zero-value nil slice: `len=0 cap=0` + `==nil` | [README](./nil-slices/README.md) |
+| `order-csv-pipeline` | 2-stage channel pipeline: parse → VAT, error-as-data | [README](./order-csv-pipeline/README.md) |
 | `order-service-di` | Constructor DI + interfaces + `%w` wrapping | [README](./order-service-di/README.md) |
 | `order-status-enum` | `iota` enum + `String()` method | [README](./order-status-enum/README.md) |
 | `otp-verification` | Array `==` element-wise compare | [README](./otp-verification/README.md) |
