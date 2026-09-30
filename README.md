@@ -207,6 +207,7 @@ go run ./payment-tracker
 | `sms-template-renderer` | `strings.NewReplacer` multi-placeholder template render | [README](./sms-template-renderer/README.md) |
 | `sql-clause-builder` | Variadic `...any` + SQL `IN` placeholders | [README](./sql-clause-builder/README.md) |
 | `stacking-defers` | Deferred calls executed LIFO on exit | [README](./stacking-defers/README.md) |
+| `stock-feed-merge` | Merge two feeds in `select` + nil-channel disable idiom | [README](./stock-feed-merge/README.md) |
 | `statement-sort-interface` | `sort.Interface` vs `slices.SortFunc` + `cmp.Compare` | [README](./statement-sort-interface/README.md) |
 | `status-code-analytics` | Map count + `Sorted(Keys())` + max-scan | [README](./status-code-analytics/README.md) |
 | `streaming-upload-checksum` | `TeeReader`+`LimitReader` streaming upload + sha256 | [README](./streaming-upload-checksum/README.md) |
